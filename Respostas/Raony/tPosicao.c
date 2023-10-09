@@ -7,7 +7,8 @@ tPosicao* CriaPosicao(int linha, int coluna) {
 
 tPosicao* ClonaPosicao(tPosicao* posicao) {
     tPosicao * posicaoClone = NULL;
-    posicaoClone = &posicao;
+    posicaoClone->coluna = posicao->coluna;
+    posicaoClone->linha = posicao->linha;
     return posicaoClone;
 }
 
@@ -20,7 +21,8 @@ int ObtemColunaPosicao(tPosicao* posicao) {
 }
 
 void AtualizaPosicao(tPosicao* posicaoAtual, tPosicao* posicaoNova) {
-    posicaoAtual = &posicaoNova;
+    posicaoAtual->coluna = posicaoNova->coluna;
+    posicaoAtual->linha = posicaoNova->linha;
 }
 
 bool SaoIguaisPosicao(tPosicao* posicao1, tPosicao* posicao2) {
