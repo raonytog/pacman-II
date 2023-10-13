@@ -86,18 +86,6 @@ if test -d "$DIR_GAB_SRC"; then
     fi
 fi
 
-arquivosDesejados=("tMapa" "main" "tMovimento" "tPacman" "tPosicao" "tTunel")
-
-contains() {
-  local file_to_check=$1
-  for file in "${arquivosDesejados[@]}"; do
-    if [[ $file == "$file_to_check" ]]; then
-      return 0
-    fi
-  done
-  return 1
-}
-
 if [[ "$RUN_PROFESSOR_SCRIPT" == true ]] ; then
     if test -d "$DIR_GAB_OBJ"; then
         rm -r $DIR_GAB_OBJ
@@ -116,16 +104,7 @@ if [[ "$RUN_PROFESSOR_SCRIPT" == true ]] ; then
     if [ -d "$DIR_INCLUDES" ] && [ -d "$DIR_GAB_SRC" ]; then
 
         if [ "$HEADER_FILES_EXIST" = "true" ]; then
-
-            for fileH in "${arquivosDesejados[@]}"; do
-                if [[ "$src_file_name" != "main" ]]; then
-                    if [[ -f "$DIR_GAB_SRC/$fileH.h" ]]; then
-                        cp $DIR_GAB_SRC/$fileH.h $DIR_INCLUDES
-                    fi
-                fi
-            done
-
-            # cp $DIR_GAB_SRC/*.h $DIR_INCLUDES
+            cp $DIR_GAB_SRC/*.h $DIR_INCLUDES
             echo " - Arquivos .h do professor da pasta $DIR_GAB_SRC copiados para a pasta $DIR_INCLUDES com sucesso!"
             TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG} - Arquivos .h do professor da pasta $DIR_GAB_SRC copiados para a pasta $DIR_INCLUDES com sucesso!\n"
         else
@@ -142,19 +121,18 @@ if [[ "$RUN_PROFESSOR_SCRIPT" == true ]] ; then
         for src_file in "${src_files_array[@]}"; do
             x=${src_file%.c}  # x sera' o nome do arquivo sem a extensao .c
             raw_file_name=${x##*/}  # raw_file_name sera' o nome do arquivo puro, sem os diretorios que contem ele
-            if contains "$raw_file_name"; then
-                gab_src_files_names+=("$raw_file_name")
-                src=$DIR_GAB_SRC/$raw_file_name.c
-                out=$DIR_GAB_OBJ/$raw_file_name.o
-                output=$(gcc -Wall -c $src -o $out 2>&1)
-                if [ $? -ne 0 ]; then 
-                    echo "   - Erro de compilação! Verifique se o arquivo $src está correto."
-                    TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Erro de compilação! Verifique se o arquivo $src está correto.\n"
-                    echo $TERMINAL_OUTPUT_LOG >> "log.txt"
-                    exit 1
-                fi
+            gab_src_files_names+=("$raw_file_name")
+            src=$DIR_GAB_SRC/$raw_file_name.c
+            out=$DIR_GAB_OBJ/$raw_file_name.o
+            output=$(gcc -Wall -c $src -o $out 2>&1)
+            if [ $? -ne 0 ]; then 
+                echo "   - Erro de compilação! Verifique se o arquivo $src está correto."
+                TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Erro de compilação! Verifique se o arquivo $src está correto.\n"
+                echo $TERMINAL_OUTPUT_LOG >> "log.txt"
+                exit 1
             fi
         done
+
 
         output=$(gcc -Wall -o $DIR_GAB_OBJ/prog $DIR_GAB_OBJ/*.o -lm 2>&1)
         if [ $? -ne 0 ]; then 
@@ -194,8 +172,7 @@ if [[ "$RUN_PROFESSOR_SCRIPT" == true ]] ; then
         output="${DIR_CASE}/saida/saida.txt"
 
         # $DIR_GAB_OBJ/prog < $txt_input_file > $output 2>&1
-        $DIR_GAB_OBJ/prog $directory_path < $input_file 2>&1
-        mv *.txt $DIR_CASE/saida/
+        $DIR_GAB_OBJ/prog $directory_path < $input_file > $output 2>&1
         echo " - Output do resultado do professor gerado com sucesso na pasta $output."
         TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG} - Output do resultado do professor gerado com sucesso na pasta $output.\n"
     done
@@ -273,9 +250,8 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
         fi
     done
     
-    # n_compilations=$((n_compilations * n_files))
-    # n_compilations=$((n_compilations + n_files)) # considerando a pasta completo
-    n_compilations=$((n_compilations + 1)) # considerando a pasta completo
+    n_compilations=$((n_compilations * n_files))
+    n_compilations=$((n_compilations + n_files)) # considerando a pasta completo
     n_folders_to_compile=$((n_folders_to_compile + 1)) # considerando a pasta completo
     n_linkings=$((n_files + 1))
 
@@ -355,8 +331,7 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
                 fi
                 extra_files_array_size=${#student_extra_src_files[@]}
                 extra_n_compilation=$((n_folders_to_compile * extra_files_array_size))
-                # student_n_compilations=$((n_compilations + extra_n_compilation))
-                student_n_compilations=$((n_compilations))
+                student_n_compilations=$((n_compilations + extra_n_compilation))
 
                 declare -A test_cases_results
 
@@ -471,17 +446,10 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
                     cp -r $DIR_GAB_CASOS $FILE_NAME_FOLDER
 
                     if find "$STUDENT_ANSWER_FOLDER" -maxdepth 1 -type f -name "*.h" | read; then
-                        if [[ "$src_file_name" == "main" ]] || [[ "$src_file_name" == "completo" ]] ; then
-                            echo "   - Copiando os $STUDENT_ANSWER_FOLDER/*.h do aluno para a pasta $FILE_NAME_FOLDER"
-                            TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Copiando os '$STUDENT_ANSWER_FOLDER/*.h' do aluno para a pasta $FILE_NAME_FOLDER\n"
-                            cp $STUDENT_ANSWER_FOLDER/*.h $FILE_NAME_FOLDER
-                            
-                        else
-                            echo "   - Copiando os $STUDENT_ANSWER_FOLDER/$src_file_name.h do aluno para a pasta $FILE_NAME_FOLDER"
-                            TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Copiando os '$STUDENT_ANSWER_FOLDER/src_file_name.h' do aluno para a pasta $FILE_NAME_FOLDER\n"
-                            cp $STUDENT_ANSWER_FOLDER/$src_file_name.h $FILE_NAME_FOLDER
-                        fi
-                        
+                        echo "   - Copiando os $STUDENT_ANSWER_FOLDER/*.h do aluno para a pasta $FILE_NAME_FOLDER"
+                        TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Copiando os '$STUDENT_ANSWER_FOLDER/*.h' do aluno para a pasta $FILE_NAME_FOLDER\n"
+                        cp $STUDENT_ANSWER_FOLDER/*.h $FILE_NAME_FOLDER
+
                         if find "$DIR_GAB_INCLUDES" -maxdepth 1 -type f -name "*.h" | read; then
                             if [[ "$src_file_name" != "completo" ]] ; then
                                 echo "   - Copiando os $DIR_GAB_INCLUDES/*.h do professor para a pasta $FILE_NAME_FOLDER"
@@ -491,15 +459,9 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
                         fi
                     fi
 
-                    if [[ "$src_file_name" == "main" ]] || [[ "$src_file_name" == "completo" ]]; then
-                        echo "   - Copiando os $STUDENT_ANSWER_FOLDER/*.c do aluno para a pasta $FILE_NAME_FOLDER"
-                        TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Copiando os '$STUDENT_ANSWER_FOLDER/*.c' do aluno para a pasta $FILE_NAME_FOLDER\n"
-                        cp $STUDENT_ANSWER_FOLDER/*.c $FILE_NAME_FOLDER
-                    else
-                        echo "   - Copiando os $STUDENT_ANSWER_FOLDER/$src_file_name.c do aluno para a pasta $FILE_NAME_FOLDER"
-                        TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Copiando os '$STUDENT_ANSWER_FOLDER/src_file_name.c' do aluno para a pasta $FILE_NAME_FOLDER\n"
-                        cp $STUDENT_ANSWER_FOLDER/$src_file_name.c $FILE_NAME_FOLDER
-                    fi
+                    echo "   - Copiando os $STUDENT_ANSWER_FOLDER/*.c do aluno para a pasta $FILE_NAME_FOLDER"
+                    TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Copiando os '$STUDENT_ANSWER_FOLDER/*.c' do aluno para a pasta $FILE_NAME_FOLDER\n"
+                    cp $STUDENT_ANSWER_FOLDER/*.c $FILE_NAME_FOLDER
                 done
                 echo -e " - Arquivos copiados: ok!"
                 TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG} - Arquivos copiados: ok!\n"
@@ -511,46 +473,30 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
                 TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}\nCOMPILANDO OS ARQUIVOS NA PASTA DE RESULTADO DO ALUNO:\n"
                 compilation_errors=0
                 correct_compilations=0
-
-                echo "cd $STUDENT_RESULT_FOLDER"
-                cd $STUDENT_RESULT_FOLDER
                 for src_file_dir in "${src_files_names[@]}"; do
-                    echo "   - Compilando a pasta $src_file_dir do aluno, gerando os .o's"
-                    cd $src_file_dir
-                    gcc -Wall -c *.c 2>> result_compilation.txt
-                    if [ $? -ne 0 ]; then 
-                        echo "   - Erro de compilação! Verifique se o arquivo $source_file está correto."
-                        TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Erro de compilação! Verifique se o arquivo $source_file está correto.\n"
-                        compilation_errors=$(expr $compilation_errors + 1)
-                    else
-                        correct_compilations=$(expr $correct_compilations + 1)
-                    fi
-                    cd ../
-                #     echo " - Pasta $    :"
-                #     TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG} - Pasta $src_file_dir:\n"
-                #     for src_file_name in "${files_to_compile[@]}"; do
-                #         if [[ "$src_file_name" == "completo" ]] ; then
-                #             continue
-                #         fi
-                #         source_file=$STUDENT_RESULT_FOLDER/$src_file_dir/$src_file_name.c
-                #         object_file=$STUDENT_RESULT_FOLDER/$src_file_dir/$src_file_name.o
+                    echo " - Pasta $src_file_dir:"
+                    TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG} - Pasta $src_file_dir:\n"
+                    for src_file_name in "${files_to_compile[@]}"; do
+                        if [[ "$src_file_name" == "completo" ]] ; then
+                            continue
+                        fi
+                        source_file=$STUDENT_RESULT_FOLDER/$src_file_dir/$src_file_name.c
+                        object_file=$STUDENT_RESULT_FOLDER/$src_file_dir/$src_file_name.o
 
-                #         echo "   - Compilando o arquivo $src_file_name.c do aluno, gerando o $src_file_name.o"
-                #         TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Compilando o arquivo $src_file_name.c do aluno, gerando o $src_file_name.o\n"
-                #         gcc -Wall -c $source_file -o $object_file 2>> $STUDENT_RESULT_FOLDER/$src_file_dir/result_compilation.txt
-                #         if [ $? -ne 0 ]; then 
-                #             echo "   - Erro de compilação! Verifique se o arquivo $source_file está correto."
-                #             TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Erro de compilação! Verifique se o arquivo $source_file está correto.\n"
-                #             compilation_errors=$(expr $compilation_errors + 1)
-                #         else
-                #             correct_compilations=$(expr $correct_compilations + 1)
-                #         fi
-                #     done
-                #     echo "   - Arquivo de output gerado: $STUDENT_RESULT_FOLDER/$src_file_dir/result_compilation.txt"
-                #     TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Arquivo de output gerado: $STUDENT_RESULT_FOLDER/$src_file_dir/result_compilation.txt.\n"
+                        echo "   - Compilando o arquivo $src_file_name.c do aluno, gerando o $src_file_name.o"
+                        TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Compilando o arquivo $src_file_name.c do aluno, gerando o $src_file_name.o\n"
+                        gcc -Wall -c $source_file -o $object_file 2>> $STUDENT_RESULT_FOLDER/$src_file_dir/result_compilation.txt
+                        if [ $? -ne 0 ]; then 
+                            echo "   - Erro de compilação! Verifique se o arquivo $source_file está correto."
+                            TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Erro de compilação! Verifique se o arquivo $source_file está correto.\n"
+                            compilation_errors=$(expr $compilation_errors + 1)
+                        else
+                            correct_compilations=$(expr $correct_compilations + 1)
+                        fi
+                    done
+                    echo "   - Arquivo de output gerado: $STUDENT_RESULT_FOLDER/$src_file_dir/result_compilation.txt"
+                    TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Arquivo de output gerado: $STUDENT_RESULT_FOLDER/$src_file_dir/result_compilation.txt.\n"
                 done
-                cd ../../
-
                 test_cases_results["compilacoes_corretas"]=$correct_compilations
                 if [ $compilation_errors -gt 0 ] ; then
                     echo -e " - Arquivos Compilados: Erro!: $compilation_errors arquivos com erros de compilacao.\n"
@@ -648,7 +594,7 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
                             filename_out=$(basename -- "$output")   # Get only the file name without the full path
 
                             binary=$STUDENT_RESULT_FOLDER/$src_file_dir/prog
-                            valgrind_args="--leak-check=full --track-origins=yes --log-file=$DIR_CASE/result_valgrind.txt"
+                            valgrind_args="--leak-check=full --log-file=$DIR_CASE/result_valgrind.txt"
                             # output=$(timeout 5 valgrind $valgrind_args $binary < $txt_input_file > $output 2>&1)
 
                             if [ "$IGNORE_VALGRIND" = "false" ]; then
@@ -657,7 +603,6 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
                                 output=$(timeout 5 $binary $directory_path < $input_file > $output 2>&1)
                             fi
 
-                            find "." -maxdepth 1 -type f -name "*.txt" ! -name "log.txt" -exec mv {} "${DIR_CASE}/saida/" \;
                             # echo "output: $output"
                             # output=$(valgrind $valgrind_args $binary < $DIR_CASE/in.txt > "out.txt" 2>&1)
 
@@ -687,12 +632,12 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
                                         fi
                                     done < "$valgrind_result_file"
 
-                                    # if [[ -f $valgrind_result_file ]]; then 
-                                    #     rm -r $valgrind_result_file
-                                    # fi
+                                    if [[ -f $valgrind_result_file ]]; then 
+                                        rm -r $valgrind_result_file
+                                    fi
 
-                                    # echo "Test Case: $DIR_CASE" >> $valgrind_result_file
-                                    # echo "Valgrind result: allocs: $allocs frees: $frees errors: $errors contexts: $contexts" >> $valgrind_result_file
+                                    echo "Test Case: $DIR_CASE" >> $valgrind_result_file
+                                    echo "Valgrind result: allocs: $allocs frees: $frees errors: $errors contexts: $contexts" >> $valgrind_result_file
                                     if test "$allocs" = "$frees" && test "$errors" = "0"; then
                                         echo "   - Valgrind: Ok! allocs: $allocs, frees: $frees, errors: $errors"
                                         TERMINAL_OUTPUT_LOG="${TERMINAL_OUTPUT_LOG}   - Valgrind: Ok! allocs: $allocs, frees: $frees, errors: $errors.\n"
@@ -979,4 +924,3 @@ if [[ "$RUN_STUDENT_SCRIPT" == true ]] ; then
 
     create_csv
 fi
-
