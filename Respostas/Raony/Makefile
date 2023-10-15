@@ -22,3 +22,7 @@ leak:
 origins: 
 	clear
 	valgrind --track-origins=yes ./prog
+
+fix:
+	clear
+	bash correcao.sh

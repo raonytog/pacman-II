@@ -1,14 +1,19 @@
 #include "tPosicao.h"
 
 tPosicao* CriaPosicao(int linha, int coluna) {
-    tPosicao *posicao = (tPosicao *) calloc (2, sizeof(int));
+    tPosicao * posicao = (tPosicao *) malloc (sizeof(tPosicao));
+    if (posicao == NULL) {
+        printf("Alocacao impropria no tPosicao.c\n");
+        exit(1);
+    }
+
+    posicao->linha = linha;
+    posicao->coluna = coluna;
     return posicao;
 }
 
 tPosicao* ClonaPosicao(tPosicao* posicao) {
-    tPosicao * posicaoClone = NULL;
-    posicaoClone->coluna = posicao->coluna;
-    posicaoClone->linha = posicao->linha;
+    tPosicao * posicaoClone = CriaPosicao(posicao->linha, posicao->coluna);
     return posicaoClone;
 }
 

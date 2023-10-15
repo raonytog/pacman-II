@@ -9,13 +9,8 @@
  * \param colunaAcesso2 coluna da posição do acesso 2 do túnel
  */
 tTunel* CriaTunel(int linhaAcesso1, int colunaAcesso1, int linhaAcesso2, int colunaAcesso2) {
-    tPosicao * posicao1 = (tPosicao *) malloc (sizeof(tPosicao));
-    posicao1->linha = linhaAcesso1;
-    posicao1->coluna = colunaAcesso1;
-
-    tPosicao * posicao2 = (tPosicao *) malloc (sizeof(tPosicao));
-    posicao2->linha = linhaAcesso2;
-    posicao2->coluna = colunaAcesso2;
+    tPosicao * posicao1 = CriaPosicao(linhaAcesso1, colunaAcesso1);
+    tPosicao * posicao2 = CriaPosicao(linhaAcesso2, colunaAcesso2);
 
     tTunel * tunel = (tTunel *) malloc(sizeof(tTunel));
     tunel->acesso1 = posicao1;
@@ -29,8 +24,13 @@ tTunel* CriaTunel(int linhaAcesso1, int colunaAcesso1, int linhaAcesso2, int col
  * \param posicao posição
  */
 bool EntrouTunel(tTunel* tunel, tPosicao* posicao) {
-    if (posicao->coluna == tunel->acesso1->coluna || posicao->coluna == tunel->acesso2->coluna &&
-        posicao->linha == tunel->acesso1->linha || posicao->linha == tunel->acesso2->linha) return 1;
+    if (posicao->coluna == tunel->acesso1->coluna || 
+        posicao->coluna == tunel->acesso2->coluna &&
+        posicao->linha == tunel->acesso1->linha || 
+        posicao->linha == tunel->acesso2->linha) {
+        return 1;
+    }
+
     return 0;
 }
 
@@ -40,8 +40,16 @@ bool EntrouTunel(tTunel* tunel, tPosicao* posicao) {
  * \param posicao posição
  */
 void LevaFinalTunel(tTunel* tunel, tPosicao* posicao) {
-    posicao->coluna = tunel->acesso2->coluna;
-    posicao->linha = tunel->acesso2->linha;
+    if (!EntrouTunel(tunel, posicao)) return;
+
+    if (tunel->acesso1->coluna == posicao->coluna && tunel->acesso1->linha == posicao->linha) {
+        posicao->coluna = tunel->acesso2->coluna;
+        posicao->linha = tunel->acesso2->linha;
+
+    } else if (tunel->acesso2->coluna == posicao->coluna && tunel->acesso2->linha == posicao->linha) {
+        posicao->coluna = tunel->acesso1->coluna;
+        posicao->linha = tunel->acesso1->linha;
+    }
 }
 
 /**
