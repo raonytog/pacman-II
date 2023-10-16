@@ -1,0 +1,3 @@
+Movimento 6 (s) colidiu com a parede
+Movimento 13 (a) colidiu com a parede
+Movimento 17 (a) colidiu com a parede

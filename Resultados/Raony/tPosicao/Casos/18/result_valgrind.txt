@@ -1,0 +1,27 @@
+==21718== Memcheck, a memory error detector
+==21718== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21718== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==21718== Command: Resultados/Raony/tPosicao/prog Resultados/Raony/tPosicao/Casos/18
+==21718== Parent PID: 21717
+==21718== 
+==21718== error calling PR_SET_PTRACER, vgdb might block
+==21718== Conditional jump or move depends on uninitialised value(s)
+==21718==    at 0x10B2F1: lerComandoTeclado (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
+==21718==    by 0x10B3B9: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
+==21718==    by 0x10B8CF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
+==21718== 
+==21718== Conditional jump or move depends on uninitialised value(s)
+==21718==    at 0x10B307: lerComandoTeclado (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
+==21718==    by 0x10B3B9: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
+==21718==    by 0x10B8CF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
+==21718== 
+==21718== 
+==21718== HEAP SUMMARY:
+==21718==     in use at exit: 0 bytes in 0 blocks
+==21718==   total heap usage: 15,696 allocs, 15,696 frees, 162,620 bytes allocated
+==21718== 
+==21718== All heap blocks were freed -- no leaks are possible
+==21718== 
+==21718== Use --track-origins=yes to see where uninitialised values come from
+==21718== For lists of detected and suppressed errors, rerun with: -s
+==21718== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

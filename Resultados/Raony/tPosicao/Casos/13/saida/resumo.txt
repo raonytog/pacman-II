@@ -1,0 +1,25 @@
+Movimento 1 (w) pegou comida
+Movimento 23 (s) colidiu com a parede
+Movimento 24 (s) colidiu com a parede
+Movimento 25 (s) colidiu com a parede
+Movimento 26 (s) colidiu com a parede
+Movimento 27 (s) colidiu com a parede
+Movimento 29 (s) colidiu com a parede
+Movimento 31 (s) colidiu com a parede
+Movimento 32 (s) colidiu com a parede
+Movimento 34 (s) colidiu com a parede
+Movimento 35 (s) colidiu com a parede
+Movimento 36 (s) colidiu com a parede
+Movimento 37 (s) colidiu com a parede
+Movimento 41 (s) colidiu com a parede
+Movimento 42 (s) colidiu com a parede
+Movimento 43 (s) colidiu com a parede
+Movimento 61 (s) colidiu com a parede
+Movimento 78 (s) colidiu com a parede
+Movimento 82 (s) colidiu com a parede
+Movimento 92 (s) colidiu com a parede
+Movimento 93 (s) colidiu com a parede
+Movimento 94 (s) colidiu com a parede
+Movimento 95 (s) colidiu com a parede
+Movimento 97 (s) colidiu com a parede
+Movimento 98 (s) colidiu com a parede

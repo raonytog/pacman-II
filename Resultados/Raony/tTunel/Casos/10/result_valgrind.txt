@@ -1,0 +1,42 @@
+==12413== Memcheck, a memory error detector
+==12413== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==12413== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==12413== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/10
+==12413== Parent PID: 12412
+==12413== 
+==12413== error calling PR_SET_PTRACER, vgdb might block
+==12413== Invalid read of size 8
+==12413==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==12413== 
+==12413== 
+==12413== Process terminating with default action of signal 11 (SIGSEGV)
+==12413==  Access not within mapped region at address 0x0
+==12413==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12413==  If you believe this happened as a result of a stack
+==12413==  overflow in your program's main thread (unlikely but
+==12413==  possible), you can try to increase the size of the
+==12413==  main thread stack using the --main-stacksize= flag.
+==12413==  The main thread stack size used in this run was 8388608.
+==12413== 
+==12413== HEAP SUMMARY:
+==12413==     in use at exit: 9,040 bytes in 123 blocks
+==12413==   total heap usage: 116,392 allocs, 116,269 frees, 1,042,964 bytes allocated
+==12413== 
+==12413== LEAK SUMMARY:
+==12413==    definitely lost: 0 bytes in 0 blocks
+==12413==    indirectly lost: 0 bytes in 0 blocks
+==12413==      possibly lost: 0 bytes in 0 blocks
+==12413==    still reachable: 9,040 bytes in 123 blocks
+==12413==         suppressed: 0 bytes in 0 blocks
+==12413== Reachable blocks (those to which a pointer was found) are not shown.
+==12413== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==12413== 
+==12413== For lists of detected and suppressed errors, rerun with: -s
+==12413== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

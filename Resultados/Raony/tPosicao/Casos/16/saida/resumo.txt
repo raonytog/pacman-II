@@ -1,0 +1,3 @@
+Movimento 15 (w) colidiu com a parede
+Movimento 16 (w) colidiu com a parede
+Movimento 37 (s) colidiu com a parede
