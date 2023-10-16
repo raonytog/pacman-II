@@ -26,3 +26,9 @@ origins:
 try:
 	clear
 	bash correcao.sh
+
+push:
+	clear
+	git add *
+	git commit -a -m "fazendo"
+	git push origin main
