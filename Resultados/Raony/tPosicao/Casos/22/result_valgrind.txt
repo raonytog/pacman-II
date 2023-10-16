@@ -1,27 +1,16 @@
-==22662== Memcheck, a memory error detector
-==22662== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==22662== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==22662== Command: Resultados/Raony/tPosicao/prog Resultados/Raony/tPosicao/Casos/22
-==22662== Parent PID: 22661
-==22662== 
-==22662== error calling PR_SET_PTRACER, vgdb might block
-==22662== Conditional jump or move depends on uninitialised value(s)
-==22662==    at 0x10B2F1: lerComandoTeclado (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
-==22662==    by 0x10B3B9: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
-==22662==    by 0x10B8CF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
-==22662== 
-==22662== Conditional jump or move depends on uninitialised value(s)
-==22662==    at 0x10B307: lerComandoTeclado (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
-==22662==    by 0x10B3B9: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
-==22662==    by 0x10B8CF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPosicao/prog)
-==22662== 
-==22662== 
-==22662== HEAP SUMMARY:
-==22662==     in use at exit: 0 bytes in 0 blocks
-==22662==   total heap usage: 33,793 allocs, 33,793 frees, 300,321 bytes allocated
-==22662== 
-==22662== All heap blocks were freed -- no leaks are possible
-==22662== 
-==22662== Use --track-origins=yes to see where uninitialised values come from
-==22662== For lists of detected and suppressed errors, rerun with: -s
-==22662== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==17813== Memcheck, a memory error detector
+==17813== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==17813== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==17813== Command: Resultados/Raony/tPosicao/prog Resultados/Raony/tPosicao/Casos/22
+==17813== Parent PID: 17812
+==17813== 
+==17813== error calling PR_SET_PTRACER, vgdb might block
+==17813== 
+==17813== HEAP SUMMARY:
+==17813==     in use at exit: 0 bytes in 0 blocks
+==17813==   total heap usage: 33,550 allocs, 33,550 frees, 301,337 bytes allocated
+==17813== 
+==17813== All heap blocks were freed -- no leaks are possible
+==17813== 
+==17813== For lists of detected and suppressed errors, rerun with: -s
+==17813== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

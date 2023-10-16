@@ -1,42 +1,42 @@
-==17117== Memcheck, a memory error detector
-==17117== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==17117== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==17117== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/28
-==17117== Parent PID: 17116
-==17117== 
-==17117== error calling PR_SET_PTRACER, vgdb might block
-==17117== Invalid read of size 8
-==17117==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==17117== 
-==17117== 
-==17117== Process terminating with default action of signal 11 (SIGSEGV)
-==17117==  Access not within mapped region at address 0x0
-==17117==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==17117==  If you believe this happened as a result of a stack
-==17117==  overflow in your program's main thread (unlikely but
-==17117==  possible), you can try to increase the size of the
-==17117==  main thread stack using the --main-stacksize= flag.
-==17117==  The main thread stack size used in this run was 8388608.
-==17117== 
-==17117== HEAP SUMMARY:
-==17117==     in use at exit: 3,464 bytes in 41 blocks
-==17117==   total heap usage: 78,359 allocs, 78,318 frees, 666,910 bytes allocated
-==17117== 
-==17117== LEAK SUMMARY:
-==17117==    definitely lost: 0 bytes in 0 blocks
-==17117==    indirectly lost: 0 bytes in 0 blocks
-==17117==      possibly lost: 0 bytes in 0 blocks
-==17117==    still reachable: 3,464 bytes in 41 blocks
-==17117==         suppressed: 0 bytes in 0 blocks
-==17117== Reachable blocks (those to which a pointer was found) are not shown.
-==17117== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==17117== 
-==17117== For lists of detected and suppressed errors, rerun with: -s
-==17117== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==12884== Memcheck, a memory error detector
+==12884== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==12884== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==12884== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/28
+==12884== Parent PID: 12883
+==12884== 
+==12884== error calling PR_SET_PTRACER, vgdb might block
+==12884== Invalid read of size 8
+==12884==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==12884== 
+==12884== 
+==12884== Process terminating with default action of signal 11 (SIGSEGV)
+==12884==  Access not within mapped region at address 0x0
+==12884==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
+==12884==  If you believe this happened as a result of a stack
+==12884==  overflow in your program's main thread (unlikely but
+==12884==  possible), you can try to increase the size of the
+==12884==  main thread stack using the --main-stacksize= flag.
+==12884==  The main thread stack size used in this run was 8388608.
+==12884== 
+==12884== HEAP SUMMARY:
+==12884==     in use at exit: 3,464 bytes in 41 blocks
+==12884==   total heap usage: 78,359 allocs, 78,318 frees, 666,910 bytes allocated
+==12884== 
+==12884== LEAK SUMMARY:
+==12884==    definitely lost: 0 bytes in 0 blocks
+==12884==    indirectly lost: 0 bytes in 0 blocks
+==12884==      possibly lost: 0 bytes in 0 blocks
+==12884==    still reachable: 3,464 bytes in 41 blocks
+==12884==         suppressed: 0 bytes in 0 blocks
+==12884== Reachable blocks (those to which a pointer was found) are not shown.
+==12884== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==12884== 
+==12884== For lists of detected and suppressed errors, rerun with: -s
+==12884== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

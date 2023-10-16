@@ -1156,274 +1156,274 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 01:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/01/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 35,041, frees: 35,041, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 34,839, frees: 34,839, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 02:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/02/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,918, frees: 1,918, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 1,835, frees: 1,835, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 03:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/03/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,320,307, frees: 1,320,307, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 1,319,273, frees: 1,319,273, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 04:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/04/result_valgrind.txt.
- - Valgrind: Ok! allocs: 397,477, frees: 397,477, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 397,792, frees: 397,792, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 05:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/05/result_valgrind.txt.
- - Valgrind: Ok! allocs: 1,431,100, frees: 1,431,100, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 1,431,242, frees: 1,431,242, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 06:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/06/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 193,416, frees: 193,416, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 193,143, frees: 193,143, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 07:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/07/result_valgrind.txt.
- - Valgrind: Ok! allocs: 8,978, frees: 8,978, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 9,025, frees: 9,025, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 08:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/08/result_valgrind.txt.
- - Valgrind: Ok! allocs: 54,374, frees: 54,374, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 54,320, frees: 54,320, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 09:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/09/result_valgrind.txt.
- - Valgrind: Ok! allocs: 749,612, frees: 749,612, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 750,044, frees: 750,044, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 10:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/10/result_valgrind.txt.
- - Valgrind: Ok! allocs: 116,450, frees: 116,450, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 116,392, frees: 116,392, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 11:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/11/result_valgrind.txt.
- - Valgrind: Ok! allocs: 934,020, frees: 934,020, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 934,431, frees: 934,431, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 12:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/12/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 58,772, frees: 58,772, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 58,376, frees: 58,376, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 13:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/13/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 54,913, frees: 54,913, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 54,479, frees: 54,479, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 14:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/14/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 38,717, frees: 38,717, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 38,525, frees: 38,525, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 15:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/15/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 22,650, frees: 22,650, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 22,236, frees: 22,236, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 16:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/16/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 8,663, frees: 8,663, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 8,544, frees: 8,544, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 17:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/17/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 8,673, frees: 8,673, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 5,646, frees: 5,646, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 18:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/18/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 15,696, frees: 15,696, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 15,610, frees: 15,610, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 19:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/19/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 59,509, frees: 59,509, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 59,022, frees: 59,022, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 20:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/20/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 42,733, frees: 42,733, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 42,509, frees: 42,509, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 21:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/21/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 11,323, frees: 11,323, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 11,156, frees: 11,156, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 22:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/22/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 33,793, frees: 33,793, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 33,550, frees: 33,550, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 23:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/23/result_valgrind.txt.
- - Valgrind: Ok! allocs: 34,575, frees: 34,575, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 34,635, frees: 34,635, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 24:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/24/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 21,339, frees: 21,339, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 21,166, frees: 21,166, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 25:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/25/result_valgrind.txt.
- - Valgrind: Ok! allocs: 135,136, frees: 135,136, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 135,118, frees: 135,118, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 26:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/26/result_valgrind.txt.
- - Valgrind: Ok! allocs: 76,064, frees: 76,064, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 76,006, frees: 76,006, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 27:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/27/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 9,752, frees: 9,752, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 9,344, frees: 9,344, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 28:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/28/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 78,932, frees: 78,932, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 78,359, frees: 78,359, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 29:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/29/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 80,214, frees: 80,214, errors: 2 | Desconto do valgrind 30.00%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 79,390, frees: 79,390, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta tPosicao / Caso 30:
  - Arquivo de output gerado: Resultados/Raony/tPosicao/Casos/30/result_valgrind.txt.
- - Valgrind: Ok! allocs: 110,723, frees: 110,723, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o estatisticas.txt: Incorreto!
+ - Valgrind: Ok! allocs: 110,669, frees: 110,669, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o estatisticas.txt: Ok! Peso: 2.0
  - Resultado para o inicializacao.txt: Ok! Peso: 1.2
- - Resultado para o ranking.txt: Incorreto!
- - Resultado para o resumo.txt: Incorreto!
- - Resultado para o saida.txt: Incorreto!
- - Resultado para o trilha.txt: Incorreto!
+ - Resultado para o ranking.txt: Ok! Peso: 2.0
+ - Resultado para o resumo.txt: Ok! Peso: 1.2
+ - Resultado para o saida.txt: Ok! Peso: 1.8
+ - Resultado para o trilha.txt: Ok! Peso: 1.8
  - Pasta completo / Caso 01:
  - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
  - O aluno não gerou o arquivo de saída Resultados/Raony/completo/Casos/01/saida/estatisticas.txt, considerando resultado incorreto!
@@ -1918,7 +1918,7 @@ Nome 0: Raony
  - Valgrinds Corretos tMapa: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta tMapa, olhar detalhamento nos prints acima!)
  - Valgrinds Corretos tMovimento: 30 valgrinds corretos de 30 (não teve desconto na nota)
  - Valgrinds Corretos tTunel: 6 valgrinds corretos de 30 (teve desconto na nota para a pasta tTunel, olhar detalhamento nos prints acima!)
- - Valgrinds Corretos tPosicao: 11 valgrinds corretos de 30 (teve desconto na nota para a pasta tPosicao, olhar detalhamento nos prints acima!)
+ - Valgrinds Corretos tPosicao: 30 valgrinds corretos de 30 (não teve desconto na nota)
  - Valgrinds Corretos completo: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta completo, olhar detalhamento nos prints acima!)
  - Valgrinds Corretos main: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta main, olhar detalhamento nos prints acima!)
  - Cômputo final das Notas:
@@ -1926,10 +1926,10 @@ Nome 0: Raony
  - Pasta tMapa (peso 2.5): 0 resultados corretos de 180 / Nota 0
  - Pasta tMovimento (peso 1.0): 180 resultados corretos de 180 / Nota 1.00
  - Pasta tTunel (peso 1.0): 180 resultados corretos de 180 / Nota .76
- - Pasta tPosicao (peso 1.0): 30 resultados corretos de 180 / Nota .09
+ - Pasta tPosicao (peso 1.0): 180 resultados corretos de 180 / Nota 1.00
  - Pasta completo (peso 1.0): 0 resultados corretos de 180 / Nota 0
  - Pasta main (peso 1.0): 0 resultados corretos de 180 / Nota 0
- - Nota Final Raony: 1.85
+ - Nota Final Raony: 2.76
 
 ----------------------------------------------------------------------------
 

@@ -1,63 +1,33 @@
-Movimento 2 (w) colidiu com a parede
-Movimento 4 (w) colidiu com a parede
-Movimento 5 (w) colidiu com a parede
-Movimento 6 (s) colidiu com a parede
-Movimento 9 (w) colidiu com a parede
-Movimento 15 (w) colidiu com a parede
-Movimento 16 (w) colidiu com a parede
-Movimento 17 (w) colidiu com a parede
-Movimento 18 (w) colidiu com a parede
-Movimento 19 (w) colidiu com a parede
-Movimento 26 (s) colidiu com a parede
-Movimento 27 (s) colidiu com a parede
-Movimento 28 (s) colidiu com a parede
-Movimento 29 (s) colidiu com a parede
-Movimento 30 (s) colidiu com a parede
-Movimento 32 (s) colidiu com a parede
-Movimento 35 (s) colidiu com a parede
-Movimento 36 (s) colidiu com a parede
-Movimento 37 (s) colidiu com a parede
-Movimento 38 (s) colidiu com a parede
-Movimento 39 (s) colidiu com a parede
-Movimento 40 (s) colidiu com a parede
-Movimento 59 (w) colidiu com a parede
-Movimento 60 (w) colidiu com a parede
-Movimento 61 (w) colidiu com a parede
-Movimento 62 (w) colidiu com a parede
-Movimento 66 (w) colidiu com a parede
-Movimento 68 (w) colidiu com a parede
-Movimento 69 (w) colidiu com a parede
-Movimento 70 (w) colidiu com a parede
-Movimento 71 (w) colidiu com a parede
-Movimento 72 (w) colidiu com a parede
-Movimento 75 (s) colidiu com a parede
-Movimento 76 (w) colidiu com a parede
-Movimento 77 (w) colidiu com a parede
-Movimento 78 (w) colidiu com a parede
-Movimento 89 (s) colidiu com a parede
-Movimento 91 (s) colidiu com a parede
-Movimento 92 (w) colidiu com a parede
-Movimento 94 (w) colidiu com a parede
-Movimento 99 (s) colidiu com a parede
-Movimento 100 (s) colidiu com a parede
-Movimento 101 (w) colidiu com a parede
-Movimento 104 (s) colidiu com a parede
-Movimento 105 (s) colidiu com a parede
-Movimento 106 (s) colidiu com a parede
-Movimento 107 (s) colidiu com a parede
-Movimento 108 (s) colidiu com a parede
-Movimento 109 (s) colidiu com a parede
-Movimento 110 (s) colidiu com a parede
-Movimento 111 (s) colidiu com a parede
-Movimento 112 (s) colidiu com a parede
-Movimento 113 (s) colidiu com a parede
-Movimento 114 (s) colidiu com a parede
-Movimento 130 (w) colidiu com a parede
-Movimento 131 (w) colidiu com a parede
-Movimento 134 (w) colidiu com a parede
-Movimento 135 (w) colidiu com a parede
-Movimento 138 (s) colidiu com a parede
-Movimento 139 (s) colidiu com a parede
-Movimento 140 (w) colidiu com a parede
-Movimento 141 (w) colidiu com a parede
-Movimento 144 (w) colidiu com a parede
+Movimento 3 (a) colidiu com a parede
+Movimento 7 (d) colidiu com a parede
+Movimento 8 (d) colidiu com a parede
+Movimento 13 (d) pegou comida
+Movimento 16 (w) pegou comida
+Movimento 17 (w) pegou comida
+Movimento 19 (w) pegou comida
+Movimento 21 (d) pegou comida
+Movimento 26 (s) pegou comida
+Movimento 31 (a) pegou comida
+Movimento 33 (d) pegou comida
+Movimento 36 (s) pegou comida
+Movimento 39 (s) pegou comida
+Movimento 40 (s) pegou comida
+Movimento 51 (a) pegou comida
+Movimento 63 (d) pegou comida
+Movimento 68 (w) pegou comida
+Movimento 75 (s) pegou comida
+Movimento 81 (d) pegou comida
+Movimento 82 (d) pegou comida
+Movimento 90 (a) pegou comida
+Movimento 91 (s) pegou comida
+Movimento 93 (a) pegou comida
+Movimento 94 (w) pegou comida
+Movimento 95 (a) pegou comida
+Movimento 98 (a) pegou comida
+Movimento 100 (s) pegou comida
+Movimento 103 (a) pegou comida
+Movimento 111 (s) pegou comida
+Movimento 132 (d) pegou comida
+Movimento 137 (d) pegou comida
+Movimento 139 (s) pegou comida
+Movimento 145 (a) pegou comida

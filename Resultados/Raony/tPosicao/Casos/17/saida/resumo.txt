@@ -1,8 +1,9 @@
-Movimento 5 (w) colidiu com a parede
-Movimento 6 (w) colidiu com a parede
-Movimento 16 (s) colidiu com a parede
-Movimento 17 (s) colidiu com a parede
-Movimento 21 (w) colidiu com a parede
+Movimento 8 (d) pegou comida
+Movimento 9 (d) pegou comida
+Movimento 10 (d) pegou comida
+Movimento 11 (d) pegou comida
+Movimento 12 (d) pegou comida
+Movimento 18 (a) pegou comida
 Movimento 29 (w) colidiu com a parede
-Movimento 32 (w) colidiu com a parede
-Movimento 33 (w) colidiu com a parede
+Movimento 30 (a) colidiu com a parede
+Movimento 31 (d) fim de jogo por encostar em um fantasma
