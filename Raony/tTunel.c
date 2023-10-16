@@ -1,13 +1,5 @@
 #include "tTunel.h"
-#include "tPosicao.h"
 
-/**
- * Cria o tunel dinamicamente
- * \param linhaAcesso1 linha da posição do acesso 1 do túnel
- * \param colunaAcesso1 coluna da posição do acesso 1 do túnel
- * \param linhaAcesso2 linha da posição do acesso 2 do túnel
- * \param colunaAcesso2 coluna da posição do acesso 2 do túnel
- */
 tTunel* CriaTunel(int linhaAcesso1, int colunaAcesso1, int linhaAcesso2, int colunaAcesso2) {
     tPosicao * posicao1 = CriaPosicao(linhaAcesso1, colunaAcesso1);
     tPosicao * posicao2 = CriaPosicao(linhaAcesso2, colunaAcesso2);
@@ -18,11 +10,6 @@ tTunel* CriaTunel(int linhaAcesso1, int colunaAcesso1, int linhaAcesso2, int col
     return tunel;
 }
 
-/**
- * Verifica se entrou no túnel pela posição
- * \param tunel tunel
- * \param posicao posição
- */
 bool EntrouTunel(tTunel* tunel, tPosicao* posicao) {
     if (posicao->coluna == tunel->acesso1->coluna || 
         posicao->coluna == tunel->acesso2->coluna &&
@@ -34,11 +21,6 @@ bool EntrouTunel(tTunel* tunel, tPosicao* posicao) {
     return 0;
 }
 
-/**
- * Atualiza a posição para o final do túnel
- * \param tunel tunel
- * \param posicao posição
- */
 void LevaFinalTunel(tTunel* tunel, tPosicao* posicao) {
     if (!EntrouTunel(tunel, posicao)) return;
 
@@ -52,11 +34,6 @@ void LevaFinalTunel(tTunel* tunel, tPosicao* posicao) {
     }
 }
 
-/**
- * Libera o espaço alocado para a estrutura tTunel
- * 
- * \param tunel tunel
- */
 void DesalocaTunel(tTunel* tunel) {
     DesalocaPosicao(tunel->acesso1);
     DesalocaPosicao(tunel->acesso2);
