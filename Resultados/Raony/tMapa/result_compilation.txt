@@ -1,2 +1,54 @@
-cc1: fatal error: *.c: No such file or directory
-compilation terminated.
+tMapa.c: In function ‘CriaMapa’:
+tMapa.c:22:13: warning: implicit declaration of function ‘open’; did you mean ‘popen’? [-Wimplicit-function-declaration]
+   22 |     fMapa = open(caminhoConfig);
+      |             ^~~~
+      |             popen
+tMapa.c:22:11: warning: assignment to ‘FILE *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   22 |     fMapa = open(caminhoConfig);
+      |           ^
+tMapa.c:29:12: warning: passing argument 1 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   29 |     fscanf("%d", &mapa->nMaximoMovimentos);
+      |            ^~~~
+      |            |
+      |            char *
+In file included from tMapa.h:4,
+                 from tMapa.c:1:
+/usr/include/stdio.h:415:37: note: expected ‘FILE * restrict’ but argument is of type ‘char *’
+  415 | extern int fscanf (FILE *__restrict __stream,
+      |                    ~~~~~~~~~~~~~~~~~^~~~~~~~
+tMapa.c:29:18: warning: passing argument 2 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   29 |     fscanf("%d", &mapa->nMaximoMovimentos);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                  |
+      |                  int *
+In file included from tMapa.h:4,
+                 from tMapa.c:1:
+/usr/include/stdio.h:416:43: note: expected ‘const char * restrict’ but argument is of type ‘int *’
+  416 |                    const char *__restrict __format, ...) __wur;
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+tMapa.c:29:18: warning: format not a string literal and no format arguments [-Wformat-security]
+   29 |     fscanf("%d", &mapa->nMaximoMovimentos);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~
+tMapa.c:32:20: warning: passing argument 1 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   32 |             fscanf("%c", &mapa->grid[i][j]);
+      |                    ^~~~
+      |                    |
+      |                    char *
+In file included from tMapa.h:4,
+                 from tMapa.c:1:
+/usr/include/stdio.h:415:37: note: expected ‘FILE * restrict’ but argument is of type ‘char *’
+  415 | extern int fscanf (FILE *__restrict __stream,
+      |                    ~~~~~~~~~~~~~~~~~^~~~~~~~
+tMapa.c:32:13: warning: format not a string literal and no format arguments [-Wformat-security]
+   32 |             fscanf("%c", &mapa->grid[i][j]);
+      |             ^~~~~~
+tMapa.c:18:43: warning: unused variable ‘contagemElementos’ [-Wunused-variable]
+   18 |     int i = 0, j = 0, contagemLinhas = 0, contagemElementos = 0;
+      |                                           ^~~~~~~~~~~~~~~~~
+tMapa.c:18:23: warning: unused variable ‘contagemLinhas’ [-Wunused-variable]
+   18 |     int i = 0, j = 0, contagemLinhas = 0, contagemElementos = 0;
+      |                       ^~~~~~~~~~~~~~
+tMapa.c: In function ‘ObtemPosicaoItemMapa’:
+tMapa.c:49:1: warning: control reaches end of non-void function [-Wreturn-type]
+   49 | }
+      | ^

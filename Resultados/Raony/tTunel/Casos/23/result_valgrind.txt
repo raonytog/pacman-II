@@ -1,42 +1,15 @@
-==11404== Memcheck, a memory error detector
-==11404== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==11404== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==11404== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/23
-==11404== Parent PID: 11403
-==11404== 
-==11404== error calling PR_SET_PTRACER, vgdb might block
-==11404== Invalid read of size 8
-==11404==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==11404== 
-==11404== 
-==11404== Process terminating with default action of signal 11 (SIGSEGV)
-==11404==  Access not within mapped region at address 0x0
-==11404==    at 0x10D1B3: DesalocaTunel (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==    by 0x10C260: DesalocaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==    by 0x10B819: DesalocaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==    by 0x10B8BB: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tTunel/prog)
-==11404==  If you believe this happened as a result of a stack
-==11404==  overflow in your program's main thread (unlikely but
-==11404==  possible), you can try to increase the size of the
-==11404==  main thread stack using the --main-stacksize= flag.
-==11404==  The main thread stack size used in this run was 8388608.
-==11404== 
-==11404== HEAP SUMMARY:
-==11404==     in use at exit: 2,784 bytes in 31 blocks
-==11404==   total heap usage: 34,635 allocs, 34,604 frees, 307,534 bytes allocated
-==11404== 
-==11404== LEAK SUMMARY:
-==11404==    definitely lost: 0 bytes in 0 blocks
-==11404==    indirectly lost: 0 bytes in 0 blocks
-==11404==      possibly lost: 0 bytes in 0 blocks
-==11404==    still reachable: 2,784 bytes in 31 blocks
-==11404==         suppressed: 0 bytes in 0 blocks
-==11404== Reachable blocks (those to which a pointer was found) are not shown.
-==11404== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==11404== 
-==11404== For lists of detected and suppressed errors, rerun with: -s
-==11404== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==186215== Memcheck, a memory error detector
+==186215== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==186215== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==186215== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/23
+==186215== Parent PID: 186214
+==186215== 
+==186215== 
+==186215== HEAP SUMMARY:
+==186215==     in use at exit: 0 bytes in 0 blocks
+==186215==   total heap usage: 34,635 allocs, 34,635 frees, 339,790 bytes allocated
+==186215== 
+==186215== All heap blocks were freed -- no leaks are possible
+==186215== 
+==186215== For lists of detected and suppressed errors, rerun with: -s
+==186215== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

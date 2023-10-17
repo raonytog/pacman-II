@@ -1,0 +1,45 @@
+==169331== Memcheck, a memory error detector
+==169331== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==169331== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==169331== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/05
+==169331== Parent PID: 169330
+==169331== 
+==169331== Use of uninitialised value of size 8
+==169331==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331== 
+==169331== Invalid read of size 8
+==169331==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==169331== 
+==169331== 
+==169331== Process terminating with default action of signal 11 (SIGSEGV)
+==169331==  Access not within mapped region at address 0x0
+==169331==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==169331==  If you believe this happened as a result of a stack
+==169331==  overflow in your program's main thread (unlikely but
+==169331==  possible), you can try to increase the size of the
+==169331==  main thread stack using the --main-stacksize= flag.
+==169331==  The main thread stack size used in this run was 8388608.
+==169331== 
+==169331== HEAP SUMMARY:
+==169331==     in use at exit: 88 bytes in 2 blocks
+==169331==   total heap usage: 2 allocs, 0 frees, 88 bytes allocated
+==169331== 
+==169331== LEAK SUMMARY:
+==169331==    definitely lost: 0 bytes in 0 blocks
+==169331==    indirectly lost: 0 bytes in 0 blocks
+==169331==      possibly lost: 0 bytes in 0 blocks
+==169331==    still reachable: 88 bytes in 2 blocks
+==169331==         suppressed: 0 bytes in 0 blocks
+==169331== Reachable blocks (those to which a pointer was found) are not shown.
+==169331== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==169331== 
+==169331== Use --track-origins=yes to see where uninitialised values come from
+==169331== For lists of detected and suppressed errors, rerun with: -s
+==169331== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

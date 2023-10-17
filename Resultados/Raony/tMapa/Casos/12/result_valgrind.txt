@@ -1,0 +1,45 @@
+==171104== Memcheck, a memory error detector
+==171104== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==171104== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==171104== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/12
+==171104== Parent PID: 171103
+==171104== 
+==171104== Use of uninitialised value of size 8
+==171104==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104== 
+==171104== Invalid read of size 8
+==171104==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==171104== 
+==171104== 
+==171104== Process terminating with default action of signal 11 (SIGSEGV)
+==171104==  Access not within mapped region at address 0x0
+==171104==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==171104==  If you believe this happened as a result of a stack
+==171104==  overflow in your program's main thread (unlikely but
+==171104==  possible), you can try to increase the size of the
+==171104==  main thread stack using the --main-stacksize= flag.
+==171104==  The main thread stack size used in this run was 8388608.
+==171104== 
+==171104== HEAP SUMMARY:
+==171104==     in use at exit: 88 bytes in 2 blocks
+==171104==   total heap usage: 2 allocs, 0 frees, 88 bytes allocated
+==171104== 
+==171104== LEAK SUMMARY:
+==171104==    definitely lost: 0 bytes in 0 blocks
+==171104==    indirectly lost: 0 bytes in 0 blocks
+==171104==      possibly lost: 0 bytes in 0 blocks
+==171104==    still reachable: 88 bytes in 2 blocks
+==171104==         suppressed: 0 bytes in 0 blocks
+==171104== Reachable blocks (those to which a pointer was found) are not shown.
+==171104== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==171104== 
+==171104== Use --track-origins=yes to see where uninitialised values come from
+==171104== For lists of detected and suppressed errors, rerun with: -s
+==171104== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
