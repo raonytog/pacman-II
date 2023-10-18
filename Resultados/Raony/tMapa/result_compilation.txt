@@ -6,8 +6,8 @@ tMapa.c:22:13: warning: implicit declaration of function ‘open’; did you mea
 tMapa.c:22:11: warning: assignment to ‘FILE *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
    22 |     fMapa = open(caminhoConfig);
       |           ^
-tMapa.c:29:12: warning: passing argument 1 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
-   29 |     fscanf("%d", &mapa->nMaximoMovimentos);
+tMapa.c:28:12: warning: passing argument 1 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   28 |     fscanf("%d", &mapa->nMaximoMovimentos);
       |            ^~~~
       |            |
       |            char *
@@ -16,8 +16,8 @@ In file included from tMapa.h:4,
 /usr/include/stdio.h:415:37: note: expected ‘FILE * restrict’ but argument is of type ‘char *’
   415 | extern int fscanf (FILE *__restrict __stream,
       |                    ~~~~~~~~~~~~~~~~~^~~~~~~~
-tMapa.c:29:18: warning: passing argument 2 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
-   29 |     fscanf("%d", &mapa->nMaximoMovimentos);
+tMapa.c:28:18: warning: passing argument 2 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   28 |     fscanf("%d", &mapa->nMaximoMovimentos);
       |                  ^~~~~~~~~~~~~~~~~~~~~~~~
       |                  |
       |                  int *
@@ -26,29 +26,59 @@ In file included from tMapa.h:4,
 /usr/include/stdio.h:416:43: note: expected ‘const char * restrict’ but argument is of type ‘int *’
   416 |                    const char *__restrict __format, ...) __wur;
       |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
-tMapa.c:29:18: warning: format not a string literal and no format arguments [-Wformat-security]
-   29 |     fscanf("%d", &mapa->nMaximoMovimentos);
+tMapa.c:28:18: warning: format not a string literal and no format arguments [-Wformat-security]
+   28 |     fscanf("%d", &mapa->nMaximoMovimentos);
       |                  ^~~~~~~~~~~~~~~~~~~~~~~~
-tMapa.c:32:20: warning: passing argument 1 of ‘fscanf’ from incompatible pointer type [-Wincompatible-pointer-types]
-   32 |             fscanf("%c", &mapa->grid[i][j]);
-      |                    ^~~~
-      |                    |
-      |                    char *
-In file included from tMapa.h:4,
-                 from tMapa.c:1:
-/usr/include/stdio.h:415:37: note: expected ‘FILE * restrict’ but argument is of type ‘char *’
-  415 | extern int fscanf (FILE *__restrict __stream,
-      |                    ~~~~~~~~~~~~~~~~~^~~~~~~~
-tMapa.c:32:13: warning: format not a string literal and no format arguments [-Wformat-security]
-   32 |             fscanf("%c", &mapa->grid[i][j]);
-      |             ^~~~~~
-tMapa.c:18:43: warning: unused variable ‘contagemElementos’ [-Wunused-variable]
-   18 |     int i = 0, j = 0, contagemLinhas = 0, contagemElementos = 0;
-      |                                           ^~~~~~~~~~~~~~~~~
-tMapa.c:18:23: warning: unused variable ‘contagemLinhas’ [-Wunused-variable]
-   18 |     int i = 0, j = 0, contagemLinhas = 0, contagemElementos = 0;
-      |                       ^~~~~~~~~~~~~~
+tMapa.c:18:9: warning: unused variable ‘i’ [-Wunused-variable]
+   18 |     int i = 0, j = 0, contagemLinhas = 0;
+      |         ^
+tMapa.c: In function ‘ObtemItemMapa’:
+tMapa.c:64:22: warning: returning ‘char *’ from a function with return type ‘char’ makes integer from pointer without a cast [-Wint-conversion]
+   64 |     return mapa->grid[mapa->nColunas * posicao->linha + posicao->coluna];
+      |            ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tMapa.c: In function ‘EncontrouComidaMapa’:
+tMapa.c:92:91: warning: passing argument 1 of ‘ObtemNumeroLinhasMapa’ from incompatible pointer type [-Wincompatible-pointer-types]
+   92 |         ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || ObtemNumeroLinhasMapa(posicao) < 0 ||
+      |                                                                                           ^~~~~~~
+      |                                                                                           |
+      |                                                                                           tPosicao *
+tMapa.c:67:34: note: expected ‘tMapa *’ but argument is of type ‘tPosicao *’
+   67 | int ObtemNumeroLinhasMapa(tMapa* mapa) {
+      |                           ~~~~~~~^~~~
+tMapa.c:93:109: warning: comparison between pointer and integer
+   93 |         mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] != COMIDA) return 0;
+      |                                                                                                             ^~
+tMapa.c: In function ‘EncontrouParedeMapa’:
+tMapa.c:102:91: warning: passing argument 1 of ‘ObtemNumeroLinhasMapa’ from incompatible pointer type [-Wincompatible-pointer-types]
+  102 |         ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || ObtemNumeroLinhasMapa(posicao) < 0 ||
+      |                                                                                           ^~~~~~~
+      |                                                                                           |
+      |                                                                                           tPosicao *
+tMapa.c:67:34: note: expected ‘tMapa *’ but argument is of type ‘tPosicao *’
+   67 | int ObtemNumeroLinhasMapa(tMapa* mapa) {
+      |                           ~~~~~~~^~~~
+tMapa.c:103:109: warning: comparison between pointer and integer
+  103 |         mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] != PAREDE) return 0;
+      |                                                                                                             ^~
+tMapa.c:105:105: warning: comparison between pointer and integer
+  105 |     mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] == PAREDE;
+      |                                                                                                         ^~
+tMapa.c:105:105: warning: value computed is not used [-Wunused-value]
+  105 |     mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] == PAREDE;
+      |                                                                                                         ^
+tMapa.c: In function ‘AtualizaItemMapa’:
+tMapa.c:112:91: warning: passing argument 1 of ‘ObtemNumeroLinhasMapa’ from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |         ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || ObtemNumeroLinhasMapa(posicao) < 0) return 0;
+      |                                                                                           ^~~~~~~
+      |                                                                                           |
+      |                                                                                           tPosicao *
+tMapa.c:67:34: note: expected ‘tMapa *’ but argument is of type ‘tPosicao *’
+   67 | int ObtemNumeroLinhasMapa(tMapa* mapa) {
+      |                           ~~~~~~~^~~~
+tMapa.c:114:105: warning: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Wint-conversion]
+  114 |     mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] = item;
+      |                                                                                                         ^
 tMapa.c: In function ‘ObtemPosicaoItemMapa’:
-tMapa.c:49:1: warning: control reaches end of non-void function [-Wreturn-type]
-   49 | }
+tMapa.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+   56 | }
       | ^

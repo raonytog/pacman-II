@@ -1,15 +1,15 @@
-==178160== Memcheck, a memory error detector
-==178160== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==178160== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==178160== Command: Resultados/Raony/tMovimento/prog Resultados/Raony/tMovimento/Casos/12
-==178160== Parent PID: 178159
-==178160== 
-==178160== 
-==178160== HEAP SUMMARY:
-==178160==     in use at exit: 0 bytes in 0 blocks
-==178160==   total heap usage: 58,376 allocs, 58,376 frees, 539,098 bytes allocated
-==178160== 
-==178160== All heap blocks were freed -- no leaks are possible
-==178160== 
-==178160== For lists of detected and suppressed errors, rerun with: -s
-==178160== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==108278== Memcheck, a memory error detector
+==108278== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==108278== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==108278== Command: Resultados/Raony/tMovimento/prog Resultados/Raony/tMovimento/Casos/12
+==108278== Parent PID: 108277
+==108278== 
+==108278== 
+==108278== HEAP SUMMARY:
+==108278==     in use at exit: 0 bytes in 0 blocks
+==108278==   total heap usage: 58,376 allocs, 58,376 frees, 539,098 bytes allocated
+==108278== 
+==108278== All heap blocks were freed -- no leaks are possible
+==108278== 
+==108278== For lists of detected and suppressed errors, rerun with: -s
+==108278== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

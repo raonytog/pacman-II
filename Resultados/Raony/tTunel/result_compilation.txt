@@ -1,6 +1,6 @@
 tTunel.c: In function ‘EntrouTunel’:
-tTunel.c:15:51: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
-   15 |         posicao->coluna == tunel->acesso2->coluna &&
+tTunel.c:20:51: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+   20 |         posicao->coluna == tunel->acesso2->coluna &&
       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
-   16 |         posicao->linha == tunel->acesso1->linha ||
+   21 |         posicao->linha == tunel->acesso1->linha ||
       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    

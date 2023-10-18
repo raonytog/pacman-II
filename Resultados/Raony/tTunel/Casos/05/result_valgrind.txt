@@ -1,15 +1,15 @@
-==182651== Memcheck, a memory error detector
-==182651== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==182651== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==182651== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/05
-==182651== Parent PID: 182650
-==182651== 
-==182651== 
-==182651== HEAP SUMMARY:
-==182651==     in use at exit: 0 bytes in 0 blocks
-==182651==   total heap usage: 1,431,242 allocs, 1,431,242 frees, 12,172,589 bytes allocated
-==182651== 
-==182651== All heap blocks were freed -- no leaks are possible
-==182651== 
-==182651== For lists of detected and suppressed errors, rerun with: -s
-==182651== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==112658== Memcheck, a memory error detector
+==112658== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==112658== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==112658== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/05
+==112658== Parent PID: 112657
+==112658== 
+==112658== 
+==112658== HEAP SUMMARY:
+==112658==     in use at exit: 0 bytes in 0 blocks
+==112658==   total heap usage: 1,431,242 allocs, 1,431,242 frees, 12,172,589 bytes allocated
+==112658== 
+==112658== All heap blocks were freed -- no leaks are possible
+==112658== 
+==112658== For lists of detected and suppressed errors, rerun with: -s
+==112658== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

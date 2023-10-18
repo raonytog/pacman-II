@@ -1,45 +1,41 @@
-==168823== Memcheck, a memory error detector
-==168823== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==168823== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==168823== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/03
-==168823== Parent PID: 168822
-==168823== 
-==168823== Use of uninitialised value of size 8
-==168823==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823== 
-==168823== Invalid read of size 8
-==168823==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==168823== 
-==168823== 
-==168823== Process terminating with default action of signal 11 (SIGSEGV)
-==168823==  Access not within mapped region at address 0x0
-==168823==    at 0x10BA05: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==    by 0x10A767: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==    by 0x10B8BF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==168823==  If you believe this happened as a result of a stack
-==168823==  overflow in your program's main thread (unlikely but
-==168823==  possible), you can try to increase the size of the
-==168823==  main thread stack using the --main-stacksize= flag.
-==168823==  The main thread stack size used in this run was 8388608.
-==168823== 
-==168823== HEAP SUMMARY:
-==168823==     in use at exit: 88 bytes in 2 blocks
-==168823==   total heap usage: 2 allocs, 0 frees, 88 bytes allocated
-==168823== 
-==168823== LEAK SUMMARY:
-==168823==    definitely lost: 0 bytes in 0 blocks
-==168823==    indirectly lost: 0 bytes in 0 blocks
-==168823==      possibly lost: 0 bytes in 0 blocks
-==168823==    still reachable: 88 bytes in 2 blocks
-==168823==         suppressed: 0 bytes in 0 blocks
-==168823== Reachable blocks (those to which a pointer was found) are not shown.
-==168823== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==168823== 
-==168823== Use --track-origins=yes to see where uninitialised values come from
-==168823== For lists of detected and suppressed errors, rerun with: -s
-==168823== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==99128== Memcheck, a memory error detector
+==99128== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==99128== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==99128== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/03
+==99128== Parent PID: 99127
+==99128== 
+==99128== Invalid read of size 4
+==99128==    at 0x4901FAD: rewind (rewind.c:34)
+==99128==    by 0x10B9E6: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==99128==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==99128==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==99128==  Address 0x4 is not stack'd, malloc'd or (recently) free'd
+==99128== 
+==99128== 
+==99128== Process terminating with default action of signal 11 (SIGSEGV)
+==99128==  Access not within mapped region at address 0x4
+==99128==    at 0x4901FAD: rewind (rewind.c:34)
+==99128==    by 0x10B9E6: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==99128==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==99128==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==99128==  If you believe this happened as a result of a stack
+==99128==  overflow in your program's main thread (unlikely but
+==99128==  possible), you can try to increase the size of the
+==99128==  main thread stack using the --main-stacksize= flag.
+==99128==  The main thread stack size used in this run was 8388608.
+==99128== 
+==99128== HEAP SUMMARY:
+==99128==     in use at exit: 4,184 bytes in 3 blocks
+==99128==   total heap usage: 3 allocs, 0 frees, 4,184 bytes allocated
+==99128== 
+==99128== LEAK SUMMARY:
+==99128==    definitely lost: 0 bytes in 0 blocks
+==99128==    indirectly lost: 0 bytes in 0 blocks
+==99128==      possibly lost: 0 bytes in 0 blocks
+==99128==    still reachable: 4,184 bytes in 3 blocks
+==99128==         suppressed: 0 bytes in 0 blocks
+==99128== Reachable blocks (those to which a pointer was found) are not shown.
+==99128== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==99128== 
+==99128== For lists of detected and suppressed errors, rerun with: -s
+==99128== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

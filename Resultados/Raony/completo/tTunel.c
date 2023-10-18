@@ -5,6 +5,11 @@ tTunel* CriaTunel(int linhaAcesso1, int colunaAcesso1, int linhaAcesso2, int col
     tPosicao * posicao2 = CriaPosicao(linhaAcesso2, colunaAcesso2);
 
     tTunel * tunel = (tTunel *) malloc(sizeof(tTunel));
+    if (tunel == NULL) {
+        printf("Alocacao impropria no tTunel.c\n");
+        exit(1);
+    }
+    
     tunel->acesso1 = posicao1;
     tunel->acesso2 = posicao2;
     return tunel;

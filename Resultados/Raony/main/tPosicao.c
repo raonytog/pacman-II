@@ -26,8 +26,7 @@ int ObtemColunaPosicao(tPosicao* posicao) {
 }
 
 void AtualizaPosicao(tPosicao* posicaoAtual, tPosicao* posicaoNova) {
-    posicaoAtual->linha = posicaoNova->linha;
-    posicaoAtual->coluna = posicaoNova->coluna;
+    *posicaoAtual = *posicaoNova;
 }
 
 bool SaoIguaisPosicao(tPosicao* posicao1, tPosicao* posicao2) {
