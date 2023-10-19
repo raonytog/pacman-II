@@ -1,41 +1,40 @@
-==102408== Memcheck, a memory error detector
-==102408== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==102408== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==102408== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/16
-==102408== Parent PID: 102407
-==102408== 
-==102408== Invalid read of size 4
-==102408==    at 0x4901FAD: rewind (rewind.c:34)
-==102408==    by 0x10B9E6: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==102408==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==102408==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==102408==  Address 0x4 is not stack'd, malloc'd or (recently) free'd
-==102408== 
-==102408== 
-==102408== Process terminating with default action of signal 11 (SIGSEGV)
-==102408==  Access not within mapped region at address 0x4
-==102408==    at 0x4901FAD: rewind (rewind.c:34)
-==102408==    by 0x10B9E6: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==102408==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==102408==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==102408==  If you believe this happened as a result of a stack
-==102408==  overflow in your program's main thread (unlikely but
-==102408==  possible), you can try to increase the size of the
-==102408==  main thread stack using the --main-stacksize= flag.
-==102408==  The main thread stack size used in this run was 8388608.
-==102408== 
-==102408== HEAP SUMMARY:
-==102408==     in use at exit: 4,184 bytes in 3 blocks
-==102408==   total heap usage: 3 allocs, 0 frees, 4,184 bytes allocated
-==102408== 
-==102408== LEAK SUMMARY:
-==102408==    definitely lost: 0 bytes in 0 blocks
-==102408==    indirectly lost: 0 bytes in 0 blocks
-==102408==      possibly lost: 0 bytes in 0 blocks
-==102408==    still reachable: 4,184 bytes in 3 blocks
-==102408==         suppressed: 0 bytes in 0 blocks
-==102408== Reachable blocks (those to which a pointer was found) are not shown.
-==102408== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==102408== 
-==102408== For lists of detected and suppressed errors, rerun with: -s
-==102408== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==5583== Memcheck, a memory error detector
+==5583== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5583== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==5583== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/16
+==5583== Parent PID: 5582
+==5583== 
+==5583== error calling PR_SET_PTRACER, vgdb might block
+==5583== Invalid read of size 8
+==5583==    at 0x10C1E6: CriaTrilhaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==5583==    by 0x10A81F: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==5583==    by 0x10B8BF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==5583==  Address 0x50 is not stack'd, malloc'd or (recently) free'd
+==5583== 
+==5583== 
+==5583== Process terminating with default action of signal 11 (SIGSEGV)
+==5583==  Access not within mapped region at address 0x50
+==5583==    at 0x10C1E6: CriaTrilhaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==5583==    by 0x10A81F: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==5583==    by 0x10B8BF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==5583==  If you believe this happened as a result of a stack
+==5583==  overflow in your program's main thread (unlikely but
+==5583==  possible), you can try to increase the size of the
+==5583==  main thread stack using the --main-stacksize= flag.
+==5583==  The main thread stack size used in this run was 8388608.
+==5583== 
+==5583== HEAP SUMMARY:
+==5583==     in use at exit: 1,180 bytes in 8 blocks
+==5583==   total heap usage: 8 allocs, 0 frees, 1,180 bytes allocated
+==5583== 
+==5583== LEAK SUMMARY:
+==5583==    definitely lost: 0 bytes in 0 blocks
+==5583==    indirectly lost: 0 bytes in 0 blocks
+==5583==      possibly lost: 0 bytes in 0 blocks
+==5583==    still reachable: 1,180 bytes in 8 blocks
+==5583==         suppressed: 0 bytes in 0 blocks
+==5583== Reachable blocks (those to which a pointer was found) are not shown.
+==5583== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==5583== 
+==5583== For lists of detected and suppressed errors, rerun with: -s
+==5583== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

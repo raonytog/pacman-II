@@ -5,43 +5,60 @@
 #define PAREDE '#'
 
 /**
- * Cria o mapa dinamicamente
- * \param caminho caminho do arquivo com as configurações do mapa
+ * Dado o ponteiro para uma posicao, verifica se 
+ * a mesma eh valida no no tabuleiro
+ * \param ponteiro para a posicao
  */
+bool EhPosicaoValida(tMapa * mapa, tPosicao * posicao) {
+    if (ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || 
+        ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || 
+        ObtemNumeroLinhasMapa(posicao) < 0 ||
+        ObtemColunaPosicao(posicao) < 0) return false;
+        return true;
+}
+
 tMapa* CriaMapa(const char* caminhoConfig) {
+    int i = 0, j = 0, contagemLinhas = 0, achouBreak = 0;
+    char aux;
 
-    /*
-    MAT + COL * I + J
-    int (MAT*)[C]    
-    */
+    tMapa* mapa = (tMapa*)malloc(sizeof(tMapa));
+    FILE* fMapa = NULL;
 
-    int i = 0, j = 0, contagemLinhas = 0;
-    char aux = '0';
-    tMapa * mapa = (tMapa *) malloc (sizeof(tMapa));
-    FILE * fMapa = NULL;
-    fMapa = open(caminhoConfig);
+    fMapa = fopen(caminhoConfig, "r");
     if (!fMapa) {
         printf("Erro ao abrir o mapa!\n");
         exit(1);
     }
 
-    fscanf("%d", &mapa->nMaximoMovimentos);
-    while ( aux != '\n') {
-        scanf("%c", &aux);
-        j++;
-    }
-    mapa->nColunas = j;
+    mapa->nColunas = 0;
+    mapa->nLinhas = 0;
+    mapa->nFrutasAtual = 0;
+    mapa->nMaximoMovimentos = 0;
 
+    fscanf("%d%*c", &mapa->nMaximoMovimentos);
+
+    while (fscanf(fMapa, "%c", &aux) == 1) {
+        if (!achouBreak)
+            j++;
+
+        if (aux == '\n') {
+            mapa->nColunas = j-1;
+            achouBreak = 1;
+            mapa->nLinhas++;
+        }
+    }
+
+    // aloca memória para o grid
+    mapa->grid = (char**) malloc(mapa->nLinhas * sizeof(char*));
+    for (i = 0; i < mapa->nLinhas; i++) {
+        mapa->grid[i] = (char*)malloc(mapa->nColunas * sizeof(char));
+    }
+    
     rewind(fMapa);
-    scanf("%*c"); // joga fora a qnt de movimento q ja foi lida anteriormente
-
-    aux = '0';
-    while ( scanf("%c", &aux) == 1) {
-        if (aux == '\n') contagemLinhas++;
-    }
-    mapa->nLinhas = contagemLinhas;
-
-    mapa->grid = malloc (ObtemNumeroLinhasMapa(mapa) * ObtemNumeroColunasMapa(mapa) * sizeof(char));
+    fscanf(fMapa, "%*[^\n]%*c");
+    for (i = 0; i < mapa->nLinhas; i++) 
+        for (j = 0; j , mapa->nColunas; j++)
+            fscanf(fMapa, "%c", &mapa->grid[i][j]);
 
     return mapa;
 }
@@ -61,7 +78,7 @@ tTunel* ObtemTunelMapa(tMapa* mapa) {
 }
 
 char ObtemItemMapa(tMapa* mapa, tPosicao* posicao) {
-    return mapa->grid[mapa->nColunas * posicao->linha + posicao->coluna];
+    return mapa->grid[posicao->linha][posicao->coluna];
 }
 
 int ObtemNumeroLinhasMapa(tMapa* mapa) {
@@ -87,31 +104,25 @@ int ObtemNumeroMaximoMovimentosMapa(tMapa* mapa) {
 }
 
 bool EncontrouComidaMapa(tMapa* mapa, tPosicao* posicao) {
-        if (mapa == NULL || mapa->grid == NULL ||
-        ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || ObtemColunaPosicao(posicao) < 0 ||
-        ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || ObtemNumeroLinhasMapa(posicao) < 0 ||
-        mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] != COMIDA) return 0;
+        if (mapa == NULL || mapa->grid == NULL || EhPosicaoValida(mapa, posicao) ||
+            mapa->grid[posicao->linha][posicao->coluna] != COMIDA) return 0;
 
-    return mapa->grid[posicao->linha][posicao->coluna] == COMIDA;
+    mapa->grid[posicao->linha][posicao->coluna] == COMIDA;
     return 1;
 }
 
 bool EncontrouParedeMapa(tMapa* mapa, tPosicao* posicao) {
-    if (mapa == NULL || mapa->grid == NULL ||
-        ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || ObtemColunaPosicao(posicao) < 0 ||
-        ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || ObtemNumeroLinhasMapa(posicao) < 0 ||
-        mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] != PAREDE) return 0;
+    if (mapa == NULL || mapa->grid == NULL || EhPosicaoValida(mapa, posicao)  ||
+        mapa->grid[posicao->linha][posicao->coluna] != PAREDE) return 0;
 
-    mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] == PAREDE;
+    mapa->grid[posicao->linha][posicao->coluna] == PAREDE;
     return 1;
 }
 
 bool AtualizaItemMapa(tMapa* mapa, tPosicao* posicao, char item) {
-    if (mapa == NULL || mapa->grid == NULL ||
-        ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || ObtemColunaPosicao(posicao) < 0 ||
-        ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || ObtemNumeroLinhasMapa(posicao) < 0) return 0;
+    if (mapa == NULL || mapa->grid == NULL || EhPosicaoValida(mapa, posicao) ) return 0;
 
-    mapa->grid[ObtemNumeroColunasMapa(mapa) * ObtemLinhaPosicao(posicao) + ObtemColunaPosicao(posicao)] = item;
+    mapa->grid[posicao->linha][posicao->coluna] = item;
     return 1;
 }
 
