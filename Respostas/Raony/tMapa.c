@@ -58,10 +58,9 @@ tMapa* CriaMapa(const char* caminhoConfig) {
     }
 
     // aloca memória para o grid
-    mapa->grid = (char**) malloc(mapa->nLinhas * sizeof(char*));
-    for (i = 0; i < mapa->nLinhas; i++) {
-        mapa->grid[i] = (char*) malloc(mapa->nColunas * sizeof(char));
-    }
+    mapa->grid = (char**) malloc(ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
+    for (i = 0; i < mapa->nLinhas; i++) 
+        mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
     
     rewind(fMapa);
     fscanf(fMapa, "%*[^\n]%*c");
