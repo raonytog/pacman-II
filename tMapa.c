@@ -50,7 +50,7 @@ tMapa* CriaMapa(const char* caminhoConfig) {
     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
     while (fscanf(fMapa, "%c", &aux) == 1) {
         // atribui o numero de colunas e conta o num de \n como num linhas
-        if (aux == '\n') {
+        if (aux == '\n' || feof(fMapa)) {
             mapa->nColunas = j;
             mapa->nLinhas++;
             achouBreak = 1; // bloqueia q o numero de colunas altere
@@ -73,8 +73,11 @@ tMapa* CriaMapa(const char* caminhoConfig) {
     rewind(fMapa);
     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
     for (i = 0; i < ObtemNumeroLinhasMapa(mapa)+1; i++) {
+        if (i = 7) printf("oi");
         for (j = 0; j < ObtemNumeroColunasMapa(mapa)+1; j++) {
-            fscanf(fMapa, "%c", &mapa->grid[i][j]);
+            if (!feof(fMapa)) {
+                fscanf(fMapa, "%c", &mapa->grid[i][j]);
+            }
         }
     }
 
