@@ -68,12 +68,11 @@ tMapa* CriaMapa(const char* caminhoConfig) {
         mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
     }
     
-
     // le o mapa e armazena no grid, alem de criar o portal caso exista no mapa
     rewind(fMapa);
     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
     for (i = 0; i < ObtemNumeroLinhasMapa(mapa)+1; i++) {
-        if (i = 7) printf("oi");
+        fscanf("%c", &aux);
         for (j = 0; j < ObtemNumeroColunasMapa(mapa)+1; j++) {
             if (!feof(fMapa)) {
                 fscanf(fMapa, "%c", &mapa->grid[i][j]);
