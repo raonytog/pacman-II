@@ -16,51 +16,61 @@ CRIANDO O DIRETÓRIO DE RESULTADO PARA Raony:
 
 CHECKANDO OS ARQUIVOS DO ALUNO:
  - Arquivo esperado 'Respostas/Raony/tPacman.c' não encontrado!
- - Arquivo esperado 'Respostas/Raony/tPacman.h' não encontrado!
+ - Arquivo esperado 'Respostas/Raony/tPacman.h' encontrado!
  - Arquivo esperado 'Respostas/Raony/tMapa.c' encontrado!
- - Arquivo esperado 'Respostas/Raony/tMapa.h' não encontrado!
+ - Arquivo esperado 'Respostas/Raony/tMapa.h' encontrado!
  - Arquivo esperado 'Respostas/Raony/tMovimento.c' não encontrado!
- - Arquivo esperado 'Respostas/Raony/tMovimento.h' não encontrado!
+ - Arquivo esperado 'Respostas/Raony/tMovimento.h' encontrado!
  - Arquivo esperado 'Respostas/Raony/tTunel.c' não encontrado!
- - Arquivo esperado 'Respostas/Raony/tTunel.h' não encontrado!
+ - Arquivo esperado 'Respostas/Raony/tTunel.h' encontrado!
  - Arquivo esperado 'Respostas/Raony/tPosicao.c' não encontrado!
- - Arquivo esperado 'Respostas/Raony/tPosicao.h' não encontrado!
- - Arquivo esperado 'Respostas/Raony/main.c' encontrado!
+ - Arquivo esperado 'Respostas/Raony/tPosicao.h' encontrado!
+ - Arquivo esperado 'Respostas/Raony/main.c' não encontrado!
  - Arquivos esperados enviados: Faltando!
 
 COPIANDO OS ARQUIVOS PARA A PASTA DE RESULTADO DO ALUNO:
  - Pasta tPacman:
  - Copiando os Casos de teste para a pasta Resultados/Raony/tPacman
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Raony/tPacman
+ - Copiando os 'Respostas/Raony/src_file_name.h' do aluno para a pasta Resultados/Raony/tPacman
  - Copiando os 'Respostas/Raony/src_file_name.c' do aluno para a pasta Resultados/Raony/tPacman
  - Pasta tMapa:
  - Copiando os Casos de teste para a pasta Resultados/Raony/tMapa
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Raony/tMapa
+ - Copiando os 'Respostas/Raony/src_file_name.h' do aluno para a pasta Resultados/Raony/tMapa
  - Copiando os 'Respostas/Raony/src_file_name.c' do aluno para a pasta Resultados/Raony/tMapa
  - Pasta tMovimento:
  - Copiando os Casos de teste para a pasta Resultados/Raony/tMovimento
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Raony/tMovimento
+ - Copiando os 'Respostas/Raony/src_file_name.h' do aluno para a pasta Resultados/Raony/tMovimento
  - Copiando os 'Respostas/Raony/src_file_name.c' do aluno para a pasta Resultados/Raony/tMovimento
  - Pasta tTunel:
  - Copiando os Casos de teste para a pasta Resultados/Raony/tTunel
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Raony/tTunel
+ - Copiando os 'Respostas/Raony/src_file_name.h' do aluno para a pasta Resultados/Raony/tTunel
  - Copiando os 'Respostas/Raony/src_file_name.c' do aluno para a pasta Resultados/Raony/tTunel
  - Pasta tPosicao:
  - Copiando os Casos de teste para a pasta Resultados/Raony/tPosicao
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Raony/tPosicao
+ - Copiando os 'Respostas/Raony/src_file_name.h' do aluno para a pasta Resultados/Raony/tPosicao
  - Copiando os 'Respostas/Raony/src_file_name.c' do aluno para a pasta Resultados/Raony/tPosicao
  - Pasta completo:
  - Copiando os Casos de teste para a pasta Resultados/Raony/completo
+ - Copiando os 'Respostas/Raony/*.h' do aluno para a pasta Resultados/Raony/completo
  - Copiando os 'Respostas/Raony/*.c' do aluno para a pasta Resultados/Raony/completo
  - Pasta main:
  - Copiando os Casos de teste para a pasta Resultados/Raony/main
+ - Copiando os 'Includes/*.h' do professor para a pasta Resultados/Raony/main
+ - Copiando os 'Respostas/Raony/*.h' do aluno para a pasta Resultados/Raony/main
  - Copiando os 'Respostas/Raony/*.c' do aluno para a pasta Resultados/Raony/main
  - Arquivos copiados: ok!
 
 COMPILANDO OS ARQUIVOS NA PASTA DE RESULTADO DO ALUNO:
  - Erro de compilação! Verifique os arquivos da pasta tPacman.
- - Erro de compilação! Verifique os arquivos da pasta tMapa.
  - Erro de compilação! Verifique os arquivos da pasta tMovimento.
  - Erro de compilação! Verifique os arquivos da pasta tTunel.
  - Erro de compilação! Verifique os arquivos da pasta tPosicao.
- - Erro de compilação! Verifique os arquivos da pasta completo.
- - Erro de compilação! Verifique os arquivos da pasta main.
- - Arquivos Compilados: Erro!: 7 arquivos com erros de compilacao.
+ - Arquivos Compilados: Erro!: 4 arquivos com erros de compilacao.
  - Copiando os arquivos objetos do professor para cada subpasta do Resultado do Raony:
  - Copiando o Gabarito-obj/tPacman.o para a pasta Resultados/Raony/tMapa
  - Copiando o Gabarito-obj/tPacman.o para a pasta Resultados/Raony/tMovimento
@@ -101,7 +111,7 @@ LINKANDO OS ARQUIVOS COMPILADOS:
  - Arquivo de output gerado: Resultados/Raony/tPacman/result_linking.txt
  - Pasta tMapa:
  - Gerando o binário prog linkando com o(s) arquivo(s) tMapa/*.o
- - Arquivos Linkados: Erro! Binário prog não gerado.
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
  - Arquivo de output gerado: Resultados/Raony/tMapa/result_linking.txt
  - Pasta tMovimento:
  - Gerando o binário prog linkando com o(s) arquivo(s) tMovimento/*.o
@@ -123,7 +133,7 @@ LINKANDO OS ARQUIVOS COMPILADOS:
  - Gerando o binário prog linkando com o(s) arquivo(s) main/*.o
  - Arquivos Linkados: Erro! Binário prog não gerado.
  - Arquivo de output gerado: Resultados/Raony/main/result_linking.txt
- - Arquivos Linkados: Erro! 7 arquivos com erros de linkagem.
+ - Arquivos Linkados: Erro! 6 arquivos com erros de linkagem.
 
 EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta tPacman / Caso 01:
@@ -367,7 +377,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/30/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 01:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/01/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 25, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/01/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/01/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/01/saida/ranking.txt, considerando resultado incorreto!
@@ -375,7 +386,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/01/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 02:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/02/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 14, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/02/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/02/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/02/saida/ranking.txt, considerando resultado incorreto!
@@ -383,7 +395,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/02/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 03:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/03/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 35, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/03/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/03/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/03/saida/ranking.txt, considerando resultado incorreto!
@@ -391,7 +404,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/03/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 04:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/04/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/04/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/04/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/04/saida/ranking.txt, considerando resultado incorreto!
@@ -399,7 +413,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/04/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 05:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/05/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 40, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/05/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/05/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/05/saida/ranking.txt, considerando resultado incorreto!
@@ -407,7 +422,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/05/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 06:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/06/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 25, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/06/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/06/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/06/saida/ranking.txt, considerando resultado incorreto!
@@ -415,7 +431,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/06/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 07:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/07/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 15, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/07/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/07/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/07/saida/ranking.txt, considerando resultado incorreto!
@@ -423,7 +440,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/07/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 08:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/08/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 30, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/08/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/08/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/08/saida/ranking.txt, considerando resultado incorreto!
@@ -431,7 +449,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/08/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 09:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/09/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 15, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/09/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/09/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/09/saida/ranking.txt, considerando resultado incorreto!
@@ -439,7 +458,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/09/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 10:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/10/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 45, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/10/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/10/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/10/saida/ranking.txt, considerando resultado incorreto!
@@ -447,7 +467,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/10/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 11:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/11/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 15, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/11/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/11/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/11/saida/ranking.txt, considerando resultado incorreto!
@@ -455,7 +476,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/11/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 12:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/12/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/12/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/12/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/12/saida/ranking.txt, considerando resultado incorreto!
@@ -463,7 +485,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/12/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 13:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/13/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 25, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/13/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/13/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/13/saida/ranking.txt, considerando resultado incorreto!
@@ -471,7 +494,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/13/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 14:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/14/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/14/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/14/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/14/saida/ranking.txt, considerando resultado incorreto!
@@ -479,7 +503,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/14/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 15:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/15/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/15/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/15/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/15/saida/ranking.txt, considerando resultado incorreto!
@@ -487,7 +512,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/15/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 16:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/16/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 13, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/16/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/16/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/16/saida/ranking.txt, considerando resultado incorreto!
@@ -495,7 +521,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/16/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 17:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/17/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 13, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/17/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/17/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/17/saida/ranking.txt, considerando resultado incorreto!
@@ -503,7 +530,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/17/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 18:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/18/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 12, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/18/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/18/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/18/saida/ranking.txt, considerando resultado incorreto!
@@ -511,7 +539,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/18/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 19:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/19/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/19/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/19/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/19/saida/ranking.txt, considerando resultado incorreto!
@@ -519,7 +548,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/19/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 20:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/20/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/20/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/20/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/20/saida/ranking.txt, considerando resultado incorreto!
@@ -527,7 +557,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/20/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 21:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/21/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 15, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/21/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/21/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/21/saida/ranking.txt, considerando resultado incorreto!
@@ -535,7 +566,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/21/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 22:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/22/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/22/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/22/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/22/saida/ranking.txt, considerando resultado incorreto!
@@ -543,7 +575,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/22/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 23:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/23/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 15, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/23/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/23/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/23/saida/ranking.txt, considerando resultado incorreto!
@@ -551,7 +584,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/23/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 24:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/24/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 20, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/24/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/24/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/24/saida/ranking.txt, considerando resultado incorreto!
@@ -559,7 +593,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/24/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 25:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/25/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 25, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/25/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/25/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/25/saida/ranking.txt, considerando resultado incorreto!
@@ -567,7 +602,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/25/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 26:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/26/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 35, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/26/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/26/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/26/saida/ranking.txt, considerando resultado incorreto!
@@ -575,7 +611,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/26/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 27:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/27/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 25, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/27/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/27/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/27/saida/ranking.txt, considerando resultado incorreto!
@@ -583,7 +620,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/27/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 28:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/28/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 30, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/28/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/28/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/28/saida/ranking.txt, considerando resultado incorreto!
@@ -591,7 +629,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/28/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 29:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/29/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 35, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/29/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/29/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/29/saida/ranking.txt, considerando resultado incorreto!
@@ -599,7 +638,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/29/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tMapa / Caso 30:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Raony/tMapa/Casos/30/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 25, frees: 0, errors: 0 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/30/saida/estatisticas.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/30/saida/inicializacao.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tMapa/Casos/30/saida/ranking.txt, considerando resultado incorreto!
@@ -1814,8 +1854,8 @@ RESULTADOS FINAIS
 ----------------------------------------------------------------------------
 Nome 0: Raony
  - Resumo dos Resultados:
- - Resumo das Compilações: 0 compilações corretas de 2 no total
- - Resumo das Linkagens: 0 linkagens corretas de 2 no total
+ - Resumo das Compilações: 3 compilações corretas de 7 no total
+ - Resumo das Linkagens: 1 linkagens corretas de 7 no total
  - Valgrinds Corretos tPacman: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta tPacman, olhar detalhamento nos prints acima!)
  - Valgrinds Corretos tMapa: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta tMapa, olhar detalhamento nos prints acima!)
  - Valgrinds Corretos tMovimento: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta tMovimento, olhar detalhamento nos prints acima!)
@@ -1826,11 +1866,11 @@ Nome 0: Raony
  - Cômputo final das Notas:
  - Pasta tPacman (peso 2.5): 0 resultados corretos de 180 / Nota 0
  - Pasta tMapa (peso 2.5): 0 resultados corretos de 180 / Nota 0
- - Pasta tMovimento (peso 1.0): 0 resultados corretos de 180 / Nota 0
- - Pasta tTunel (peso 1.0): 0 resultados corretos de 180 / Nota 0
- - Pasta tPosicao (peso 1.0): 0 resultados corretos de 180 / Nota 0
- - Pasta completo (peso 1.0): 0 resultados corretos de 180 / Nota 0
- - Pasta main (peso 1.0): 0 resultados corretos de 180 / Nota 0
+ - Pasta tMovimento (peso 0.5): 0 resultados corretos de 180 / Nota 0
+ - Pasta tTunel (peso 0.5): 0 resultados corretos de 180 / Nota 0
+ - Pasta tPosicao (peso 0.5): 0 resultados corretos de 180 / Nota 0
+ - Pasta completo (peso 0.0): 0 resultados corretos de 180 / Nota 0
+ - Pasta main (peso 3.5): 0 resultados corretos de 180 / Nota 0
  - Nota Final Raony: 0
 
 ----------------------------------------------------------------------------

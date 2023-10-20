@@ -12,7 +12,7 @@
 bool EhPosicaoValida(tMapa * mapa, tPosicao * posicao) {
     if (ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || 
         ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || 
-        ObtemNumeroLinhasMapa(posicao) < 0 ||
+        ObtemLinhaPosicao(posicao) < 0 ||
         ObtemColunaPosicao(posicao) < 0) return false;
         return true;
 }
@@ -27,49 +27,70 @@ bool EhNullGridOuMapa (tMapa * mapa) {
 
 tMapa* CriaMapa(const char* caminhoConfig) {
     int i = 0, j = 0, contagemLinhas = 0, achouBreak = 0;
-    char aux;
+    int linhaP1 = 0, linhaP2 = 0, colunaP1 = 0, colunaP2 = 0, tickFlag = 0;
+    char aux = '0', caminhoMapa[1000];
 
     tMapa * mapa = (tMapa*)malloc(sizeof(tMapa));
     FILE * fMapa = NULL;
 
-    fMapa = fopen(caminhoConfig, "r");
+    sprintf(caminhoMapa, "%s/mapa.txt", caminhoConfig);
+    fMapa = fopen(caminhoMapa, "r");
     if (!fMapa) {
         printf("Erro ao abrir o mapa!\n");
         exit(1);
     }
 
-    mapa->nColunas = 0;
-    mapa->nLinhas = 0;
-    mapa->nFrutasAtual = 0;
-    mapa->nMaximoMovimentos = 0;
-    mapa->tunel = NULL;
+    // inicializa as variaveis
+     mapa->nColunas = 0;
+     mapa->nLinhas = 0;
+     mapa->nFrutasAtual = 0;
+     mapa->nMaximoMovimentos = 0;
+     mapa->tunel = NULL;
 
-    fscanf("%d%*c", &mapa->nMaximoMovimentos);
-
-    while (fscanf(fMapa, "%c", &aux) == 1) {
-        if (!achouBreak)
-            j++;
-
-        if (aux == '\n') {
-            mapa->nColunas = j-1;
-            achouBreak = 1;
+     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
+     while (fscanf(fMapa, "%c", &aux) == 1) {
+        // atribui o numero de colunas e conta o num de \n como num linhas
+         if (aux == '\n') {
+            mapa->nColunas = j;
             mapa->nLinhas++;
-        }
-    }
+            achouBreak = 1; // bloqueia q o numero de colunas altere
+         }
+        
+
+        //le qts char tem ate o \n
+         if (!achouBreak)
+             j++;
+     }
 
     // aloca memória para o grid
-    mapa->grid = (char**) malloc(mapa->nLinhas * sizeof(char*));
-    for (i = 0; i < mapa->nLinhas; i++) {
-        mapa->grid[i] = (char*) malloc(mapa->nColunas * sizeof(char));
-    }
+    mapa->grid = (char**) malloc(ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
+    for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) 
+         mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
     
-    rewind(fMapa);
-    fscanf(fMapa, "%*[^\n]%*c");
-    for (i = 0; i < mapa->nLinhas; i++) 
-        for (j = 0; j , mapa->nColunas; j++)
-            fscanf(fMapa, "%c", &mapa->grid[i][j]);
+
+    // le o mapa e armazena no grid, alem de criar o portal caso exista no mapa
+     rewind(fMapa);
+     fscanf(fMapa, "%d\n");
+     for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) 
+         for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
+             fscanf(fMapa, "%c", &mapa->grid[i][j]);
+             if (mapa->grid[i][j] == PORTAL) {
+                 switch (tickFlag) {
+                     case 1:
+                         tickFlag++;
+                         linhaP1 = i;
+                         colunaP1 = j;
+                         break;
+
+                     case 2:
+                         linhaP2 = i;
+                         colunaP2 = j;
+                         tTunel * portal = CriaTunel(linhaP1, colunaP1, linhaP2, colunaP2);
+                 }
+             }
 
     mapa->nFrutasAtual = ObtemQuantidadeFrutasIniciaisMapa(mapa);
+    fclose(fMapa);
     return mapa;
 }
 
@@ -154,6 +175,8 @@ void EntraTunelMapa(tMapa* mapa, tPosicao* posicao) {
 }
 
 void DesalocaMapa(tMapa* mapa) {
+    if (mapa == NULL) return;
+
     for (int i = 0; i < mapa->nLinhas; i++)
         free(mapa->grid[i]);
 

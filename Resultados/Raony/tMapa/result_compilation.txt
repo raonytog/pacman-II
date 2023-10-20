@@ -1,4 +1,18 @@
-tMapa.c:1:10: fatal error: tMapa.h: No such file or directory
-    1 | #include "tMapa.h"
-      |          ^~~~~~~~~
-compilation terminated.
+tMapa.c: In function ‘CriaMapa’:
+tMapa.c:73:22: warning: format ‘%d’ expects a matching ‘int *’ argument [-Wformat=]
+   73 |      fscanf(fMapa, "%d\n");
+      |                     ~^
+      |                      |
+      |                      int *
+tMapa.c:75:10: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   75 |          for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
+      |          ^~~
+tMapa.c:77:14: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   77 |              if (mapa->grid[i][j] == PORTAL) {
+      |              ^~
+tMapa.c:88:35: warning: unused variable ‘portal’ [-Wunused-variable]
+   88 |                          tTunel * portal = CriaTunel(linhaP1, colunaP1, linhaP2, colunaP2);
+      |                                   ^~~~~~
+tMapa.c:29:23: warning: unused variable ‘contagemLinhas’ [-Wunused-variable]
+   29 |     int i = 0, j = 0, contagemLinhas = 0, achouBreak = 0;
+      |                       ^~~~~~~~~~~~~~

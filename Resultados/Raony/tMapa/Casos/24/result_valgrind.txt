@@ -1,0 +1,31 @@
+==6846== Memcheck, a memory error detector
+==6846== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6846== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==6846== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/24
+==6846== Parent PID: 6845
+==6846== 
+==6846== error calling PR_SET_PTRACER, vgdb might block
+==6846== 
+==6846== Process terminating with default action of signal 11 (SIGSEGV)
+==6846==  Bad permissions for mapped region at address 0x10E475
+==6846==    at 0x48C71C9: __vfscanf_internal (vfscanf-internal.c:1896)
+==6846==    by 0x48C229C: __isoc99_fscanf (isoc99_fscanf.c:30)
+==6846==    by 0x10BC60: CriaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==6846==    by 0x10A787: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==6846==    by 0x10B8DF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==6846== 
+==6846== HEAP SUMMARY:
+==6846==     in use at exit: 1,417 bytes in 20 blocks
+==6846==   total heap usage: 20 allocs, 0 frees, 1,417 bytes allocated
+==6846== 
+==6846== LEAK SUMMARY:
+==6846==    definitely lost: 0 bytes in 0 blocks
+==6846==    indirectly lost: 0 bytes in 0 blocks
+==6846==      possibly lost: 0 bytes in 0 blocks
+==6846==    still reachable: 1,417 bytes in 20 blocks
+==6846==         suppressed: 0 bytes in 0 blocks
+==6846== Reachable blocks (those to which a pointer was found) are not shown.
+==6846== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==6846== 
+==6846== For lists of detected and suppressed errors, rerun with: -s
+==6846== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
