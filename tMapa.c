@@ -41,54 +41,64 @@ tMapa* CriaMapa(const char* caminhoConfig) {
     }
 
     // inicializa as variaveis
-     mapa->nColunas = 0;
-     mapa->nLinhas = 0;
-     mapa->nFrutasAtual = 0;
-     mapa->nMaximoMovimentos = 0;
-     mapa->tunel = NULL;
+    mapa->nColunas = 0;
+    mapa->nLinhas = 0;
+    mapa->nFrutasAtual = 0;
+    mapa->nMaximoMovimentos = 0;
+    mapa->tunel = NULL;
 
-     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
-     while (fscanf(fMapa, "%c", &aux) == 1) {
+    fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
+    while (fscanf(fMapa, "%c", &aux) == 1) {
         // atribui o numero de colunas e conta o num de \n como num linhas
-         if (aux == '\n') {
+        if (aux == '\n') {
             mapa->nColunas = j;
             mapa->nLinhas++;
             achouBreak = 1; // bloqueia q o numero de colunas altere
-         }
+        }
 
         //le qts char tem ate o \n
-         if (!achouBreak)
-             j++;
-     }
+        if (!achouBreak) {
+            j++;
+        }
+    }
 
     // aloca memória para o grid
     mapa->grid = (char**) malloc(ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
-    for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) 
-         mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
+    for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
+        mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
+    }
     
 
     // le o mapa e armazena no grid, alem de criar o portal caso exista no mapa
-     rewind(fMapa);
-     fscanf(fMapa, "%d\n");
-     for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) 
-         for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
-             fscanf(fMapa, "%c", &mapa->grid[i][j]);
-             if (mapa->grid[i][j] == PORTAL) {
-                 switch (tickFlag) {
-                     case 1:
-                         tickFlag++;
-                         linhaP1 = i;
-                         colunaP1 = j;
-                         break;
-
-                     case 2:
-                         linhaP2 = i;
-                         colunaP2 = j;
-                         tTunel * portal = CriaTunel(linhaP1, colunaP1, linhaP2, colunaP2);
-                 }
-             }
+    rewind(fMapa);
+    fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
+    for (i = 0; i < ObtemNumeroLinhasMapa(mapa)+1; i++) {
+        for (j = 0; j < ObtemNumeroColunasMapa(mapa)+1; j++) {
+            fscanf(fMapa, "%c", &mapa->grid[i][j]);
+        }
+    }
 
     mapa->nFrutasAtual = ObtemQuantidadeFrutasIniciaisMapa(mapa);
+    for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
+        for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
+            if (mapa->grid[i][j] == PORTAL) {
+                switch (tickFlag) {
+                     case 1:
+                        tickFlag++;
+                        linhaP1 = i;
+                        colunaP1 = j;
+                        break;
+
+                     case 2:
+                        linhaP2 = i;
+                        colunaP2 = j;
+                        tTunel * portal = CriaTunel(linhaP1, colunaP1, linhaP2, colunaP2);
+                        mapa->tunel = portal;
+                }
+            }
+        }
+    }
+
     fclose(fMapa);
     return mapa;
 }
@@ -127,6 +137,7 @@ int ObtemQuantidadeFrutasIniciaisMapa(tMapa* mapa) {
 
     for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++)
         for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
+
             tPosicao * posicao = CriaPosicao(0, 0);
             if (EncontrouComidaMapa(mapa, posicao)) contagem++;
             DesalocaPosicao(posicao);
@@ -143,6 +154,7 @@ bool EncontrouComidaMapa(tMapa* mapa, tPosicao* posicao) {
         if (EhNullGridOuMapa(mapa) || EhPosicaoValida(mapa, posicao) ||
             mapa->grid[posicao->linha][posicao->coluna] != COMIDA) return 0;
 
+    mapa->nFrutasAtual--;
     return 1;
 }
 
