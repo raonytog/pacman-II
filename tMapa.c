@@ -73,6 +73,7 @@ tMapa* CriaMapa(const char* caminhoConfig) {
     rewind(fMapa);
     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
     for (i = 0; i < ObtemNumeroLinhasMapa(mapa)+1; i++) {
+//fscanf(fMapa, "%c", &aux);
         for (j = 0; j < ObtemNumeroColunasMapa(mapa)+1; j++) {
             fscanf(fMapa, "%c", &mapa->grid[i][j]);
         }
