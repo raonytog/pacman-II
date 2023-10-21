@@ -1,31 +1,27 @@
-==6454== Memcheck, a memory error detector
-==6454== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==6454== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==6454== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/22
-==6454== Parent PID: 6453
-==6454== 
-==6454== error calling PR_SET_PTRACER, vgdb might block
-==6454== 
-==6454== Process terminating with default action of signal 11 (SIGSEGV)
-==6454==  Bad permissions for mapped region at address 0x10E475
-==6454==    at 0x48C71C9: __vfscanf_internal (vfscanf-internal.c:1896)
-==6454==    by 0x48C229C: __isoc99_fscanf (isoc99_fscanf.c:30)
-==6454==    by 0x10BC60: CriaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
-==6454==    by 0x10A787: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
-==6454==    by 0x10B8DF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
-==6454== 
-==6454== HEAP SUMMARY:
-==6454==     in use at exit: 1,492 bytes in 20 blocks
-==6454==   total heap usage: 20 allocs, 0 frees, 1,492 bytes allocated
-==6454== 
-==6454== LEAK SUMMARY:
-==6454==    definitely lost: 0 bytes in 0 blocks
-==6454==    indirectly lost: 0 bytes in 0 blocks
-==6454==      possibly lost: 0 bytes in 0 blocks
-==6454==    still reachable: 1,492 bytes in 20 blocks
-==6454==         suppressed: 0 bytes in 0 blocks
-==6454== Reachable blocks (those to which a pointer was found) are not shown.
-==6454== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==6454== 
-==6454== For lists of detected and suppressed errors, rerun with: -s
-==6454== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==25795== Memcheck, a memory error detector
+==25795== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==25795== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==25795== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/22
+==25795== Parent PID: 25794
+==25795== 
+==25795== error calling PR_SET_PTRACER, vgdb might block
+==25795== 
+==25795== HEAP SUMMARY:
+==25795==     in use at exit: 120 bytes in 1 blocks
+==25795==   total heap usage: 13,910 allocs, 13,909 frees, 129,320 bytes allocated
+==25795== 
+==25795== 120 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==25795==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25795==    by 0x10BB7A: CriaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==25795==    by 0x10A787: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==25795==    by 0x10B8DF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==25795== 
+==25795== LEAK SUMMARY:
+==25795==    definitely lost: 120 bytes in 1 blocks
+==25795==    indirectly lost: 0 bytes in 0 blocks
+==25795==      possibly lost: 0 bytes in 0 blocks
+==25795==    still reachable: 0 bytes in 0 blocks
+==25795==         suppressed: 0 bytes in 0 blocks
+==25795== 
+==25795== For lists of detected and suppressed errors, rerun with: -s
+==25795== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

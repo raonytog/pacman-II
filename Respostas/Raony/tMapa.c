@@ -1,4 +1,5 @@
 #include "tMapa.h"
+#include <string.h>
 
 #define COMIDA '*'
 #define PORTAL '@'
@@ -7,14 +8,14 @@
 /**
  * Dado o ponteiro para uma posicao, verifica se 
  * a mesma eh valida no no tabuleiro
- * \param ponteiro para a posicao
+ * \param ponteiro para a posicao e ponteiro para o mapa
  */
-bool EhPosicaoValida(tMapa * mapa, tPosicao * posicao) {
+bool EhPosicaoInvalida(tMapa * mapa, tPosicao * posicao) {
     if (ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || 
         ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || 
         ObtemLinhaPosicao(posicao) < 0 ||
-        ObtemColunaPosicao(posicao) < 0) return false;
-        return true;
+        ObtemColunaPosicao(posicao) < 0) return true;
+        return false;
 }
 
 /**
@@ -26,13 +27,10 @@ bool EhNullGridOuMapa (tMapa * mapa) {
 }
 
 tMapa* CriaMapa(const char* caminhoConfig) {
-    int i = 0, j = 0, contagemLinhas = 0, achouBreak = 0;
-    int linhaP1 = 0, linhaP2 = 0, colunaP1 = 0, colunaP2 = 0, tickFlag = 0;
-    char aux = '0', caminhoMapa[1000];
-
     tMapa * mapa = (tMapa*)malloc(sizeof(tMapa));
     FILE * fMapa = NULL;
 
+    char aux[1000], caminhoMapa[1000];
     sprintf(caminhoMapa, "%s/mapa.txt", caminhoConfig);
     fMapa = fopen(caminhoMapa, "r");
     if (!fMapa) {
@@ -47,60 +45,45 @@ tMapa* CriaMapa(const char* caminhoConfig) {
     mapa->nMaximoMovimentos = 0;
     mapa->tunel = NULL;
 
+    // le mapa
     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
-    while (fscanf(fMapa, "%c", &aux) == 1) {
-        // atribui o numero de colunas e conta o num de \n como num linhas
-        if (aux == '\n' || feof(fMapa)) {
-            mapa->nColunas = j;
-            mapa->nLinhas++;
-            achouBreak = 1; // bloqueia q o numero de colunas altere
-        }
-
-        //le qts char tem ate o \n
-        if (!achouBreak) {
-            j++;
-        }
+    while (fscanf(fMapa, "%[^\n]", aux) == 1) {
+        mapa->nColunas = strlen(aux);
+        mapa->nLinhas++;
+        fscanf(fMapa, "%*c");
     }
 
     // aloca memória para o grid
+    int i = 0, j = 0;
     mapa->grid = (char**) malloc(ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
     for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
         mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
     }
     
     // le o mapa e armazena no grid, alem de criar o portal caso exista no mapa
+    int linhaP1 = 0, colunaP1 = 0, numPortaisEcontrados = 0;
     rewind(fMapa);
-    fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
-    for (i = 0; i < ObtemNumeroLinhasMapa(mapa)+1; i++) {
-        fscanf("%c", &aux);
-        for (j = 0; j < ObtemNumeroColunasMapa(mapa)+1; j++) {
-            if (!feof(fMapa)) {
-                fscanf(fMapa, "%c", &mapa->grid[i][j]);
-            }
-        }
-    }
-
-    mapa->nFrutasAtual = ObtemQuantidadeFrutasIniciaisMapa(mapa);
+    fscanf(fMapa, "%d", &mapa->nMaximoMovimentos);
     for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
+        fscanf(fMapa, "%*c");
         for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
+            fscanf(fMapa, "%c", &mapa->grid[i][j]);
             if (mapa->grid[i][j] == PORTAL) {
-                switch (tickFlag) {
-                     case 1:
-                        tickFlag++;
-                        linhaP1 = i;
-                        colunaP1 = j;
-                        break;
+                numPortaisEcontrados++;
 
-                     case 2:
-                        linhaP2 = i;
-                        colunaP2 = j;
-                        tTunel * portal = CriaTunel(linhaP1, colunaP1, linhaP2, colunaP2);
-                        mapa->tunel = portal;
+                if (numPortaisEcontrados == 1) {
+                    linhaP1 = i; 
+                    colunaP1 = j;
+
+                } else if (numPortaisEcontrados == 2) {
+                    tTunel * tunel = CriaTunel(linhaP1, colunaP1, i, j);
+                    mapa->tunel = tunel;
                 }
             }
         }
     }
 
+    mapa->nFrutasAtual = ObtemQuantidadeFrutasIniciaisMapa(mapa);
     fclose(fMapa);
     return mapa;
 }
@@ -117,12 +100,11 @@ tPosicao* ObtemPosicaoItemMapa(tMapa* mapa, char item) {
 }
 
 tTunel* ObtemTunelMapa(tMapa* mapa) {
-    tTunel * tunel = mapa->tunel;
-    return tunel;
+    return mapa->tunel;
 }
 
 char ObtemItemMapa(tMapa* mapa, tPosicao* posicao) {
-    if (EhNullGridOuMapa(mapa) || EhPosicaoValida(mapa, posicao)) return '\0';
+    if (EhNullGridOuMapa(mapa) || EhPosicaoInvalida(mapa, posicao)) return '\0';
     return mapa->grid[posicao->linha][posicao->coluna];
 }
 
@@ -138,12 +120,8 @@ int ObtemQuantidadeFrutasIniciaisMapa(tMapa* mapa) {
     int contagem = 0;
 
     for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++)
-        for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
-
-            tPosicao * posicao = CriaPosicao(0, 0);
-            if (EncontrouComidaMapa(mapa, posicao)) contagem++;
-            DesalocaPosicao(posicao);
-        }
+        for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
+            if (mapa->grid[i][j] == COMIDA) contagem++;
     
     return contagem;
 }
@@ -153,7 +131,7 @@ int ObtemNumeroMaximoMovimentosMapa(tMapa* mapa) {
 }
 
 bool EncontrouComidaMapa(tMapa* mapa, tPosicao* posicao) {
-        if (EhNullGridOuMapa(mapa) || EhPosicaoValida(mapa, posicao) ||
+        if (EhNullGridOuMapa(mapa) || EhPosicaoInvalida(mapa, posicao) ||
             mapa->grid[posicao->linha][posicao->coluna] != COMIDA) return 0;
 
     mapa->nFrutasAtual--;
@@ -161,14 +139,14 @@ bool EncontrouComidaMapa(tMapa* mapa, tPosicao* posicao) {
 }
 
 bool EncontrouParedeMapa(tMapa* mapa, tPosicao* posicao) {
-    if (EhNullGridOuMapa(mapa) || EhPosicaoValida(mapa, posicao)  ||
+    if (EhNullGridOuMapa(mapa) || EhPosicaoInvalida(mapa, posicao)  ||
         mapa->grid[posicao->linha][posicao->coluna] != PAREDE) return 0;
 
     return 1;
 }
 
 bool AtualizaItemMapa(tMapa* mapa, tPosicao* posicao, char item) {
-    if (EhNullGridOuMapa(mapa)|| EhPosicaoValida(mapa, posicao)) return 0;
+    if (EhNullGridOuMapa(mapa)|| EhPosicaoInvalida(mapa, posicao)) return 0;
 
     mapa->grid[posicao->linha][posicao->coluna] = item;
     return 1;

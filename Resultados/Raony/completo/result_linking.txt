@@ -1,21 +1,2 @@
-/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
-(.text+0x1b): undefined reference to `main'
-/usr/bin/ld: Resultados/Raony/completo/tMapa.o: in function `EhPosicaoValida':
-tMapa.c:(.text+0x1d): undefined reference to `ObtemColunaPosicao'
-/usr/bin/ld: tMapa.c:(.text+0x3b): undefined reference to `ObtemLinhaPosicao'
-/usr/bin/ld: tMapa.c:(.text+0x59): undefined reference to `ObtemLinhaPosicao'
-/usr/bin/ld: tMapa.c:(.text+0x69): undefined reference to `ObtemColunaPosicao'
-/usr/bin/ld: Resultados/Raony/completo/tMapa.o: in function `CriaMapa':
-tMapa.c:(.text+0x493): undefined reference to `CriaTunel'
-/usr/bin/ld: Resultados/Raony/completo/tMapa.o: in function `ObtemPosicaoItemMapa':
-tMapa.c:(.text+0x540): undefined reference to `CriaPosicao'
-/usr/bin/ld: Resultados/Raony/completo/tMapa.o: in function `ObtemQuantidadeFrutasIniciaisMapa':
-tMapa.c:(.text+0x65c): undefined reference to `CriaPosicao'
-/usr/bin/ld: tMapa.c:(.text+0x687): undefined reference to `DesalocaPosicao'
-/usr/bin/ld: Resultados/Raony/completo/tMapa.o: in function `AcessouTunelMapa':
-tMapa.c:(.text+0x883): undefined reference to `EntrouTunel'
-/usr/bin/ld: Resultados/Raony/completo/tMapa.o: in function `EntraTunelMapa':
-tMapa.c:(.text+0x8b0): undefined reference to `LevaFinalTunel'
-/usr/bin/ld: Resultados/Raony/completo/tMapa.o: in function `DesalocaMapa':
-tMapa.c:(.text+0x911): undefined reference to `DesalocaTunel'
+/usr/bin/ld: cannot find Resultados/Raony/completo/*.o: No such file or directory
 collect2: error: ld returned 1 exit status
