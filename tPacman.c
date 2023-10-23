@@ -12,8 +12,12 @@ tPacman* CriaPacman(tPosicao* posicao) {
     if (pacman == NULL || posicao == NULL) return NULL;
     AtualizaPosicao(pacman->posicaoAtual, posicao);
 
-    // tem q implementar mais coisa aq ainda
+    pacman->trilha = (int **)malloc (pacman->nLinhasTrilha * sizeof(int *));
+    for (int i = 0; i < pacman->nLinhasTrilha; i++) {
+        pacman->trilha[i] = (int *) malloc(pacman->nColunasTrilha * sizeof(int));
+    }
 
+    pacman->nMovimentosSignificativos = (tMovimento *) malloc (sizeof(tMovimento));
     return pacman;
 }
 
@@ -116,9 +120,7 @@ void DesalocaPacman(tPacman* pacman);
  * 
  * \param pacman pacman
  */
-int ObtemNumeroAtualMovimentosPacman(tPacman* pacman) {
-    // a implementar
-}
+int ObtemNumeroAtualMovimentosPacman(tPacman* pacman);
 
 
 int ObtemNumeroMovimentosSemPontuarPacman(tPacman* pacman) {

@@ -1,0 +1,26 @@
+==385828== Memcheck, a memory error detector
+==385828== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==385828== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==385828== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/09
+==385828== Parent PID: 385827
+==385828== 
+==385828== 
+==385828== HEAP SUMMARY:
+==385828==     in use at exit: 80 bytes in 1 blocks
+==385828==   total heap usage: 749,135 allocs, 749,134 frees, 6,289,608 bytes allocated
+==385828== 
+==385828== 80 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==385828==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==385828==    by 0x10BB89: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==385828==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==385828==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==385828== 
+==385828== LEAK SUMMARY:
+==385828==    definitely lost: 80 bytes in 1 blocks
+==385828==    indirectly lost: 0 bytes in 0 blocks
+==385828==      possibly lost: 0 bytes in 0 blocks
+==385828==    still reachable: 0 bytes in 0 blocks
+==385828==         suppressed: 0 bytes in 0 blocks
+==385828== 
+==385828== For lists of detected and suppressed errors, rerun with: -s
+==385828== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

@@ -10,12 +10,11 @@
  * a mesma eh valida no no tabuleiro
  * \param ponteiro para a posicao e ponteiro para o mapa
  */
-bool EhPosicaoInvalida(tMapa * mapa, tPosicao * posicao) {
+bool EstaForaDosLimites(tMapa * mapa, tPosicao * posicao) {
     if (ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || 
-        ObtemLinhaPosicao(posicao) > ObtemNumeroLinhasMapa(mapa) || 
-        ObtemLinhaPosicao(posicao) < 0 ||
-        ObtemColunaPosicao(posicao) < 0) return true;
-        return false;
+        ObtemLinhaPosicao(posicao)  > ObtemNumeroLinhasMapa(mapa) || 
+        ObtemLinhaPosicao(posicao) < 0 || ObtemColunaPosicao(posicao) < 0) return true;
+    return false;
 }
 
 /**
@@ -23,13 +22,14 @@ bool EhPosicaoInvalida(tMapa * mapa, tPosicao * posicao) {
  * \param ponteiro para o mapa
  */
 bool EhNullGridOuMapa (tMapa * mapa) {
-    return mapa == NULL || mapa->grid == NULL;
+    return (mapa == NULL || mapa->grid == NULL);
 }
 
 tMapa* CriaMapa(const char* caminhoConfig) {
     tMapa * mapa = (tMapa*)malloc(sizeof(tMapa));
     FILE * fMapa = NULL;
 
+    // define o caminho para o mapa
     char aux[1000], caminhoMapa[1000];
     sprintf(caminhoMapa, "%s/mapa.txt", caminhoConfig);
     fMapa = fopen(caminhoMapa, "r");
@@ -43,9 +43,10 @@ tMapa* CriaMapa(const char* caminhoConfig) {
     mapa->nLinhas = 0;
     mapa->nFrutasAtual = 0;
     mapa->nMaximoMovimentos = 0;
+    mapa->grid = NULL;
     mapa->tunel = NULL;
 
-    // le mapa
+    // le limites do mapa
     fscanf(fMapa, "%d\n", &mapa->nMaximoMovimentos);
     while (fscanf(fMapa, "%[^\n]", aux) == 1) {
         mapa->nColunas = strlen(aux);
@@ -55,9 +56,9 @@ tMapa* CriaMapa(const char* caminhoConfig) {
 
     // aloca memória para o grid
     int i = 0, j = 0;
-    mapa->grid = (char**) malloc(ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
+    mapa->grid = (char**) malloc (ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
     for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
-        mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
+        mapa->grid[i] = (char*) malloc (ObtemNumeroColunasMapa(mapa) * sizeof(char));
     }
     
     // le o mapa e armazena no grid, alem de criar o portal caso exista no mapa
@@ -83,7 +84,11 @@ tMapa* CriaMapa(const char* caminhoConfig) {
         }
     }
 
-    mapa->nFrutasAtual = ObtemQuantidadeFrutasIniciaisMapa(mapa);
+    // le qtd de comida no mapa no incio do jogo
+    for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++)
+        for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
+            mapa->nFrutasAtual++;
+            
     fclose(fMapa);
     return mapa;
 }
@@ -104,7 +109,7 @@ tTunel* ObtemTunelMapa(tMapa* mapa) {
 }
 
 char ObtemItemMapa(tMapa* mapa, tPosicao* posicao) {
-    if (EhNullGridOuMapa(mapa) || EhPosicaoInvalida(mapa, posicao)) return '\0';
+    if (EhNullGridOuMapa(mapa) || EstaForaDosLimites(mapa, posicao)) return '\0';
     return mapa->grid[posicao->linha][posicao->coluna];
 }
 
@@ -117,13 +122,7 @@ int ObtemNumeroColunasMapa(tMapa* mapa) {
 }
 
 int ObtemQuantidadeFrutasIniciaisMapa(tMapa* mapa) {
-    int contagem = 0;
-
-    for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++)
-        for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
-            if (mapa->grid[i][j] == COMIDA) contagem++;
-    
-    return contagem;
+    return mapa->nFrutasAtual;
 }
 
 int ObtemNumeroMaximoMovimentosMapa(tMapa* mapa) {
@@ -131,30 +130,28 @@ int ObtemNumeroMaximoMovimentosMapa(tMapa* mapa) {
 }
 
 bool EncontrouComidaMapa(tMapa* mapa, tPosicao* posicao) {
-        if (EhNullGridOuMapa(mapa) || EhPosicaoInvalida(mapa, posicao) ||
-            mapa->grid[posicao->linha][posicao->coluna] != COMIDA) return 0;
-        
+    if (EhNullGridOuMapa(mapa) || EstaForaDosLimites(mapa, posicao) ||
+        mapa->grid[posicao->linha][posicao->coluna] != COMIDA) return false;
+
     mapa->nFrutasAtual--;
-    return 1;
+    return true;
 }
 
 bool EncontrouParedeMapa(tMapa* mapa, tPosicao* posicao) {
-    if (EhNullGridOuMapa(mapa) || EhPosicaoInvalida(mapa, posicao)  ||
-        mapa->grid[posicao->linha][posicao->coluna] != PAREDE) return 0;
+    if (EhNullGridOuMapa(mapa) || EstaForaDosLimites(mapa, posicao) || mapa->grid[posicao->linha][posicao->coluna] != PAREDE) return 0;
 
     return 1;
 }
 
 bool AtualizaItemMapa(tMapa* mapa, tPosicao* posicao, char item) {
-    if (EhNullGridOuMapa(mapa)|| EhPosicaoInvalida(mapa, posicao)) return 0;
+    if (EhNullGridOuMapa(mapa)|| EstaForaDosLimites(mapa, posicao)) return 0;
 
     mapa->grid[posicao->linha][posicao->coluna] = item;
     return 1;
 }
 
 bool PossuiTunelMapa(tMapa* mapa) {
-    if (mapa->tunel == NULL) return false;
-    return true;
+    return mapa->tunel != NULL;
 }
 
 bool AcessouTunelMapa(tMapa* mapa, tPosicao* posicao) {
@@ -168,8 +165,10 @@ void EntraTunelMapa(tMapa* mapa, tPosicao* posicao) {
 void DesalocaMapa(tMapa* mapa) {
     if (mapa == NULL) return;
 
+    if (mapa->grid != NULL) {
     for (int i = 0; i < mapa->nLinhas; i++)
         free(mapa->grid[i]);
+    }
 
     DesalocaTunel(mapa->tunel);
     free(mapa);

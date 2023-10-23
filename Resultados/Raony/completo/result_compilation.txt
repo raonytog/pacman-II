@@ -1,2 +1,5 @@
-cc1: fatal error: *.c: No such file or directory
+In file included from tMapa.c:1:
+tMapa.h:8:10: fatal error: tPosicao.h: No such file or directory
+    8 | #include "tPosicao.h"
+      |          ^~~~~~~~~~~~
 compilation terminated.

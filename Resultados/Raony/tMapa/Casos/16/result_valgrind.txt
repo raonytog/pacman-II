@@ -1,0 +1,37 @@
+==387565== Memcheck, a memory error detector
+==387565== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==387565== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==387565== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/16
+==387565== Parent PID: 387564
+==387565== 
+==387565== Conditional jump or move depends on uninitialised value(s)
+==387565==    at 0x10B311: lerComandoTeclado (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565==    by 0x10B3D9: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565==    by 0x10B8EF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565== 
+==387565== Conditional jump or move depends on uninitialised value(s)
+==387565==    at 0x10B327: lerComandoTeclado (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565==    by 0x10B3D9: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565==    by 0x10B8EF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565== 
+==387565== 
+==387565== HEAP SUMMARY:
+==387565==     in use at exit: 64 bytes in 1 blocks
+==387565==   total heap usage: 8,546 allocs, 8,545 frees, 116,068 bytes allocated
+==387565== 
+==387565== 64 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==387565==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==387565==    by 0x10BB89: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==387565== 
+==387565== LEAK SUMMARY:
+==387565==    definitely lost: 64 bytes in 1 blocks
+==387565==    indirectly lost: 0 bytes in 0 blocks
+==387565==      possibly lost: 0 bytes in 0 blocks
+==387565==    still reachable: 0 bytes in 0 blocks
+==387565==         suppressed: 0 bytes in 0 blocks
+==387565== 
+==387565== Use --track-origins=yes to see where uninitialised values come from
+==387565== For lists of detected and suppressed errors, rerun with: -s
+==387565== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
