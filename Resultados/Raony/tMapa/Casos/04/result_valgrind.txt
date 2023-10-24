@@ -1,27 +1,26 @@
-==21627== Memcheck, a memory error detector
-==21627== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==21627== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==21627== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/04
-==21627== Parent PID: 21626
-==21627== 
-==21627== error calling PR_SET_PTRACER, vgdb might block
-==21627== 
-==21627== HEAP SUMMARY:
-==21627==     in use at exit: 120 bytes in 1 blocks
-==21627==   total heap usage: 397,178 allocs, 397,177 frees, 3,363,940 bytes allocated
-==21627== 
-==21627== 120 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==21627==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==21627==    by 0x10BB89: CriaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
-==21627==    by 0x10A787: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
-==21627==    by 0x10B8DF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
-==21627== 
-==21627== LEAK SUMMARY:
-==21627==    definitely lost: 120 bytes in 1 blocks
-==21627==    indirectly lost: 0 bytes in 0 blocks
-==21627==      possibly lost: 0 bytes in 0 blocks
-==21627==    still reachable: 0 bytes in 0 blocks
-==21627==         suppressed: 0 bytes in 0 blocks
-==21627== 
-==21627== For lists of detected and suppressed errors, rerun with: -s
-==21627== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==56687== Memcheck, a memory error detector
+==56687== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==56687== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==56687== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/04
+==56687== Parent PID: 56686
+==56687== 
+==56687== 
+==56687== HEAP SUMMARY:
+==56687==     in use at exit: 120 bytes in 1 blocks
+==56687==   total heap usage: 397,178 allocs, 397,177 frees, 3,396,196 bytes allocated
+==56687== 
+==56687== 120 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==56687==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==56687==    by 0x10BB89: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==56687==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==56687==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
+==56687== 
+==56687== LEAK SUMMARY:
+==56687==    definitely lost: 120 bytes in 1 blocks
+==56687==    indirectly lost: 0 bytes in 0 blocks
+==56687==      possibly lost: 0 bytes in 0 blocks
+==56687==    still reachable: 0 bytes in 0 blocks
+==56687==         suppressed: 0 bytes in 0 blocks
+==56687== 
+==56687== For lists of detected and suppressed errors, rerun with: -s
+==56687== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

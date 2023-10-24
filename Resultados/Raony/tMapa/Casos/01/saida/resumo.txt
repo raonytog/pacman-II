@@ -28,4 +28,3 @@ Movimento 100 (s) pegou comida
 Movimento 101 (a) pegou comida
 Movimento 104 (a) colidiu com a parede
 Movimento 106 (a) pegou comida
-Movimento 106 (a) fim de jogo por encostar em um fantasma

@@ -10,3 +10,15 @@ Movimento 54 (w) pegou comida
 Movimento 56 (w) pegou comida
 Movimento 57 (a) pegou comida
 Movimento 74 (d) pegou comida
+Movimento 78 (d) pegou comida
+Movimento 80 (d) pegou comida
+Movimento 84 (d) pegou comida
+Movimento 86 (w) pegou comida
+Movimento 89 (d) pegou comida
+Movimento 90 (d) pegou comida
+Movimento 94 (s) pegou comida
+Movimento 98 (a) pegou comida
+Movimento 109 (w) pegou comida
+Movimento 111 (d) pegou comida
+Movimento 120 (d) pegou comida
+Movimento 130 (a) pegou comida

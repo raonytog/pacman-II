@@ -103,7 +103,7 @@ tPosicao* ObtemPosicaoItemMapa(tMapa* mapa, char item) {
 }
 
 tTunel* ObtemTunelMapa(tMapa* mapa) {
-    return mapa->tunel;
+    return mapa->tunel;                     
 }
 
 char ObtemItemMapa(tMapa* mapa, tPosicao* posicao) {
@@ -131,7 +131,6 @@ bool EncontrouComidaMapa(tMapa* mapa, tPosicao* posicao) {
     if (EhNullGridOuMapa(mapa) || EstaForaDosLimites(mapa, posicao) ||
         mapa->grid[posicao->linha][posicao->coluna] != COMIDA) return false;
 
-    mapa->nFrutasAtual--;
     return true;
 }
 
