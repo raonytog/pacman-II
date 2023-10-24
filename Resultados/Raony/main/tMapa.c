@@ -163,8 +163,10 @@ void DesalocaMapa(tMapa* mapa) {
     if (mapa == NULL) return;
 
     if (mapa->grid != NULL) {
-    for (int i = 0; i < mapa->nLinhas; i++)
-        free(mapa->grid[i]);
+        for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
+            free(mapa->grid[i]);
+        }
+        free(mapa->grid);
     }
 
     DesalocaTunel(mapa->tunel);

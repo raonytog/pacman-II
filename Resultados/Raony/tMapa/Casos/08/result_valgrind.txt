@@ -1,26 +1,15 @@
-==57677== Memcheck, a memory error detector
-==57677== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==57677== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==57677== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/08
-==57677== Parent PID: 57676
-==57677== 
-==57677== 
-==57677== HEAP SUMMARY:
-==57677==     in use at exit: 200 bytes in 1 blocks
-==57677==   total heap usage: 54,046 allocs, 54,045 frees, 500,646 bytes allocated
-==57677== 
-==57677== 200 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==57677==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==57677==    by 0x10BB89: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==57677==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==57677==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==57677== 
-==57677== LEAK SUMMARY:
-==57677==    definitely lost: 200 bytes in 1 blocks
-==57677==    indirectly lost: 0 bytes in 0 blocks
-==57677==      possibly lost: 0 bytes in 0 blocks
-==57677==    still reachable: 0 bytes in 0 blocks
-==57677==         suppressed: 0 bytes in 0 blocks
-==57677== 
-==57677== For lists of detected and suppressed errors, rerun with: -s
-==57677== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==77735== Memcheck, a memory error detector
+==77735== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==77735== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==77735== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/08
+==77735== Parent PID: 77734
+==77735== 
+==77735== 
+==77735== HEAP SUMMARY:
+==77735==     in use at exit: 0 bytes in 0 blocks
+==77735==   total heap usage: 54,046 allocs, 54,046 frees, 500,646 bytes allocated
+==77735== 
+==77735== All heap blocks were freed -- no leaks are possible
+==77735== 
+==77735== For lists of detected and suppressed errors, rerun with: -s
+==77735== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
