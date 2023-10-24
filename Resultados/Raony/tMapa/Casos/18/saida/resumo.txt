@@ -28,23 +28,3 @@ Movimento 55 (a) pegou comida
 Movimento 56 (a) colidiu com a parede
 Movimento 57 (s) pegou comida
 Movimento 58 (s) pegou comida
-Movimento 59 (d) pegou comida
-Movimento 60 (w) pegou comida
-Movimento 63 (s) pegou comida
-Movimento 64 (d) pegou comida
-Movimento 66 (s) pegou comida
-Movimento 67 (d) pegou comida
-Movimento 68 (s) pegou comida
-Movimento 69 (a) pegou comida
-Movimento 72 (d) pegou comida
-Movimento 73 (d) pegou comida
-Movimento 74 (d) pegou comida
-Movimento 75 (d) pegou comida
-Movimento 76 (d) pegou comida
-Movimento 77 (d) pegou comida
-Movimento 78 (w) pegou comida
-Movimento 79 (a) pegou comida
-Movimento 82 (s) colidiu com a parede
-Movimento 83 (d) pegou comida
-Movimento 87 (a) pegou comida
-Movimento 87 (a) fim de jogo por encostar em um fantasma

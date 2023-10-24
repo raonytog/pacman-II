@@ -1,37 +1,27 @@
-==388591== Memcheck, a memory error detector
-==388591== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==388591== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==388591== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/20
-==388591== Parent PID: 388590
-==388591== 
-==388591== Conditional jump or move depends on uninitialised value(s)
-==388591==    at 0x10B311: lerComandoTeclado (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591==    by 0x10B3D9: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591==    by 0x10B8EF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591== 
-==388591== Conditional jump or move depends on uninitialised value(s)
-==388591==    at 0x10B327: lerComandoTeclado (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591==    by 0x10B3D9: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591==    by 0x10B8EF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591== 
-==388591== 
-==388591== HEAP SUMMARY:
-==388591==     in use at exit: 120 bytes in 1 blocks
-==388591==   total heap usage: 42,516 allocs, 42,515 frees, 404,680 bytes allocated
-==388591== 
-==388591== 120 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==388591==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==388591==    by 0x10BB89: CriaMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591==    by 0x10A787: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591==    by 0x10B8DF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tMapa/prog)
-==388591== 
-==388591== LEAK SUMMARY:
-==388591==    definitely lost: 120 bytes in 1 blocks
-==388591==    indirectly lost: 0 bytes in 0 blocks
-==388591==      possibly lost: 0 bytes in 0 blocks
-==388591==    still reachable: 0 bytes in 0 blocks
-==388591==         suppressed: 0 bytes in 0 blocks
-==388591== 
-==388591== Use --track-origins=yes to see where uninitialised values come from
-==388591== For lists of detected and suppressed errors, rerun with: -s
-==388591== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==25447== Memcheck, a memory error detector
+==25447== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==25447== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==25447== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/20
+==25447== Parent PID: 25446
+==25447== 
+==25447== error calling PR_SET_PTRACER, vgdb might block
+==25447== 
+==25447== HEAP SUMMARY:
+==25447==     in use at exit: 120 bytes in 1 blocks
+==25447==   total heap usage: 24,171 allocs, 24,170 frees, 214,888 bytes allocated
+==25447== 
+==25447== 120 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==25447==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25447==    by 0x10BB89: CriaMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==25447==    by 0x10A787: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==25447==    by 0x10B8DF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tMapa/prog)
+==25447== 
+==25447== LEAK SUMMARY:
+==25447==    definitely lost: 120 bytes in 1 blocks
+==25447==    indirectly lost: 0 bytes in 0 blocks
+==25447==      possibly lost: 0 bytes in 0 blocks
+==25447==    still reachable: 0 bytes in 0 blocks
+==25447==         suppressed: 0 bytes in 0 blocks
+==25447== 
+==25447== For lists of detected and suppressed errors, rerun with: -s
+==25447== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

@@ -56,9 +56,9 @@ tMapa* CriaMapa(const char* caminhoConfig) {
 
     // aloca memória para o grid
     int i = 0, j = 0;
-    mapa->grid = (char**) malloc(ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
+    mapa->grid = (char**) malloc (ObtemNumeroLinhasMapa(mapa) * sizeof(char*));
     for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
-        mapa->grid[i] = (char*) malloc(ObtemNumeroColunasMapa(mapa) * sizeof(char));
+        mapa->grid[i] = (char*) malloc (ObtemNumeroColunasMapa(mapa) * sizeof(char));
     }
     
     // le o mapa e armazena no grid, alem de criar o portal caso exista no mapa
@@ -69,6 +69,9 @@ tMapa* CriaMapa(const char* caminhoConfig) {
         fscanf(fMapa, "%*c");
         for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
             fscanf(fMapa, "%c", &mapa->grid[i][j]);
+
+            if (mapa->grid[i][j] == COMIDA) mapa->nFrutasAtual++;
+            
             if (mapa->grid[i][j] == PORTAL) {
                 numPortaisEcontrados++;
 
@@ -84,11 +87,6 @@ tMapa* CriaMapa(const char* caminhoConfig) {
         }
     }
 
-    // le qtd de comida no mapa no incio do jogo
-    for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++)
-        for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
-            mapa->nFrutasAtual++;
-            
     fclose(fMapa);
     return mapa;
 }

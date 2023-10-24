@@ -69,6 +69,9 @@ tMapa* CriaMapa(const char* caminhoConfig) {
         fscanf(fMapa, "%*c");
         for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
             fscanf(fMapa, "%c", &mapa->grid[i][j]);
+
+            if (mapa->grid[i][j] == COMIDA) mapa->nFrutasAtual++;
+            
             if (mapa->grid[i][j] == PORTAL) {
                 numPortaisEcontrados++;
 
@@ -84,11 +87,6 @@ tMapa* CriaMapa(const char* caminhoConfig) {
         }
     }
 
-    // le qtd de comida no mapa no incio do jogo
-    for (i = 0; i < ObtemNumeroLinhasMapa(mapa); i++)
-        for (j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
-            mapa->nFrutasAtual++;
-            
     fclose(fMapa);
     return mapa;
 }
