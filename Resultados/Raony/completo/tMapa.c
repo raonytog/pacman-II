@@ -1,4 +1,5 @@
 #include "tMapa.h"
+#include "tAuxiliares.h"
 #include <string.h>
 
 #define COMIDA '*'

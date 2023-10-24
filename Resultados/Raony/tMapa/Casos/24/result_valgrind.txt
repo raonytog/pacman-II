@@ -1,15 +1,15 @@
-==80953== Memcheck, a memory error detector
-==80953== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==80953== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==80953== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/24
-==80953== Parent PID: 80952
-==80953== 
-==80953== 
-==80953== HEAP SUMMARY:
-==80953==     in use at exit: 0 bytes in 0 blocks
-==80953==   total heap usage: 20,927 allocs, 20,927 frees, 222,297 bytes allocated
-==80953== 
-==80953== All heap blocks were freed -- no leaks are possible
-==80953== 
-==80953== For lists of detected and suppressed errors, rerun with: -s
-==80953== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==105208== Memcheck, a memory error detector
+==105208== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==105208== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==105208== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/24
+==105208== Parent PID: 105207
+==105208== 
+==105208== 
+==105208== HEAP SUMMARY:
+==105208==     in use at exit: 0 bytes in 0 blocks
+==105208==   total heap usage: 20,927 allocs, 20,927 frees, 222,297 bytes allocated
+==105208== 
+==105208== All heap blocks were freed -- no leaks are possible
+==105208== 
+==105208== For lists of detected and suppressed errors, rerun with: -s
+==105208== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
