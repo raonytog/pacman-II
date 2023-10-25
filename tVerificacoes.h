@@ -1,14 +1,7 @@
-#ifndef TAUXILIARES_H_
-#define TAUXILIARES_H_
+#ifndef TVERIFICACOES_H_
+#define TVERIFICACOES_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
-#include "tMapa.h"
-#include "tPosicao.h"
-#include "tTunel.h"
-
+#include "tPacman.h"
 
 /**
  * Dado o ponteiro para uma posicao, verifica se 

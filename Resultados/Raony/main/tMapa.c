@@ -1,16 +1,10 @@
 #include "tMapa.h"
-#include "tAuxiliares.h"
 #include <string.h>
 
 #define COMIDA '*'
 #define PORTAL '@'
 #define PAREDE '#'
 
-/**
- * Dado o ponteiro para uma posicao, verifica se 
- * a mesma eh valida no no tabuleiro
- * \param ponteiro para a posicao e ponteiro para o mapa
- */
 bool EstaForaDosLimites(tMapa * mapa, tPosicao * posicao) {
     if (ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || 
         ObtemLinhaPosicao(posicao)  > ObtemNumeroLinhasMapa(mapa) || 
@@ -18,10 +12,6 @@ bool EstaForaDosLimites(tMapa * mapa, tPosicao * posicao) {
     return false;
 }
 
-/**
- * Dado o ponteiro para uma mapa, verifica se o mapa ou o grid é NULL
- * \param ponteiro para o mapa
- */
 bool EhNullGridOuMapa (tMapa * mapa) {
     return (mapa == NULL || mapa->grid == NULL);
 }
