@@ -1,4 +1,51 @@
-tPacman.c:2:10: fatal error: tAuxiliares.h: No such file or directory
-    2 | #include "tAuxiliares.h"
-      |          ^~~~~~~~~~~~~~~
-compilation terminated.
+tPacman.c: In function ‘CriaPacman’:
+tPacman.c:43:57: warning: implicit declaration of function ‘realoc’; did you mean ‘realloc’? [-Wimplicit-function-declaration]
+   43 |     pacman->nMovimentosSignificativos = (tMovimento **) realoc (sizeof(tMovimento *));
+      |                                                         ^~~~~~
+      |                                                         realloc
+tPacman.c:43:41: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   43 |     pacman->nMovimentosSignificativos = (tMovimento **) realoc (sizeof(tMovimento *));
+      |                                         ^
+tPacman.c:43:39: warning: assignment to ‘int’ from ‘tMovimento **’ makes integer from pointer without a cast [-Wint-conversion]
+   43 |     pacman->nMovimentosSignificativos = (tMovimento **) realoc (sizeof(tMovimento *));
+      |                                       ^
+tPacman.c: In function ‘ClonaHistoricoDeMovimentosSignificativosPacman’:
+tPacman.c:54:27: warning: initialization of ‘tMovimento **’ from incompatible pointer type ‘tMovimento *’ [-Wincompatible-pointer-types]
+   54 |     tMovimento ** clone = *(pacman->historicoDeMovimentosSignificativos);
+      |                           ^
+tPacman.c:55:12: warning: returning ‘tMovimento *’ from a function with incompatible return type ‘tMovimento **’ [-Wincompatible-pointer-types]
+   55 |     return *clone;
+      |            ^~~~~~
+tPacman.c: In function ‘MovePacman’:
+tPacman.c:72:18: warning: implicit declaration of function ‘EstaForaDosLimites’ [-Wimplicit-function-declaration]
+   72 |             if (!EstaForaDosLimites(mapa, pClone) && EncontrouParedeMapa(mapa, pClone)) {
+      |                  ^~~~~~~~~~~~~~~~~~
+tPacman.c:79:24: error: redefinition of ‘pClone’
+   79 |             tPosicao * pClone = ClonaPosicao(pacman->posicaoAtual);
+      |                        ^~~~~~
+tPacman.c:70:24: note: previous definition of ‘pClone’ with type ‘tPosicao *’
+   70 |             tPosicao * pClone = ClonaPosicao(pacman->posicaoAtual);
+      |                        ^~~~~~
+tPacman.c:88:24: error: redefinition of ‘pClone’
+   88 |             tPosicao * pClone = ClonaPosicao(pacman->posicaoAtual);
+      |                        ^~~~~~
+tPacman.c:79:24: note: previous definition of ‘pClone’ with type ‘tPosicao *’
+   79 |             tPosicao * pClone = ClonaPosicao(pacman->posicaoAtual);
+      |                        ^~~~~~
+tPacman.c:97:24: error: redefinition of ‘pClone’
+   97 |             tPosicao * pClone = ClonaPosicao(pacman->posicaoAtual);
+      |                        ^~~~~~
+tPacman.c:88:24: note: previous definition of ‘pClone’ with type ‘tPosicao *’
+   88 |             tPosicao * pClone = ClonaPosicao(pacman->posicaoAtual);
+      |                        ^~~~~~
+tPacman.c: In function ‘DesalocaPacman’:
+tPacman.c:143:33: warning: passing argument 1 of ‘DesalocaMovimento’ from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |         DesalocaMovimento(pacman->historicoDeMovimentosSignificativos);
+      |                           ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 tMovimento **
+In file included from tPacman.h:5,
+                 from tPacman.c:1:
+tMovimento.h:61:36: note: expected ‘tMovimento *’ but argument is of type ‘tMovimento **’
+   61 | void DesalocaMovimento(tMovimento* movimento);
+      |                        ~~~~~~~~~~~~^~~~~~~~~

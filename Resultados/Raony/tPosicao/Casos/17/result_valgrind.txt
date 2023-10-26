@@ -1,16 +1,26 @@
-==12589== Memcheck, a memory error detector
-==12589== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==12589== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==12589== Command: Resultados/Raony/tPosicao/prog Resultados/Raony/tPosicao/Casos/17
-==12589== Parent PID: 12588
-==12589== 
-==12589== error calling PR_SET_PTRACER, vgdb might block
-==12589== 
-==12589== HEAP SUMMARY:
-==12589==     in use at exit: 0 bytes in 0 blocks
-==12589==   total heap usage: 5,646 allocs, 5,646 frees, 58,452 bytes allocated
-==12589== 
-==12589== All heap blocks were freed -- no leaks are possible
-==12589== 
-==12589== For lists of detected and suppressed errors, rerun with: -s
-==12589== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==197440== Memcheck, a memory error detector
+==197440== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==197440== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==197440== Command: Resultados/Raony/tPosicao/prog Resultados/Raony/tPosicao/Casos/17
+==197440== Parent PID: 197439
+==197440== 
+==197440== Conditional jump or move depends on uninitialised value(s)
+==197440==    at 0x10B2F1: lerComandoTeclado (in /home/rtgomes/pacman-revival/Resultados/Raony/tPosicao/prog)
+==197440==    by 0x10B3B9: ExecutaJogo (in /home/rtgomes/pacman-revival/Resultados/Raony/tPosicao/prog)
+==197440==    by 0x10B8CF: main (in /home/rtgomes/pacman-revival/Resultados/Raony/tPosicao/prog)
+==197440== 
+==197440== Conditional jump or move depends on uninitialised value(s)
+==197440==    at 0x10B307: lerComandoTeclado (in /home/rtgomes/pacman-revival/Resultados/Raony/tPosicao/prog)
+==197440==    by 0x10B3B9: ExecutaJogo (in /home/rtgomes/pacman-revival/Resultados/Raony/tPosicao/prog)
+==197440==    by 0x10B8CF: main (in /home/rtgomes/pacman-revival/Resultados/Raony/tPosicao/prog)
+==197440== 
+==197440== 
+==197440== HEAP SUMMARY:
+==197440==     in use at exit: 0 bytes in 0 blocks
+==197440==   total heap usage: 8,705 allocs, 8,705 frees, 118,708 bytes allocated
+==197440== 
+==197440== All heap blocks were freed -- no leaks are possible
+==197440== 
+==197440== Use --track-origins=yes to see where uninitialised values come from
+==197440== For lists of detected and suppressed errors, rerun with: -s
+==197440== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
