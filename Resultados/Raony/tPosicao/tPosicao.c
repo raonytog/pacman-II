@@ -30,7 +30,7 @@ void AtualizaPosicao(tPosicao* posicaoAtual, tPosicao* posicaoNova) {
 }
 
 bool SaoIguaisPosicao(tPosicao* posicao1, tPosicao* posicao2) {
-    return ( (ObtemLinhaPosicao(posicao1) == ObtemColunaPosicao(posicao2)) && (ObtemLinhaPosicao(posicao2) == ObtemColunaPosicao(posicao2)) );
+    return ( (ObtemLinhaPosicao(posicao1) == ObtemLinhaPosicao(posicao2)) && (ObtemColunaPosicao(posicao1) == ObtemColunaPosicao(posicao2)) );
 }
 
 void DesalocaPosicao(tPosicao* posicao) {

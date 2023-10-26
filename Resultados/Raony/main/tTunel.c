@@ -10,8 +10,8 @@ tTunel* CriaTunel(int linhaAcesso1, int colunaAcesso1, int linhaAcesso2, int col
         exit(1);
     }
 
-    AtualizaPosicao(tunel->acesso1, posicao1);
-    AtualizaPosicao(tunel->acesso2, posicao2)
+    tunel->acesso1 = posicao1;
+    tunel->acesso2 = posicao2;
     return tunel;
 }
 

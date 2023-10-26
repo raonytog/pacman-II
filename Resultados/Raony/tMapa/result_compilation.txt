@@ -1,0 +1,4 @@
+tMapa.c:3:10: fatal error: utils.h: No such file or directory
+    3 | #include "utils.h"
+      |          ^~~~~~~~~
+compilation terminated.

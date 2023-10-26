@@ -1,20 +1,6 @@
-#include "tMapa.h"
-#include <string.h>
-
-#define COMIDA '*'
-#define PORTAL '@'
-#define PAREDE '#'
-
-bool EstaForaDosLimites(tMapa * mapa, tPosicao * posicao) {
-    if (ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || 
-        ObtemLinhaPosicao(posicao)  > ObtemNumeroLinhasMapa(mapa) || 
-        ObtemLinhaPosicao(posicao) < 0 || ObtemColunaPosicao(posicao) < 0) return true;
-    return false;
-}
-
-bool EhNullGridOuMapa (tMapa * mapa) {
-    return (mapa == NULL || mapa->grid == NULL);
-}
+// #include "tMapa.h"
+// #include <string.h>
+#include "utils.h"
 
 tMapa* CriaMapa(const char* caminhoConfig) {
     tMapa * mapa = (tMapa*)malloc(sizeof(tMapa));
