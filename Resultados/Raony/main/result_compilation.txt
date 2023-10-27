@@ -1,11 +1,11 @@
 tPacman.c: In function ‘ClonaHistoricoDeMovimentosSignificativosPacman’:
-tPacman.c:59:27: warning: initialization of ‘tMovimento **’ from incompatible pointer type ‘tMovimento *’ [-Wincompatible-pointer-types]
-   59 |     tMovimento ** clone = *(pacman->historicoDeMovimentosSignificativos);
+tPacman.c:72:27: warning: initialization of ‘tMovimento **’ from incompatible pointer type ‘tMovimento *’ [-Wincompatible-pointer-types]
+   72 |     tMovimento ** clone = *(pacman->historicoDeMovimentosSignificativos);
       |                           ^
-tPacman.c:60:12: warning: returning ‘tMovimento *’ from a function with incompatible return type ‘tMovimento **’ [-Wincompatible-pointer-types]
-   60 |     return *clone;
+tPacman.c:73:12: warning: returning ‘tMovimento *’ from a function with incompatible return type ‘tMovimento **’ [-Wincompatible-pointer-types]
+   73 |     return *clone;
       |            ^~~~~~
 tPacman.c: In function ‘CriaPacman’:
-tPacman.c:20:5: warning: ‘*pacman.posicaoAtual’ may be used uninitialized [-Wmaybe-uninitialized]
-   20 |     AtualizaPosicao(pacman->posicaoAtual, posicao);
+tPacman.c:33:5: warning: ‘*pacman.posicaoAtual’ may be used uninitialized [-Wmaybe-uninitialized]
+   33 |     AtualizaPosicao(pacman->posicaoAtual, posicao);
       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

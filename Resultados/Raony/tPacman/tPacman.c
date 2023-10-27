@@ -1,5 +1,4 @@
 #include "tPacman.h"
-#include "utils.h"
 
 /*
 *
@@ -13,6 +12,20 @@
 *       "*.o"
 */
 
+#define VIVO 1 
+#define MORTO 0 
+
+#define COMIDA '*'
+#define PORTAL '@'
+#define PAREDE '#'
+#define PACMAN '>'
+
+typedef enum {
+    ESQUERDA = 0,
+    CIMA = 1,
+    BAIXO = 2,
+    DIREITA = 3 
+} MOVIMENTOS;
 
 tPacman* CriaPacman(tPosicao* posicao) {
     tPacman * pacman = (tPacman*)malloc(sizeof(tPacman));

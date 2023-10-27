@@ -1,4 +1,11 @@
-tPacman.c:2:10: fatal error: utils.h: No such file or directory
-    2 | #include "utils.h"
-      |          ^~~~~~~~~
-compilation terminated.
+tPacman.c: In function ‘ClonaHistoricoDeMovimentosSignificativosPacman’:
+tPacman.c:72:27: warning: initialization of ‘tMovimento **’ from incompatible pointer type ‘tMovimento *’ [-Wincompatible-pointer-types]
+   72 |     tMovimento ** clone = *(pacman->historicoDeMovimentosSignificativos);
+      |                           ^
+tPacman.c:73:12: warning: returning ‘tMovimento *’ from a function with incompatible return type ‘tMovimento **’ [-Wincompatible-pointer-types]
+   73 |     return *clone;
+      |            ^~~~~~
+tPacman.c: In function ‘CriaPacman’:
+tPacman.c:33:5: warning: ‘*pacman.posicaoAtual’ may be used uninitialized [-Wmaybe-uninitialized]
+   33 |     AtualizaPosicao(pacman->posicaoAtual, posicao);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

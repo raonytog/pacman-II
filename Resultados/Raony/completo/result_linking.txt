@@ -1,3 +1,7 @@
+/usr/bin/ld: Resultados/Raony/completo/utils.o: in function `EstaForaDosLimites':
+utils.c:(.text+0x0): multiple definition of `EstaForaDosLimites'; Resultados/Raony/completo/tMapa.o:tMapa.c:(.text+0x0): first defined here
+/usr/bin/ld: Resultados/Raony/completo/utils.o: in function `EhNullGridOuMapa':
+utils.c:(.text+0x83): multiple definition of `EhNullGridOuMapa'; Resultados/Raony/completo/tMapa.o:tMapa.c:(.text+0x83): first defined here
 /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
 (.text+0x1b): undefined reference to `main'
 collect2: error: ld returned 1 exit status
