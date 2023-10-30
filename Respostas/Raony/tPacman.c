@@ -109,6 +109,21 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
 
             pacman->nMovimentosEsquerda++;                
             break;
+
+        case DIREITA: // direita
+            pClone->coluna++;
+            if (EncontrouParedeMapa(mapa, pClone)) {
+                pacman->nColisoesParedeDireita++;
+
+            } else {
+                if (EncontrouComidaMapa(mapa, ObtemPosicaoPacman(pacman))) 
+                    pacman->nFrutasComidasDireita++;
+                
+                AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
+            }
+
+            pacman->nMovimentosDireita++;
+            break;
         
         case CIMA: // cima
             pClone->linha--;
@@ -138,22 +153,6 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
             }
             
             pacman->nMovimentosBaixo++;
-            break;
-
-        case DIREITA: // direita
-            pClone->coluna++;
-            if (EncontrouParedeMapa(mapa, pClone)) {
-                pacman->nColisoesParedeDireita++;
-
-            } else {
-                if (EncontrouComidaMapa(mapa, ObtemPosicaoPacman(pacman))) 
-                    pacman->nFrutasComidasDireita++;
-                
-                AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-
-            }
-            
-            pacman->nMovimentosDireita++;
             break;
     }
 
