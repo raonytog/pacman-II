@@ -133,270 +133,270 @@ LINKANDO OS ARQUIVOS COMPILADOS:
 EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta tPacman / Caso 01:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/01/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 349, frees: 321, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 705, frees: 631, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/01/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/01/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/01/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/01/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/01/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 02:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/02/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 108, frees: 91, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 222, frees: 178, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/02/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/02/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/02/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/02/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/02/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 03:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/03/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,869, frees: 1,831, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 3,735, frees: 3,641, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/03/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/03/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/03/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/03/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/03/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 04:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/04/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 639, frees: 616, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,290, frees: 1,226, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/04/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/04/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/04/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/04/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/04/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 05:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/05/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,304, frees: 1,261, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 2,600, frees: 2,496, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/05/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/05/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/05/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/05/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/05/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 06:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/06/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 549, frees: 521, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,099, frees: 1,029, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/06/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/06/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/06/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/06/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/06/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 07:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/07/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 129, frees: 111, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 257, frees: 215, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/07/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/07/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/07/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/07/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/07/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 08:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/08/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 309, frees: 276, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 608, frees: 532, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/08/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/08/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/08/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/08/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/08/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 09:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/09/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 929, frees: 911, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,863, frees: 1,817, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/09/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/09/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/09/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/09/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/09/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 10:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/10/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 449, frees: 401, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 873, frees: 767, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/10/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/10/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/10/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/10/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/10/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 11:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/11/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,029, frees: 1,011, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 2,063, frees: 2,017, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/11/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/11/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/11/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/11/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/11/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 12:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/12/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 414, frees: 391, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 840, frees: 776, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/12/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/12/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/12/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/12/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/12/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 13:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/13/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 549, frees: 521, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,099, frees: 1,029, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/13/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/13/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/13/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/13/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/13/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 14:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/14/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 339, frees: 316, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 684, frees: 624, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/14/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/14/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/14/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/14/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/14/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 15:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/15/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 489, frees: 466, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 990, frees: 926, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/15/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/15/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/15/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/15/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/15/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 16:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/16/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 188, frees: 169, errors: 2 | Desconto do valgrind 30.00%
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/16/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/16/saida/inicializacao.txt, considerando resultado incorreto!
+ - Valgrind: Incorreto! allocs: 8,606, frees: 8,565, errors: 16447 | Desconto do valgrind 30.00%
+ - Resultado para o estatisticas.txt: Incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/16/saida/ranking.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/16/saida/resumo.txt, considerando resultado incorreto!
+ - Resultado para o resumo.txt: Incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/16/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 17:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/17/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 188, frees: 169, errors: 2 | Desconto do valgrind 30.00%
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/17/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/17/saida/inicializacao.txt, considerando resultado incorreto!
+ - Valgrind: Incorreto! allocs: 8,611, frees: 8,565, errors: 16442 | Desconto do valgrind 30.00%
+ - Resultado para o estatisticas.txt: Incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/17/saida/ranking.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/17/saida/resumo.txt, considerando resultado incorreto!
+ - Resultado para o resumo.txt: Incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/17/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 18:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/18/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 180, frees: 161, errors: 2 | Desconto do valgrind 30.00%
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/18/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/18/saida/inicializacao.txt, considerando resultado incorreto!
+ - Valgrind: Incorreto! allocs: 15,546, frees: 15,453, errors: 29118 | Desconto do valgrind 30.00%
+ - Resultado para o estatisticas.txt: Incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/18/saida/ranking.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/18/saida/resumo.txt, considerando resultado incorreto!
+ - Resultado para o resumo.txt: Incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/18/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 19:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/19/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 492, frees: 466, errors: 2 | Desconto do valgrind 30.00%
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/19/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/19/saida/inicializacao.txt, considerando resultado incorreto!
+ - Valgrind: Incorreto! allocs: 59,319, frees: 59,200, errors: 114952 | Desconto do valgrind 30.00%
+ - Resultado para o estatisticas.txt: Incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/19/saida/ranking.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/19/saida/resumo.txt, considerando resultado incorreto!
+ - Resultado para o resumo.txt: Incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/19/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 20:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/20/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 342, frees: 316, errors: 2 | Desconto do valgrind 30.00%
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/20/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/20/saida/inicializacao.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/20/saida/ranking.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/20/saida/resumo.txt, considerando resultado incorreto!
+ - Valgrind: Incorreto! allocs: 42,602, frees: 42,548, errors: 82240 | Desconto do valgrind 30.00%
+ - Resultado para o estatisticas.txt: Incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
+ - Resultado para o ranking.txt: Incorreto!
+ - Resultado para o resumo.txt: Incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/20/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 21:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/21/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 202, frees: 181, errors: 2 | Desconto do valgrind 30.00%
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/21/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/21/saida/inicializacao.txt, considerando resultado incorreto!
+ - Valgrind: Incorreto! allocs: 11,247, frees: 11,185, errors: 20988 | Desconto do valgrind 30.00%
+ - Resultado para o estatisticas.txt: Incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/21/saida/ranking.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/21/saida/resumo.txt, considerando resultado incorreto!
+ - Resultado para o resumo.txt: Incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/21/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 22:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/22/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 339, frees: 316, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 690, frees: 626, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/22/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/22/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/22/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/22/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/22/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 23:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/23/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 429, frees: 411, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 875, frees: 821, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/23/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/23/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/23/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/23/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/23/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 24:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/24/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 264, frees: 241, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 534, frees: 474, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/24/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/24/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/24/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/24/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/24/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 25:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/25/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 549, frees: 521, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,105, frees: 1,031, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/25/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/25/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/25/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/25/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/25/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 26:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/26/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 519, frees: 481, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,035, frees: 941, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/26/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/26/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/26/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/26/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/26/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 27:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/27/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 449, frees: 421, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 905, frees: 831, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/27/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/27/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/27/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/27/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/27/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 28:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/28/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 684, frees: 651, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,370, frees: 1,286, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/28/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/28/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/28/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/28/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/28/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 29:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/29/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 969, frees: 931, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,935, frees: 1,841, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/29/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/29/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/29/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/29/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/29/saida/trilha.txt, considerando resultado incorreto!
  - Pasta tPacman / Caso 30:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/30/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 549, frees: 521, errors: 2 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,105, frees: 1,031, errors: 1 | Desconto do valgrind 30.00%
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/30/saida/estatisticas.txt, considerando resultado incorreto!
- - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/30/saida/inicializacao.txt, considerando resultado incorreto!
+ - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/30/saida/ranking.txt, considerando resultado incorreto!
  - O aluno não gerou o arquivo de saída Resultados/Raony/tPacman/Casos/30/saida/resumo.txt, considerando resultado incorreto!
  - Resultado para o saida.txt: Incorreto!
@@ -1979,14 +1979,14 @@ Nome 0: Raony
  - Valgrinds Corretos completo: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta completo, olhar detalhamento nos prints acima!)
  - Valgrinds Corretos main: 0 valgrinds corretos de 30 (teve desconto na nota para a pasta main, olhar detalhamento nos prints acima!)
  - Cômputo final das Notas:
- - Pasta tPacman (peso 2.5): 0 resultados corretos de 180 / Nota 0
+ - Pasta tPacman (peso 2.5): 30 resultados corretos de 180 / Nota .17
  - Pasta tMapa (peso 2.5): 180 resultados corretos de 180 / Nota 2.50
  - Pasta tMovimento (peso 0.5): 180 resultados corretos de 180 / Nota .50
  - Pasta tTunel (peso 0.5): 180 resultados corretos de 180 / Nota .50
  - Pasta tPosicao (peso 0.5): 180 resultados corretos de 180 / Nota .50
  - Pasta completo (peso 0.0): 0 resultados corretos de 180 / Nota 0
  - Pasta main (peso 3.5): 0 resultados corretos de 180 / Nota 0
- - Nota Final Raony: 4.00
+ - Nota Final Raony: 4.17
 
 ----------------------------------------------------------------------------
 

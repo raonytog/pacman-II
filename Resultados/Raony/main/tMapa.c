@@ -5,6 +5,14 @@
 #define PAREDE '#'
 #define PACMAN '>'
 
+
+/**
+*  Verifica se o numero de colunas e linhas excedem ou são menores do que as minimas e maximas 
+*  dimensoes do mapa
+
+* \param ponteiro para o mapa
+* \param ponteiro para a posicao
+*/
 bool EstaForaDosLimites(tMapa * mapa, tPosicao * posicao) {
     if (ObtemColunaPosicao(posicao) > ObtemNumeroColunasMapa(mapa) || 
         ObtemLinhaPosicao(posicao)  > ObtemNumeroLinhasMapa(mapa) || 
@@ -12,9 +20,14 @@ bool EstaForaDosLimites(tMapa * mapa, tPosicao * posicao) {
     return false;
 }
 
+/**
+*  Verifica se o mapa ou o grid é null
+* \param ponteiro para o mapa
+*/
 bool EhNullGridOuMapa (tMapa * mapa) {
     return (mapa == NULL || mapa->grid == NULL);
 }
+
 
 tMapa* CriaMapa(const char* caminhoConfig) {
     tMapa * mapa = (tMapa*)malloc(sizeof(tMapa));

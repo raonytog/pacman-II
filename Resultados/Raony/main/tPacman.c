@@ -20,6 +20,7 @@
 #define PAREDE '#'
 #define PACMAN '>'
 
+/* tipo para auxiliar o movimento */
 typedef enum {
     ESQUERDA = 0,
     CIMA = 1,
@@ -27,12 +28,14 @@ typedef enum {
     DIREITA = 3 
 } MOVIMENTOS;
 
+
 tPacman* CriaPacman(tPosicao* posicao) {
     tPacman * pacman = (tPacman*)malloc(sizeof(tPacman));
     if (pacman == NULL || posicao == NULL) return NULL;
-    AtualizaPosicao(pacman->posicaoAtual, posicao);
 
     // dump de inicializacoes
+    pacman->posicaoAtual = posicao;
+
     pacman->estaVivo = 1;
 
     pacman->nColisoesParedeBaixo = 0;
@@ -67,10 +70,22 @@ tPacman* ClonaPacman(tPacman* pacman) {
     return clone;
 }
 
+/**
+ * Clona a lista historico de movimentos significativos do pacman.
+ * Aloca dinamicamente todas as estruturas do histórico de
+ * movimentos do pacman original (passado como parâmetro): a lista e os movimentos da lista.
+ * E por fim copia as informações do histórico original para o clone.
+ * Retorna um ponteiro para o tMovimento** clone.
+ * \param pacman pacman
+ */
 tMovimento** ClonaHistoricoDeMovimentosSignificativosPacman(tPacman* pacman) {
-    // ERRADINHO
-    tMovimento ** clone = *(pacman->historicoDeMovimentosSignificativos); 
-    return *clone;
+    tMovimento ** movClone = (tMovimento **) malloc(ObtemNumeroMovimentosSignificativosPacman(pacman) * sizeof(tMovimento *));
+    for (int i = 0; i < ObtemNumeroMovimentosSignificativosPacman(pacman); i++) {
+        movClone[i] = (tMovimento *) malloc(sizeof(tMovimento));
+        movClone[i] = pacman->historicoDeMovimentosSignificativos[i];
+    }
+
+    return movClone;
 }
 
 tPosicao* ObtemPosicaoPacman(tPacman* pacman) {
@@ -169,7 +184,7 @@ void CriaTrilhaPacman(tPacman* pacman, int nLinhas, int nColunas) {
 }
 
 void AtualizaTrilhaPacman(tPacman* pacman) {
-    pacman->trilha[ObtemLinhaPosicao(pacman->posicaoAtual)][ObtemColunaPosicao(pacman->posicaoAtual)] = ObtemNumeroAtualMovimentosPacman(pacman);
+    pacman->trilha[ObtemLinhaPosicao(ObtemPosicaoPacman(pacman))][ObtemColunaPosicao(ObtemPosicaoPacman(pacman))] = ObtemNumeroAtualMovimentosPacman(pacman);
 }
 
 void SalvaTrilhaPacman(tPacman* pacman) {
@@ -204,7 +219,7 @@ void MataPacman(tPacman* pacman) {
 void DesalocaPacman(tPacman* pacman) {
     if (pacman == NULL) return;
 
-    // desaloca posi
+    // desaloca posicao
     DesalocaPosicao(pacman->posicaoAtual);
 
     // desaloca movimento
@@ -220,7 +235,7 @@ void DesalocaPacman(tPacman* pacman) {
 
 int ObtemNumeroAtualMovimentosPacman(tPacman* pacman) {
     return ObtemNumeroMovimentosBaixoPacman(pacman) + ObtemNumeroMovimentosCimaPacman(pacman) + 
-           ObtemNumeroMovimentosEsquerdaPacman(pacman) + ObtemNumeroColisoesParedeDireitaPacman(pacman);
+           ObtemNumeroMovimentosEsquerdaPacman(pacman) + ObtemNumeroMovimentosDireitaPacman(pacman);
 }
 
 int ObtemNumeroMovimentosSemPontuarPacman(tPacman* pacman) {
@@ -281,7 +296,8 @@ int ObtemNumeroColisoesParedeDireitaPacman(tPacman* pacman) {
 }
 
 int ObtemNumeroMovimentosSignificativosPacman(tPacman* pacman) {
-    return pacman->nMovimentosSignificativos;
+    if (EstaVivoPacman(pacman)) return ObtemPontuacaoAtualPacman(pacman) + ObtemNumeroColisoesParedePacman(pacman);
+    else return ObtemPontuacaoAtualPacman(pacman) + ObtemNumeroColisoesParedePacman(pacman) + 1;
 }
 
 int ObtemPontuacaoAtualPacman(tPacman* pacman) {
