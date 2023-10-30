@@ -1,7 +1,37 @@
-/usr/bin/ld: Resultados/Raony/completo/utils.o: in function `EstaForaDosLimites':
-utils.c:(.text+0x0): multiple definition of `EstaForaDosLimites'; Resultados/Raony/completo/tMapa.o:tMapa.c:(.text+0x0): first defined here
-/usr/bin/ld: Resultados/Raony/completo/utils.o: in function `EhNullGridOuMapa':
-utils.c:(.text+0x83): multiple definition of `EhNullGridOuMapa'; Resultados/Raony/completo/tMapa.o:tMapa.c:(.text+0x83): first defined here
 /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
 (.text+0x1b): undefined reference to `main'
+/usr/bin/ld: Resultados/Raony/completo/tPacman.o: in function `ClonaHistoricoDeMovimentosSignificativosPacman':
+tPacman.c:(.text+0x1bf): undefined reference to `ObtemAcaoMovimento'
+/usr/bin/ld: tPacman.c:(.text+0x1e1): undefined reference to `ObtemComandoMovimento'
+/usr/bin/ld: tPacman.c:(.text+0x203): undefined reference to `ObtemNumeroMovimento'
+/usr/bin/ld: tPacman.c:(.text+0x226): undefined reference to `CriaMovimento'
+/usr/bin/ld: Resultados/Raony/completo/tPacman.o: in function `MovePacman':
+tPacman.c:(.text+0x2a7): undefined reference to `ClonaPosicao'
+/usr/bin/ld: tPacman.c:(.text+0x30c): undefined reference to `EncontrouParedeMapa'
+/usr/bin/ld: tPacman.c:(.text+0x341): undefined reference to `EncontrouComidaMapa'
+/usr/bin/ld: tPacman.c:(.text+0x379): undefined reference to `AtualizaItemMapa'
+/usr/bin/ld: tPacman.c:(.text+0x3b1): undefined reference to `EncontrouParedeMapa'
+/usr/bin/ld: tPacman.c:(.text+0x3e6): undefined reference to `EncontrouComidaMapa'
+/usr/bin/ld: tPacman.c:(.text+0x41e): undefined reference to `AtualizaItemMapa'
+/usr/bin/ld: tPacman.c:(.text+0x456): undefined reference to `EncontrouParedeMapa'
+/usr/bin/ld: tPacman.c:(.text+0x48b): undefined reference to `EncontrouComidaMapa'
+/usr/bin/ld: tPacman.c:(.text+0x4c3): undefined reference to `AtualizaItemMapa'
+/usr/bin/ld: tPacman.c:(.text+0x4fd): undefined reference to `EncontrouParedeMapa'
+/usr/bin/ld: tPacman.c:(.text+0x532): undefined reference to `EncontrouComidaMapa'
+/usr/bin/ld: tPacman.c:(.text+0x56a): undefined reference to `AtualizaItemMapa'
+/usr/bin/ld: tPacman.c:(.text+0x588): undefined reference to `PossuiTunelMapa'
+/usr/bin/ld: tPacman.c:(.text+0x5a7): undefined reference to `ObtemTunelMapa'
+/usr/bin/ld: tPacman.c:(.text+0x5b2): undefined reference to `EntrouTunel'
+/usr/bin/ld: tPacman.c:(.text+0x5dd): undefined reference to `ObtemTunelMapa'
+/usr/bin/ld: tPacman.c:(.text+0x5e8): undefined reference to `LevaFinalTunel'
+/usr/bin/ld: tPacman.c:(.text+0x5fe): undefined reference to `AtualizaPosicao'
+/usr/bin/ld: tPacman.c:(.text+0x60a): undefined reference to `DesalocaPosicao'
+/usr/bin/ld: Resultados/Raony/completo/tPacman.o: in function `AtualizaTrilhaPacman':
+tPacman.c:(.text+0x721): undefined reference to `ObtemLinhaPosicao'
+/usr/bin/ld: tPacman.c:(.text+0x738): undefined reference to `ObtemColunaPosicao'
+/usr/bin/ld: Resultados/Raony/completo/tPacman.o: in function `InsereNovoMovimentoSignificativoPacman':
+tPacman.c:(.text+0x8fc): undefined reference to `CriaMovimento'
+/usr/bin/ld: Resultados/Raony/completo/tPacman.o: in function `DesalocaPacman':
+tPacman.c:(.text+0x9b1): undefined reference to `DesalocaPosicao'
+/usr/bin/ld: tPacman.c:(.text+0x9d9): undefined reference to `DesalocaMovimento'
 collect2: error: ld returned 1 exit status
