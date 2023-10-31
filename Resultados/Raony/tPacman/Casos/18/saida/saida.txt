@@ -955,4 +955,5 @@ Estado do jogo apos o movimento 'a':
 ###################
 Pontuacao: 46
 
-Gam
+Game over!
+Pontuacao final: 46

@@ -2334,4 +2334,9 @@ Estado do jogo apos o movimento 'a':
 # #   # # #        #
 # ## ## # ##       #
 #  #  # #  #       #
-#               B 
+#               B  #
+####################
+Pontuacao: 24
+
+Voce venceu!
+Pontuacao final: 24

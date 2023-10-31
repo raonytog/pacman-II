@@ -2604,4 +2604,9 @@ Estado do jogo apos o movimento 'a':
 # ###   # ######   #  # #
 # ###   # ######   #    #
 # ### ### ###### #####  #
-#              
+#                       #
+#########################
+Pontuacao: 30
+
+Voce venceu!
+Pontuacao final: 30

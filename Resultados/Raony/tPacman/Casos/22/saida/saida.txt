@@ -1831,4 +1831,8 @@ Estado do jogo apos o movimento 'd':
 # ## # ##P##   #   #
 # ## # ## #    #   #
 #      >           #
-#######
+####################
+Pontuacao: 30
+
+Voce venceu!
+Pontuacao final: 30

@@ -717,3 +717,14 @@ Estado do jogo apos o movimento 'a':
 #################
 #      #@  >    #
 #      ###      #
+#   B  ### ###  #
+#     ####      #
+# #    ### #    #
+# # ## ###P## C #
+# # ##I###  #   #
+#        #      #
+#################
+Pontuacao: 12
+
+Voce venceu!
+Pontuacao final: 12

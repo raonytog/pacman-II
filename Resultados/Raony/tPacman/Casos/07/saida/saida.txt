@@ -1030,3 +1030,13 @@ Estado do jogo apos o movimento 'w':
 #      * #
 #  >   # #
 #      # #
+#      # #
+#  # #   #
+#*## ## P#
+#  # #   #
+#    *   #
+##########
+Pontuacao: 5
+
+Game over!
+Pontuacao final: 5
