@@ -1,6 +1,6 @@
-Movimento 84563776 (a) ÀW
+Movimento 84563760 (a) °W
 
-Movimento 84565824 (a) À_
+Movimento 84565808 (a) °_
 
 Movimento 16 (w) pegou comida
 Movimento 20 (w) pegou comida

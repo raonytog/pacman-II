@@ -35,8 +35,8 @@ tPacman.c:(.text+0x284): undefined reference to `ClonaPosicao'
 tPacman.c:(.text+0x86b): undefined reference to `ObtemLinhaPosicao'
 /usr/bin/ld: tPacman.c:(.text+0x882): undefined reference to `ObtemColunaPosicao'
 /usr/bin/ld: Resultados/Raony/completo/tPacman.o: in function `InsereNovoMovimentoSignificativoPacman':
-tPacman.c:(.text+0xaa8): undefined reference to `CriaMovimento'
+tPacman.c:(.text+0xaad): undefined reference to `CriaMovimento'
 /usr/bin/ld: Resultados/Raony/completo/tPacman.o: in function `DesalocaPacman':
-tPacman.c:(.text+0xb1f): undefined reference to `DesalocaMovimento'
-/usr/bin/ld: tPacman.c:(.text+0xba3): undefined reference to `DesalocaPosicao'
+tPacman.c:(.text+0xb24): undefined reference to `DesalocaMovimento'
+/usr/bin/ld: tPacman.c:(.text+0xba8): undefined reference to `DesalocaPosicao'
 collect2: error: ld returned 1 exit status

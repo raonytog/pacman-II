@@ -24,7 +24,8 @@ void GeraArquivoInicializacao (tMapa * mapa, tPacman * pacman) {
             fprintf(fInicializacao, "%c", mapa->grid[i][j]);
         fprintf(fInicializacao, "\n");
     }
-    fprintf("Pac-Man comecara o jogo na linha %d e coluna %d\n", ObtemLinhaPosicao(ObtemPosicaoPacman(pacman)), ObtemColunaPosicao(ObtemPosicaoPacman(pacman)));
+    fprintf(fInicializacao, "Pac-Man comecara o jogo na linha %d e coluna %d\n", 
+            ObtemLinhaPosicao(ObtemPosicaoPacman(pacman))+1, ObtemColunaPosicao(ObtemPosicaoPacman(pacman))+1);
 
     fclose(fInicializacao);
 }

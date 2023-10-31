@@ -228,9 +228,9 @@ void SalvaTrilhaPacman(tPacman* pacman) {
 }
 
 void InsereNovoMovimentoSignificativoPacman(tPacman* pacman, COMANDO comando, const char* acao) {
-    pacman->nMovimentosSignificativos++;
-    pacman->historicoDeMovimentosSignificativos = (tMovimento **) realloc (pacman->historicoDeMovimentosSignificativos, pacman->nMovimentosSignificativos * sizeof(tMovimento *));
-    pacman->historicoDeMovimentosSignificativos[ObtemNumeroMovimentosSignificativosPacman(pacman) - 1] = CriaMovimento(ObtemNumeroAtualMovimentosPacman(pacman), comando, acao);
+    (pacman->nMovimentosSignificativos)++;
+    pacman->historicoDeMovimentosSignificativos = (tMovimento **) realloc (pacman->historicoDeMovimentosSignificativos, ObtemNumeroMovimentosSignificativosPacman(pacman) * sizeof(tMovimento *));
+    pacman->historicoDeMovimentosSignificativos[ObtemNumeroMovimentosSignificativosPacman(pacman)-1] = CriaMovimento(ObtemNumeroAtualMovimentosPacman(pacman), comando, acao);
 }
 
 void MataPacman(tPacman* pacman) {
@@ -271,8 +271,8 @@ int ObtemNumeroMovimentosSemPontuarPacman(tPacman* pacman) {
 }
 
 int ObtemNumeroColisoesParedePacman(tPacman* pacman) {
-    return ObtemNumeroColisoesParedeBaixoPacman(pacman) + ObtemNumeroColisoesParedeCimaPacman(pacman) +
-           ObtemNumeroColisoesParedeEsquerdaPacman(pacman) + ObtemNumeroColisoesParedeDireitaPacman(pacman);
+    return ObtemNumeroColisoesParedeBaixoPacman(pacman) + ObtemNumeroColisoesParedeCimaPacman(pacman)
+         + ObtemNumeroColisoesParedeEsquerdaPacman(pacman) + ObtemNumeroColisoesParedeDireitaPacman(pacman);
 }
 
 int ObtemNumeroMovimentosBaixoPacman(tPacman* pacman) {
@@ -328,6 +328,6 @@ int ObtemNumeroMovimentosSignificativosPacman(tPacman* pacman) {
 }
 
 int ObtemPontuacaoAtualPacman(tPacman* pacman) {
-    return ObtemNumeroFrutasComidasBaixoPacman(pacman) + ObtemNumeroFrutasComidasCimaPacman(pacman) +
-           ObtemNumeroFrutasComidasEsquerdaPacman(pacman) + ObtemNumeroFrutasComidasDireitaPacman(pacman);
+    return ObtemNumeroFrutasComidasBaixoPacman(pacman) + ObtemNumeroFrutasComidasCimaPacman(pacman) 
+         + ObtemNumeroFrutasComidasEsquerdaPacman(pacman) + ObtemNumeroFrutasComidasDireitaPacman(pacman);
 }

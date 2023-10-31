@@ -1,9 +1,9 @@
-Movimento 93775248 (a) æ–
-Movimento 93777296 (a) î–
-Movimento 93779344 (a) ö–
-Movimento 93781392 (a) þ–
-Movimento 93783440 (a) —
-Movimento 93785488 (a) —
+Movimento 93775232 (a) 
+Movimento 93777280 (a) 
+Movimento 93779328 (a) 
+Movimento 93781376 (a) 
+Movimento 93783424 (a) 
+Movimento 93785472 (a) 
 Movimento 18 (w) colidiu com a parede
 Movimento 24 (s) pegou comida
 Movimento 25 (a) pegou comida
