@@ -153,7 +153,6 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
         if (EntrouTunel(ObtemTunelMapa(mapa), posicaoClone)) {
             AtualizaTrilhaPacman(pacman);
             LevaFinalTunel(ObtemTunelMapa(mapa), posicaoClone);
-            AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
         }
     }
 
@@ -219,14 +218,18 @@ void DesalocaPacman(tPacman* pacman) {
     if (pacman == NULL) return;
 
     // desaloca movimento
-    for (int i = 0; i < pacman->nMovimentosSignificativos; i++)
-        DesalocaMovimento(pacman->historicoDeMovimentosSignificativos[i]);
-    free(pacman->historicoDeMovimentosSignificativos);
+    if (pacman->historicoDeMovimentosSignificativos != NULL) {
+        for (int i = 0; i < pacman->nMovimentosSignificativos; i++)
+            DesalocaMovimento(pacman->historicoDeMovimentosSignificativos[i]);
+        free(pacman->historicoDeMovimentosSignificativos);
+    }
 
     // desaloca trilha
-    for (int i = 0; i < pacman->nLinhasTrilha; i++)
-        free(pacman->trilha[i]);
-    free(pacman->trilha);
+    if (pacman->trilha != NULL) {
+        for (int i = 0; i < pacman->nLinhasTrilha; i++)
+            free(pacman->trilha[i]);
+        free(pacman->trilha);
+    }
 
     // desaloca posicao
     DesalocaPosicao(pacman->posicaoAtual);
