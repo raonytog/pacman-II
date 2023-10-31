@@ -4822,11 +4822,4 @@ Estado do jogo apos o movimento 'd':
 # ## ##  *  ##  *##   # #
 #I # #  *##  ##         #
 #       ##*      #  #   #
-# ##  # *  * ### # ##   #
-# ## ### ###* #* #  # * #
-#      > *  *     *    *#
-#########################
-Pontuacao: 6
-
-Game over!
-Pontuacao final: 6
+# ##  # *  * ###

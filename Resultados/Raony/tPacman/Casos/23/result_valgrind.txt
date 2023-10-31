@@ -1,0 +1,299 @@
+==32212== Memcheck, a memory error detector
+==32212== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==32212== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==32212== Command: Resultados/Raony/tPacman/prog Resultados/Raony/tPacman/Casos/23
+==32212== Parent PID: 32211
+==32212== 
+==32212== error calling PR_SET_PTRACER, vgdb might block
+==32212== Conditional jump or move depends on uninitialised value(s)
+==32212==    at 0x10CC63: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Conditional jump or move depends on uninitialised value(s)
+==32212==    at 0x10CCAB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFE8: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10ABDC: PrintaGridMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B5FC: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f40 is 0 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFFC: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10ABF1: PrintaGridMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B5FC: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f44 is 4 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFBC: ClonaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C548: MovePacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B470: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f40 is 0 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFC8: ClonaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C548: MovePacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B470: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f44 is 4 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid write of size 4
+==32212==    at 0x10D01B: AtualizaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C88D: MovePacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B470: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f40 is 0 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid write of size 4
+==32212==    at 0x10D028: AtualizaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C88D: MovePacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B470: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f44 is 4 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFE8: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C9AB: AtualizaTrilhaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C899: MovePacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B470: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f40 is 0 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFFC: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C9C2: AtualizaTrilhaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C899: MovePacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B470: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f44 is 4 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFE8: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10AE10: VerificaColisaoComFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B487: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f40 is 0 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFFC: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10AE1F: VerificaColisaoComFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B487: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f44 is 4 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFE8: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10AEA9: VerificaColisaoComFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B487: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f40 is 0 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10CFFC: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10AEB8: VerificaColisaoComFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B487: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f44 is 4 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid free() / delete / delete[] / realloc()
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4a94f40 is 0 bytes inside a block of size 8 free'd
+==32212==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10D090: DesalocaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10CCCB: DesalocaPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B496: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Block was alloc'd at
+==32212==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32212==    by 0x10CF7C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10BF09: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10A79A: CriaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B89F: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Use of uninitialised value of size 8
+==32212==    at 0x10C28E: ObtemComandoMovimento (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C483: ClonaHistoricoDeMovimentosSignificativosPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B0FD: GeraArquivos (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B78E: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212== 
+==32212== Invalid read of size 4
+==32212==    at 0x10C28E: ObtemComandoMovimento (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C483: ClonaHistoricoDeMovimentosSignificativosPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B0FD: GeraArquivos (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B78E: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  Address 0x4 is not stack'd, malloc'd or (recently) free'd
+==32212== 
+==32212== 
+==32212== Process terminating with default action of signal 11 (SIGSEGV)
+==32212==  Access not within mapped region at address 0x4
+==32212==    at 0x10C28E: ObtemComandoMovimento (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10C483: ClonaHistoricoDeMovimentosSignificativosPacman (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B0FD: GeraArquivos (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B78E: ExecutaJogo (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==    by 0x10B8AF: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/tPacman/prog)
+==32212==  If you believe this happened as a result of a stack
+==32212==  overflow in your program's main thread (unlikely but
+==32212==  possible), you can try to increase the size of the
+==32212==  main thread stack using the --main-stacksize= flag.
+==32212==  The main thread stack size used in this run was 8388608.
+==32212== 
+==32212== HEAP SUMMARY:
+==32212==     in use at exit: 4,604 bytes in 43 blocks
+==32212==   total heap usage: 34,377 allocs, 34,413 frees, 296,990 bytes allocated
+==32212== 
+==32212== LEAK SUMMARY:
+==32212==    definitely lost: 0 bytes in 0 blocks
+==32212==    indirectly lost: 0 bytes in 0 blocks
+==32212==      possibly lost: 0 bytes in 0 blocks
+==32212==    still reachable: 4,604 bytes in 43 blocks
+==32212==         suppressed: 0 bytes in 0 blocks
+==32212== Reachable blocks (those to which a pointer was found) are not shown.
+==32212== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==32212== 
+==32212== Use --track-origins=yes to see where uninitialised values come from
+==32212== For lists of detected and suppressed errors, rerun with: -s
+==32212== ERROR SUMMARY: 65979 errors from 17 contexts (suppressed: 0 from 0)

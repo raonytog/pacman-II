@@ -92,87 +92,96 @@ int EstaVivoPacman(tPacman* pacman) {
 }
 
 void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
-    tPosicao * pClone = ClonaPosicao(ObtemPosicaoPacman(pacman));
+    tPosicao * posicaoClone = ClonaPosicao(ObtemPosicaoPacman(pacman));
     switch (comando) {
         case ESQUERDA: //esquerda
-            pClone->coluna--;
-            if (EncontrouParedeMapa(mapa, pClone)) {
+            posicaoClone->coluna--;
+            if (EncontrouParedeMapa(mapa, posicaoClone)) {
                 pacman->nColisoesParedeEsquerda++;
-
+                posicaoClone->coluna++;
+                
             } else {
-                AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-                pacman->nMovimentosEsquerda++;
-            }
-            
-            if (EncontrouComidaMapa(mapa, ObtemPosicaoPacman(pacman))) {
-                pacman->nFrutasComidasEsquerda++;
-            }
-            break;
-        
-        case CIMA: // cima
-            pClone->linha--;
-            if (EncontrouParedeMapa(mapa, pClone)) {
-                pacman->nColisoesParedeCima++;
+                if (EncontrouComidaMapa(mapa, posicaoClone))
+                    pacman->nFrutasComidasEsquerda++;
 
-            } else {
-                AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-                pacman->nMovimentosCima++;
+                AtualizaItemMapa(mapa, posicaoClone, PACMAN);
             }
-            
-            if (EncontrouComidaMapa(mapa, ObtemPosicaoPacman(pacman))) {
-                pacman->nFrutasComidasCima++;
-            }
-            break;
 
-        case BAIXO: // baixo
-            pClone->linha++;
-            if (EncontrouParedeMapa(mapa, pClone)) {
-                pacman->nColisoesParedeBaixo++;
-
-            } else {
-                AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-                pacman->nMovimentosBaixo++;
-            }
-            
-            if (EncontrouComidaMapa(mapa, ObtemPosicaoPacman(pacman))) {
-                pacman->nFrutasComidasBaixo++;
-            }
+            pacman->nMovimentosEsquerda++;
             break;
 
         case DIREITA: // direita
-            pClone->coluna++;
-            if (EncontrouParedeMapa(mapa, pClone)) {
+            posicaoClone->coluna++;
+            if (EncontrouParedeMapa(mapa, posicaoClone)) {
                 pacman->nColisoesParedeDireita++;
+                posicaoClone->coluna--;
 
             } else {
-                AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-                pacman->nMovimentosDireita++;
+                if (EncontrouComidaMapa(mapa, posicaoClone)) 
+                    pacman->nFrutasComidasDireita++;
+                
+                AtualizaItemMapa(mapa, posicaoClone, PACMAN);
+            }
+
+            pacman->nMovimentosDireita++;
+            break;
+        
+        case CIMA: // cima
+            posicaoClone->linha--;
+            if (EncontrouParedeMapa(mapa, posicaoClone)) {
+                pacman->nColisoesParedeCima++;
+                posicaoClone->linha++;
+
+            } else {
+                if (EncontrouComidaMapa(mapa, posicaoClone)) 
+                    pacman->nFrutasComidasCima++;
+                    
+                AtualizaItemMapa(mapa, posicaoClone, PACMAN);
+            }
+
+            pacman->nMovimentosCima++;
+            break;
+
+        case BAIXO: // baixo
+            posicaoClone->linha++;
+            if (EncontrouParedeMapa(mapa, posicaoClone)) {
+                pacman->nColisoesParedeBaixo++;
+                posicaoClone->linha--;
+
+            } else {
+                if (EncontrouComidaMapa(mapa, posicaoClone)) 
+                    pacman->nFrutasComidasBaixo++;
+
+                AtualizaItemMapa(mapa, posicaoClone, PACMAN);
             }
             
-            if (EncontrouComidaMapa(mapa, ObtemPosicaoPacman(pacman))) {
-                pacman->nFrutasComidasDireita++;
-            }
+            pacman->nMovimentosBaixo++;
             break;
     }
 
-    if (EntrouTunel(ObtemTunelMapa(mapa), ObtemPosicaoPacman(pacman))) {
-        LevaFinalTunel(ObtemTunelMapa(mapa), ObtemPosicaoPacman(pacman));
+    if (PossuiTunelMapa(mapa) && EntrouTunel(ObtemTunelMapa(mapa), posicaoClone)) {
+        LevaFinalTunel(ObtemTunelMapa(mapa), posicaoClone);
+        AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
+        AtualizaTrilhaPacman(pacman);
     }
 
-    AtualizaPosicao(pacman->posicaoAtual, pClone);
-    DesalocaPosicao(pClone);
+    AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
+    DesalocaPosicao(posicaoClone);
     AtualizaTrilhaPacman(pacman);
 }
 
 void CriaTrilhaPacman(tPacman* pacman, int nLinhas, int nColunas) {
+    printf("ADORO SEXO");
     if (pacman->trilha != NULL) return;
 
+    // atribui os numeros de linhas e colunas
+    pacman->nLinhasTrilha = nLinhas;
+    pacman->nColunasTrilha = nColunas;
+
+    // aloca espaco pra trilha
     pacman->trilha = (int **) malloc (nLinhas * sizeof(int *));
     for (int i = 0; i < nLinhas; i++) {
         pacman->trilha[i] = (int *) malloc (nColunas * sizeof(int));
-    }
-
-    for (int i = 0; i < nLinhas; i++) {
         for (int j = 0; j < nColunas; j++) {
             pacman->trilha[i][j] = -1;
         }
@@ -180,8 +189,7 @@ void CriaTrilhaPacman(tPacman* pacman, int nLinhas, int nColunas) {
 }
 
 void AtualizaTrilhaPacman(tPacman* pacman) {
-    int row = ObtemLinhaPosicao(ObtemPosicaoPacman(pacman));
-    int col = ObtemColunaPosicao(ObtemPosicaoPacman(pacman));
+    int row = ObtemLinhaPosicao(ObtemPosicaoPacman(pacman)), col = ObtemColunaPosicao(ObtemPosicaoPacman(pacman));
     pacman->trilha[row][col] = ObtemNumeroAtualMovimentosPacman(pacman);
 }
 
@@ -195,12 +203,11 @@ void SalvaTrilhaPacman(tPacman* pacman) {
 
     for (int i = 0; i < pacman->nLinhasTrilha; i++) {
         for (int j = 0; j < pacman->nColunasTrilha; j++) {
-            if (pacman->trilha[i][j] == -1) {
-                fprintf(fTrilha,"#");
-                if (j != pacman->nColunasTrilha-1) fprintf(fTrilha, " "); // nao printa o espaco na ultima coluna
-            }
-
+            if (pacman->trilha[i][j] == -1) fprintf(fTrilha, "#");
             else fprintf(fTrilha, "%d ", pacman->trilha[i][j]);
+
+            // nao printa o espaco na ultima coluna
+            if (j != pacman->nColunasTrilha-1) fprintf(fTrilha, " "); 
         }
         fprintf(fTrilha, "\n");
     }
@@ -234,6 +241,7 @@ void DesalocaPacman(tPacman* pacman) {
         free(pacman->trilha[i]);
     free(pacman->trilha);
 
+    // desaloca o pacman em si
     free(pacman);
 }
 

@@ -1515,18 +1515,4 @@ Estado do jogo apos o movimento 'w':
 #             #
 # ### ###  ## #
 #          ## #
-#P  ###  #    #
-#   #   ## ## #
-#   #    # ## #
-# #     > C   #
-# ##      #   #
-# # B    ###  #
-#      #      #
-# ### ## ###  #
-#  #   #  #   #
-#             #
-###############
-Pontuacao: 16
-
-Voce venceu!
-Pontuacao final: 16
+#P  ###  #

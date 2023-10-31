@@ -3327,8 +3327,4 @@ Estado do jogo apos o movimento 'd':
 # #   #   # # ##*  #*   #
 # #   ### #*#  #  *#    #
 #          *      **  * #
-#########################
-Pontuacao: 29
-
-Game over!
-Pontuacao final: 29
+##

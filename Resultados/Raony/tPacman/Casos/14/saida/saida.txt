@@ -2133,12 +2133,4 @@ Estado do jogo apos o movimento 'a':
 #   #     #  #   B #
 #   #     ## #  #  #
 #   C >    # # ### #
-#     # #          #
-#  #  # #   ##  #  #
-# ### # ### ## ### #
-#                  #
-####################
-Pontuacao: 29
-
-Voce venceu!
-Pontuacao final: 29
+#     # #   
