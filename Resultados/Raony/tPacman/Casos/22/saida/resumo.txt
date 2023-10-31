@@ -1,5 +1,5 @@
-Movimento 80974672 (a) Ð“Ó
-Movimento 80976720 (a) Ð›Ó
+Movimento 80974656 (a) À“Ó
+Movimento 80976704 (a) À›Ó
 Movimento 7 (d) pegou comida
 Movimento 13 (a) pegou comida
 Movimento 16 (d) pegou comida

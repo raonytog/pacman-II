@@ -4,7 +4,7 @@ Movimento 93779344 (a) ö–
 Movimento 93781392 (a) þ–
 Movimento 93783440 (a) —
 Movimento 93785488 (a) —
-Movimento 93787536 (a) colidiu com a parede
+Movimento 18 (w) colidiu com a parede
 Movimento 24 (s) pegou comida
 Movimento 25 (a) pegou comida
 Movimento 26 (w) pegou comida
@@ -103,5 +103,4 @@ Movimento 363 (w) colidiu com a parede
 Movimento 366 (a) colidiu com a parede
 Movimento 367 (w) colidiu com a parede
 Movimento 370 (s) colidiu com a parede
-Movimento 371 (s) colidiu com a parede
 Movimento 371 (s) fim de jogo por encostar em um fantasma

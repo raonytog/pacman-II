@@ -153,7 +153,7 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
         if (EntrouTunel(ObtemTunelMapa(mapa), posicaoClone)) {
             AtualizaTrilhaPacman(pacman);
             LevaFinalTunel(ObtemTunelMapa(mapa), posicaoClone);
-            AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
+            AtualizaItemMapa(mapa, posicaoClone, PACMAN);
         }
     }
 
@@ -302,8 +302,7 @@ int ObtemNumeroColisoesParedeDireitaPacman(tPacman* pacman) {
 }
 
 int ObtemNumeroMovimentosSignificativosPacman(tPacman* pacman) {
-    if (EstaVivoPacman(pacman)) return ObtemPontuacaoAtualPacman(pacman) + ObtemNumeroColisoesParedePacman(pacman);
-    else return ObtemPontuacaoAtualPacman(pacman) + ObtemNumeroColisoesParedePacman(pacman) + 1;
+    return ObtemPontuacaoAtualPacman(pacman) + ObtemNumeroColisoesParedePacman(pacman);
 }
 
 int ObtemPontuacaoAtualPacman(tPacman* pacman) {

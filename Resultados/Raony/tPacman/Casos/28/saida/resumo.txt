@@ -1,6 +1,6 @@
-Movimento 84563856 (a) X
+Movimento 84563776 (a) ÀW
 
-Movimento 84565904 (a) `
+Movimento 84565824 (a) À_
 
 Movimento 16 (w) pegou comida
 Movimento 20 (w) pegou comida
@@ -31,5 +31,4 @@ Movimento 103 (s) pegou comida
 Movimento 104 (s) colidiu com a parede
 Movimento 106 (d) pegou comida
 Movimento 111 (s) pegou comida
-Movimento 117 (a) pegou comida
 Movimento 119 (d) fim de jogo por encostar em um fantasma

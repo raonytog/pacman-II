@@ -1,6 +1,6 @@
-Movimento 89101440 (a) 
-Movimento 89103488 (a) 
-Movimento 89105536 (a) 
+Movimento 89101360 (a) °”O
+Movimento 89103408 (a) °œO
+Movimento 89105456 (a) °¤O
 Movimento 4 (a) colidiu com a parede
 Movimento 5 (d) colidiu com a parede
 Movimento 6 (d) colidiu com a parede

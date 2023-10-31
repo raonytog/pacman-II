@@ -1,10 +1,10 @@
-Movimento 87642400 (a) †Q9
-Movimento 87644448 (a) †Y9
-Movimento 87646496 (a) †a9
-Movimento 87648544 (a) †i9
-Movimento 87650592 (a) †q9
-Movimento 87652640 (a) †y9
-Movimento 87654688 (a) †Å9
+Movimento 87642320 (a) PQ9
+Movimento 87644368 (a) PY9
+Movimento 87646416 (a) Pa9
+Movimento 87648464 (a) Pi9
+Movimento 87650512 (a) Pq9
+Movimento 87652560 (a) Py9
+Movimento 87654608 (a) PÅ9
 Movimento 13 (a) pegou comida
 Movimento 17 (d) colidiu com a parede
 Movimento 18 (a) colidiu com a parede

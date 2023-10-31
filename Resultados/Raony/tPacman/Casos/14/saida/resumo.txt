@@ -1,5 +1,5 @@
-Movimento 81371440 (a) °¡Ù
-Movimento 81373488 (a) °©Ù
+Movimento 81371424 (a)  ¡Ù
+Movimento 81373472 (a)  ©Ù
 Movimento 6 (d) pegou comida
 Movimento 8 (d) pegou comida
 Movimento 9 (s) colidiu com a parede

@@ -26,5 +26,4 @@ Movimento 64 (d) pegou comida
 Movimento 66 (a) pegou comida
 Movimento 67 (s) pegou comida
 Movimento 79 (s) pegou comida
-Movimento 82 (s) pegou comida
 Movimento 84 (w) fim de jogo por encostar em um fantasma

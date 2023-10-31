@@ -1,24 +1,24 @@
-Movimento 193219984 (a) NÑ
-Movimento 193222032 (a) VÑ
-Movimento 193224080 (a) ^Ñ
-Movimento 193226128 (a) fÑ
-Movimento 193228176 (a) nÑ
-Movimento 193230224 (a) vÑ
-Movimento 193232272 (a) ~Ñ
-Movimento 193234320 (a) ÜÑ
-Movimento 193236368 (a) éÑ
-Movimento 193238416 (a) ñÑ
-Movimento 193240464 (a) ûÑ
-Movimento 193242512 (a) ¶Ñ
-Movimento 193244560 (a) ÆÑ
-Movimento 193246608 (a) ∂Ñ
-Movimento 193248656 (a) æÑ
-Movimento 193250704 (a) ∆Ñ
-Movimento 193252752 (a) ŒÑ
-Movimento 193254800 (a) ÷Ñ
-Movimento 193256848 (a) ﬁÑ
-Movimento 193258896 (a) ÊÑ
-Movimento 193260944 (a) ÓÑ
+Movimento 193219904 (a) ¿MÑ
+Movimento 193221952 (a) ¿UÑ
+Movimento 193224000 (a) ¿]Ñ
+Movimento 193226048 (a) ¿eÑ
+Movimento 193228096 (a) ¿mÑ
+Movimento 193230144 (a) ¿uÑ
+Movimento 193232192 (a) ¿}Ñ
+Movimento 193234240 (a) ¿ÖÑ
+Movimento 193236288 (a) ¿çÑ
+Movimento 193238336 (a) ¿ïÑ
+Movimento 193240384 (a) ¿ùÑ
+Movimento 193242432 (a) ¿•Ñ
+Movimento 193244480 (a) ¿≠Ñ
+Movimento 193246528 (a) ¿µÑ
+Movimento 193248576 (a) ¿ΩÑ
+Movimento 193250624 (a) ¿≈Ñ
+Movimento 193252672 (a) ¿ÕÑ
+Movimento 193254720 (a) ¿’Ñ
+Movimento 193256768 (a) ¿›Ñ
+Movimento 193258816 (a) ¿ÂÑ
+Movimento 193260864 (a) ¿ÌÑ
 Movimento 42 (w) colidiu com a parede
 Movimento 43 (w) colidiu com a parede
 Movimento 45 (a) colidiu com a parede

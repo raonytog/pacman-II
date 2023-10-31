@@ -1,4 +1,4 @@
-Movimento 80111776 (a)  i∆
+Movimento 80111760 (a) i∆
 Movimento 2 (w) pegou comida
 Movimento 3 (d) pegou comida
 Movimento 5 (w) pegou comida

@@ -1,5 +1,5 @@
-Movimento 81076240 (a) ê ’
-Movimento 81078288 (a) ê(’
+Movimento 81076224 (a) Ä ’
+Movimento 81078272 (a) Ä(’
 Movimento 11 (w) pegou comida
 Movimento 13 (d) pegou comida
 Movimento 19 (s) pegou comida

@@ -1,4 +1,3 @@
-#include "tPacman.h"
 #include "utils.h"
 
 #define DIRETORIO_MAX_SIZE 1001
@@ -13,11 +12,10 @@ int main (int agrc, char * argv[]) {
     sprintf(diretorio, "%s", argv[1]);
 
     tMapa * mapa = CriaMapa(diretorio);
-
-    //GeraInicializacao(mapa);
-
     tPosicao * posicaoPacman = ObtemPosicaoItemMapa(mapa, PACMAN);
     tPacman * pacman = CriaPacman(posicaoPacman);
+
+    GeraArquivoInicializacao(mapa, pacman);
 
     return 0;
 }

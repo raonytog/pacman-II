@@ -1,15 +1,15 @@
-Movimento 138418848 (a)  @
-Movimento 138420896 (a)  #@
-Movimento 138422944 (a)  +@
-Movimento 138424992 (a)  3@
-Movimento 138427040 (a)  ;@
-Movimento 138429088 (a)  C@
-Movimento 138431136 (a)  K@
-Movimento 138433184 (a)  S@
-Movimento 138435232 (a)  [@
-Movimento 138437280 (a)  c@
-Movimento 138439328 (a)  k@
-Movimento 138441376 (a)  s@
+Movimento 138418768 (a) Ð@
+Movimento 138420816 (a) Ð"@
+Movimento 138422864 (a) Ð*@
+Movimento 138424912 (a) Ð2@
+Movimento 138426960 (a) Ð:@
+Movimento 138429008 (a) ÐB@
+Movimento 138431056 (a) ÐJ@
+Movimento 138433104 (a) ÐR@
+Movimento 138435152 (a) ÐZ@
+Movimento 138437200 (a) Ðb@
+Movimento 138439248 (a) Ðj@
+Movimento 138441296 (a) Ðr@
 Movimento 78 (s) colidiu com a parede
 Movimento 86 (a) colidiu com a parede
 Movimento 88 (w) pegou comida

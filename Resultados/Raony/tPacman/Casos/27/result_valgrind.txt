@@ -1,341 +1,350 @@
-==469057== Memcheck, a memory error detector
-==469057== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==469057== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==469057== Command: Resultados/Raony/tPacman/prog Resultados/Raony/tPacman/Casos/27
-==469057== Parent PID: 469056
-==469057== 
-==469057== Conditional jump or move depends on uninitialised value(s)
-==469057==    at 0x10CD2A: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Conditional jump or move depends on uninitialised value(s)
-==469057==    at 0x10CD72: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0AF: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10ABDC: PrintaGridMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B5FC: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0C3: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10ABF1: PrintaGridMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B5FC: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e4 is 4 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D083: ClonaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10C548: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B470: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D08F: ClonaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10C548: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B470: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e4 is 4 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid write of size 4
-==469057==    at 0x10D0E2: AtualizaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10C956: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B470: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid write of size 4
-==469057==    at 0x10D0EF: AtualizaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10C956: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B470: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e4 is 4 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0AF: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CA74: AtualizaTrilhaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10C962: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B470: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0C3: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CA8B: AtualizaTrilhaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10C962: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B470: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e4 is 4 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0AF: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10AE10: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B487: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0C3: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10AE1F: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B487: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e4 is 4 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0AF: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10AEA9: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B487: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 4
-==469057==    at 0x10D0C3: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10AEB8: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B487: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e4 is 4 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid free() / delete / delete[] / realloc()
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid write of size 8
-==469057==    at 0x10C4C9: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B0FD: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4b614e8 is 0 bytes after a block of size 8 alloc'd
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10C432: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B0FD: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 8
-==469057==    at 0x109507: SalvaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B26A: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4b614e8 is 0 bytes after a block of size 8 alloc'd
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10C432: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B0FD: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 8
-==469057==    at 0x109533: SalvaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B26A: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4b614e8 is 0 bytes after a block of size 8 alloc'd
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10C432: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B0FD: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 8
-==469057==    at 0x10955F: SalvaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B26A: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4b614e8 is 0 bytes after a block of size 8 alloc'd
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10C432: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B0FD: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid free() / delete / delete[] / realloc()
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B7C1: DesalocaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8BB: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4aaf8e0 is 0 bytes inside a block of size 8 free'd
-==469057==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D157: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10CD92: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B496: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Block was alloc'd at
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10D043: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10BF09: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10A79A: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B89F: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== Invalid read of size 8
-==469057==    at 0x109684: DesalocaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B829: DesalocaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8BB: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==  Address 0x4b614e8 is 0 bytes after a block of size 8 alloc'd
-==469057==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==469057==    by 0x10C432: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B0FD: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B78E: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057==    by 0x10B8AF: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
-==469057== 
-==469057== 
-==469057== HEAP SUMMARY:
-==469057==     in use at exit: 0 bytes in 0 blocks
-==469057==   total heap usage: 9,300 allocs, 9,320 frees, 122,512 bytes allocated
-==469057== 
-==469057== All heap blocks were freed -- no leaks are possible
-==469057== 
-==469057== Use --track-origins=yes to see where uninitialised values come from
-==469057== For lists of detected and suppressed errors, rerun with: -s
-==469057== ERROR SUMMARY: 16499 errors from 21 contexts (suppressed: 0 from 0)
+==401010== Memcheck, a memory error detector
+==401010== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==401010== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==401010== Command: Resultados/Raony/tPacman/prog Resultados/Raony/tPacman/Casos/27
+==401010== Parent PID: 401009
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D14E: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10ABF1: PrintaGridMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B611: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D162: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10AC06: PrintaGridMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B611: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d4 is 4 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D122: ClonaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10C5FC: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B485: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D12E: ClonaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10C5FC: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B485: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d4 is 4 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid write of size 4
+==401010==    at 0x10D181: AtualizaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CA0C: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B485: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid write of size 4
+==401010==    at 0x10D18E: AtualizaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CA0C: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B485: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d4 is 4 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D14E: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CB2A: AtualizaTrilhaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CA18: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B485: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D162: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CB41: AtualizaTrilhaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CA18: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B485: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d4 is 4 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D14E: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10AE25: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B49C: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D162: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10AE34: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B49C: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d4 is 4 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D14E: ObtemLinhaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10AEBE: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B49C: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 4
+==401010==    at 0x10D162: ObtemColunaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10AECD: VerificaColisaoComFantasma (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B49C: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d4 is 4 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid free() / delete / delete[] / realloc()
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid write of size 8
+==401010==    at 0x10C57D: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B112: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4b614d8 is 0 bytes after a block of size 8 alloc'd
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10C4E6: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B112: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 8
+==401010==    at 0x109507: SalvaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B27F: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4b614d8 is 0 bytes after a block of size 8 alloc'd
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10C4E6: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B112: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 8
+==401010==    at 0x109533: SalvaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B27F: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4b614d8 is 0 bytes after a block of size 8 alloc'd
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10C4E6: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B112: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 8
+==401010==    at 0x10955F: SalvaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B27F: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4b614d8 is 0 bytes after a block of size 8 alloc'd
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10C4E6: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B112: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Conditional jump or move depends on uninitialised value(s)
+==401010==    at 0x10C36B: DesalocaMovimento (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CDDE: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7D6: DesalocaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8E4: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid free() / delete / delete[] / realloc()
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7D6: DesalocaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8E4: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4aaf8d0 is 0 bytes inside a block of size 8 free'd
+==401010==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D1FD: DesalocaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CE62: DesalocaPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B4AB: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Block was alloc'd at
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10D0E2: CriaPosicao (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10BF74: ObtemPosicaoItemMapa (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10A7AF: CriaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8C8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== Invalid read of size 8
+==401010==    at 0x109684: DesalocaResumo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B84B: DesalocaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8E4: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==  Address 0x4b614d8 is 0 bytes after a block of size 8 alloc'd
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10C4E6: ClonaHistoricoDeMovimentosSignificativosPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B112: GeraArquivos (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B7A3: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== 
+==401010== HEAP SUMMARY:
+==401010==     in use at exit: 60 bytes in 1 blocks
+==401010==   total heap usage: 9,299 allocs, 9,318 frees, 122,444 bytes allocated
+==401010== 
+==401010== 60 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==401010==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==401010==    by 0x10C2E2: CriaMovimento (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10CD67: InsereNovoMovimentoSignificativoPacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10C6F5: MovePacman (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B485: ExecutaJogo (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010==    by 0x10B8D8: main (in /home/rtgomes/prog/pacman-revival/Resultados/Raony/tPacman/prog)
+==401010== 
+==401010== LEAK SUMMARY:
+==401010==    definitely lost: 60 bytes in 1 blocks
+==401010==    indirectly lost: 0 bytes in 0 blocks
+==401010==      possibly lost: 0 bytes in 0 blocks
+==401010==    still reachable: 0 bytes in 0 blocks
+==401010==         suppressed: 0 bytes in 0 blocks
+==401010== 
+==401010== Use --track-origins=yes to see where uninitialised values come from
+==401010== For lists of detected and suppressed errors, rerun with: -s
+==401010== ERROR SUMMARY: 16456 errors from 21 contexts (suppressed: 0 from 0)

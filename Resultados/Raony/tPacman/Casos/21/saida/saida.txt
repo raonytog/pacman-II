@@ -286,7 +286,7 @@ Pontuacao: 3
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@>** *  #
+#      # >** *  #
 #      ###*    *#
 #B     ### ###  #
 #     ####*   * #
@@ -299,7 +299,7 @@ Pontuacao: 3
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@ >* *  #
+#      #  >* *  #
 #      ###*    *#
 # B    ### ###  #
 #     ####*   * #
@@ -312,7 +312,7 @@ Pontuacao: 4
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###>    *#
 #  B   ### ###  #
 #     ####*   * #
@@ -325,7 +325,7 @@ Pontuacao: 5
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #   B  ###>###  #
 #     ####*   * #
@@ -338,7 +338,7 @@ Pontuacao: 5
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #    B ### ###  #
 #     ####>   * #
@@ -351,7 +351,7 @@ Pontuacao: 6
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #     B### ###  #
 #     #### >  * #
@@ -364,7 +364,7 @@ Pontuacao: 6
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #    B ### ###  #
 #     ####  > * #
@@ -377,7 +377,7 @@ Pontuacao: 6
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #   B  ### ###  #
 #     ####P  >* #
@@ -390,7 +390,7 @@ Pontuacao: 6
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #  B   ###P###  #
 #     ####    > #
@@ -403,7 +403,7 @@ Pontuacao: 7
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###P    *#
 # B    ### ###  #
 #     ####     >#
@@ -416,7 +416,7 @@ Pontuacao: 7
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@ P* *  #
+#      #  P* *  #
 #      ###     *#
 #B     ### ###  #
 #     ####      #
@@ -429,7 +429,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###P    *#
 # B    ### ###  #
 #     ####      #
@@ -442,7 +442,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #  B   ###P###  #
 #     ####      #
@@ -455,7 +455,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #   B  ### ###  #
 #     ####P     #
@@ -468,7 +468,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 's':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #    B ### ###  #
 #     ####      #
@@ -481,7 +481,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #     B### ###  #
 #     ####      #
@@ -494,7 +494,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #    B ### ###  #
 #     ####      #
@@ -507,7 +507,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #   B  ### ###  #
 #     ####      #
@@ -520,7 +520,7 @@ Pontuacao: 8
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #  B   ### ###  #
 #     ####      #
@@ -533,7 +533,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 # B    ### ###  #
 #     ####      #
@@ -546,7 +546,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #B     ### ###  #
 #     ####      #
@@ -559,7 +559,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'w':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 # B    ### ###  #
 #     ####P     #
@@ -572,7 +572,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'w':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #  B   ###P###  #
 #     ####      #
@@ -585,7 +585,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'w':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###P    *#
 #   B  ### ###  #
 #     ####      #
@@ -598,7 +598,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@ P* *  #
+#      #  P* *  #
 #      ###     *#
 #    B ### ###  #
 #     ####      #
@@ -611,7 +611,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'd':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###P    *#
 #     B### ###  #
 #     ####      #
@@ -624,7 +624,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'w':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #    B ###P###  #
 #     ####     >#
@@ -637,7 +637,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'w':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     *#
 #   B  ### ### >#
 #     ####P     #
@@ -650,7 +650,7 @@ Pontuacao: 9
 
 Estado do jogo apos o movimento 'w':
 #################
-#      #@  * *  #
+#      #   * *  #
 #      ###     >#
 #  B   ### ###  #
 #     ####      #
@@ -663,7 +663,7 @@ Pontuacao: 10
 
 Estado do jogo apos o movimento 'w':
 #################
-#      #@  * * >#
+#      #   * * >#
 #      ###      #
 # B    ### ###  #
 #     ####      #
@@ -676,7 +676,7 @@ Pontuacao: 10
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  * *> #
+#      #   * *> #
 #      ###      #
 #B     ### ###  #
 #     ####      #
@@ -689,7 +689,7 @@ Pontuacao: 10
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  * >  #
+#      #   * >  #
 #      ###      #
 # B    ### ###  #
 #     ####      #
@@ -702,7 +702,7 @@ Pontuacao: 11
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  *>   #
+#      #   *>   #
 #      ###      #
 #  B   ### ###  #
 #     ####      #
@@ -715,7 +715,7 @@ Pontuacao: 11
 
 Estado do jogo apos o movimento 'a':
 #################
-#      #@  >    #
+#      #   >    #
 #      ###      #
 #   B  ### ###  #
 #     ####      #

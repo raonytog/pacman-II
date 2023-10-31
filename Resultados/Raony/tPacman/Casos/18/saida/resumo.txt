@@ -1,6 +1,6 @@
-Movimento 79542128 (a) ð·½
-Movimento 79544176 (a) ð¿½
-Movimento 79546224 (a) ðÇ½
+Movimento 79542112 (a) à·½
+Movimento 79544160 (a) à¿½
+Movimento 79546208 (a) àÇ½
 Movimento 4 (a) pegou comida
 Movimento 5 (s) pegou comida
 Movimento 7 (w) pegou comida
@@ -46,5 +46,4 @@ Movimento 78 (w) pegou comida
 Movimento 79 (a) pegou comida
 Movimento 82 (s) colidiu com a parede
 Movimento 83 (d) pegou comida
-Movimento 87 (a) pegou comida
 Movimento 87 (a) fim de jogo por encostar em um fantasma
