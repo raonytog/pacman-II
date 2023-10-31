@@ -138,7 +138,7 @@ LINKANDO OS ARQUIVOS COMPILADOS:
 EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta tPacman / Caso 01:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/01/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 34,600, frees: 34,706, errors: 66144 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 34,600, frees: 34,706, errors: 66444 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -147,7 +147,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 02:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/02/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,799, frees: 1,815, errors: 3010 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,799, frees: 1,815, errors: 3058 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -156,7 +156,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 03:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/03/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,317,665, frees: 1,318,387, errors: 2616814 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,317,665, frees: 1,318,387, errors: 2618870 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -165,7 +165,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 04:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/04/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 396,611, frees: 397,249, errors: 781015 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 396,611, frees: 397,249, errors: 783019 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -174,7 +174,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 05:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/05/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 1,429,241, frees: 1,430,387, errors: 2835992 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 1,429,241, frees: 1,430,387, errors: 2839208 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -183,7 +183,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 06:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/06/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 192,479, frees: 192,849, errors: 378622 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 192,479, frees: 192,849, errors: 379678 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -192,7 +192,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 07:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/07/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 8,874, frees: 8,954, errors: 16970 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 8,874, frees: 8,954, errors: 17214 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -201,7 +201,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 08:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/08/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 53,929, frees: 54,133, errors: 105186 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 53,929, frees: 54,133, errors: 105898 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -210,7 +210,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 09:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/09/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 748,544, frees: 749,363, errors: 1487550 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 748,544, frees: 749,363, errors: 1490058 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -219,7 +219,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 10:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/10/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 115,856, frees: 116,165, errors: 227744 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 115,856, frees: 116,165, errors: 228520 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -228,7 +228,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 11:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/11/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 932,719, frees: 933,639, errors: 1854809 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 932,719, frees: 933,639, errors: 1857769 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -237,7 +237,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 12:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/12/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 58,060, frees: 58,205, errors: 112194 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 58,060, frees: 58,205, errors: 112638 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -246,7 +246,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 13:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/13/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 54,753, frees: 54,857, errors: 106091 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 54,753, frees: 54,857, errors: 106371 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -255,7 +255,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 14:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/14/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 38,263, frees: 38,382, errors: 73774 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 38,263, frees: 38,382, errors: 74114 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -264,7 +264,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 15:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/15/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 22,600, frees: 22,646, errors: 42488 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 22,600, frees: 22,646, errors: 42608 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -273,7 +273,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 16:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/16/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 8,435, frees: 8,483, errors: 15931 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 8,435, frees: 8,483, errors: 16063 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -282,7 +282,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 17:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/17/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 5,580, frees: 5,610, errors: 10290 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 5,580, frees: 5,610, errors: 10378 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -291,7 +291,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 18:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/18/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 15,393, frees: 15,479, errors: 28637 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 15,393, frees: 15,479, errors: 28789 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -300,7 +300,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 19:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/19/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 58,752, frees: 58,875, errors: 113636 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 58,752, frees: 58,875, errors: 114016 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -309,7 +309,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 20:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/20/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 42,226, frees: 42,356, errors: 81086 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 42,226, frees: 42,356, errors: 81506 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -318,7 +318,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 21:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/21/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 11,035, frees: 11,091, errors: 20359 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 11,035, frees: 11,091, errors: 20523 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -327,7 +327,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 22:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/22/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 33,321, frees: 33,423, errors: 63687 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 33,321, frees: 33,423, errors: 63955 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -336,7 +336,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 23:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/23/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 34,455, frees: 34,535, errors: 65927 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 34,455, frees: 34,535, errors: 66151 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -345,7 +345,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 24:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/24/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 20,983, frees: 21,068, errors: 39931 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 20,983, frees: 21,068, errors: 40195 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -354,7 +354,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 25:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/25/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 134,623, frees: 134,880, errors: 263130 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 134,623, frees: 134,880, errors: 263966 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -363,7 +363,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 26:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/26/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 75,729, frees: 75,888, errors: 146972 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 75,729, frees: 75,888, errors: 147428 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -372,7 +372,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 27:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/27/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 9,299, frees: 9,318, errors: 16456 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 9,299, frees: 9,318, errors: 16504 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -381,7 +381,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 28:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/28/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 78,095, frees: 78,213, errors: 151587 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 78,095, frees: 78,213, errors: 151931 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -390,7 +390,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 29:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/29/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 79,211, frees: 79,294, errors: 153253 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 79,211, frees: 79,294, errors: 153469 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
@@ -399,7 +399,7 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o trilha.txt: Ok! Peso: 1.5
  - Pasta tPacman / Caso 30:
  - Arquivo de output gerado: Resultados/Raony/tPacman/Casos/30/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 110,314, frees: 110,524, errors: 215235 | Desconto do valgrind 30.00%
+ - Valgrind: Incorreto! allocs: 110,314, frees: 110,524, errors: 215767 | Desconto do valgrind 30.00%
  - Resultado para o estatisticas.txt: Ok! Peso: 1.5
  - Resultado para o inicializacao.txt: Ok! Peso: 1.0
  - Resultado para o ranking.txt: Ok! Peso: 1.5
