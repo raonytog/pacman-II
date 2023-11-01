@@ -17,7 +17,6 @@ typedef enum {
     DIREITA = 3 
 } MOVIMENTOS;
 
-
 tPacman* CriaPacman(tPosicao* posicao) {
     tPacman * pacman = (tPacman*)malloc(sizeof(tPacman));
     if (pacman == NULL || posicao == NULL) return NULL;
@@ -159,14 +158,14 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
     AtualizaTrilhaPacman(pacman);
 
     if (PossuiTunelMapa(mapa)) {
-        if (EntrouTunel(ObtemTunelMapa(mapa), posicaoClone) && !bateuParede) {
-            AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
+        if (EntrouTunel(ObtemTunelMapa(mapa), pacman->posicaoAtual) && !bateuParede) {
+            // AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
             AtualizaTrilhaPacman(pacman);
-            LevaFinalTunel(ObtemTunelMapa(mapa), posicaoClone);
+            LevaFinalTunel(ObtemTunelMapa(mapa), pacman->posicaoAtual);
         }
     }
     
-    AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
+    // AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
     AtualizaTrilhaPacman(pacman);
     DesalocaPosicao(posicaoClone);
 }

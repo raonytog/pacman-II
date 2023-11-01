@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "enter program name, for example ${workspaceFolder}/a.out",
-            "args": ["/mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Teste/Casos/01"],
+            "args": ["/home/rtgomes/prog/pacman-revival/Teste/Casos/29"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
@@ -28,6 +28,7 @@
                 }
             ]
         }
+
 
     ]
 }
