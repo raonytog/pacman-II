@@ -20,9 +20,19 @@ typedef struct tFantasma {
     tPosicao * posicaoAntiga;
 } tFantasma;
 
+tPosicao * ObtemPosicaoFantasma (tFantasma * fantasma);
+
 tFantasma * CriaFantasma(tMapa * mapa, char simoblogia_fantasma);
 
-void MoveFantasmas (tJogo * jogo);
+tFantasma* RetornaFantasmaB(tJogo * jogo);
+
+tFantasma* RetornaFantasmaC(tJogo * jogo);
+
+tFantasma* RetornaFantasmaI(tJogo * jogo);
+
+tFantasma* RetornaFantasmaP(tJogo * jogo);
+
+void MoveFantasmas (tJogo * fantasma, tMapa * mapa)
 
 int EstaPresenteFantasma (tFantasma * fantasma);
 

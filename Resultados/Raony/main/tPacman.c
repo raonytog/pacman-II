@@ -241,7 +241,9 @@ void DesalocaPacman(tPacman* pacman) {
     }
 
     // desaloca posicao
-    DesalocaPosicao(pacman->posicaoAtual);
+    if (pacman->posicaoAtual != NULL) {
+        DesalocaPosicao(pacman->posicaoAtual);
+    }
 
     // desaloca o pacman em si
     free(pacman);
