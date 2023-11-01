@@ -1,5 +1,5 @@
-Movimento 82692816 (a) PÀÌ
-Movimento 82694864 (a) P”Ì
+Movimento 1 (w) pegou comida
+Movimento 2 (d) pegou comida
 Movimento 4 (d) pegou comida
 Movimento 8 (d) pegou comida
 Movimento 11 (w) pegou comida

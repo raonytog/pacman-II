@@ -46,7 +46,7 @@ tPacman* CriaPacman(tPosicao* posicao) {
 
     pacman->trilha = NULL;
 
-    pacman->historicoDeMovimentosSignificativos = (tMovimento **) malloc (sizeof(tMovimento *));
+    pacman->historicoDeMovimentosSignificativos = NULL;
 
     return pacman;
 }
@@ -60,7 +60,7 @@ tPacman* ClonaPacman(tPacman* pacman) {
 }
 
 tMovimento** ClonaHistoricoDeMovimentosSignificativosPacman(tPacman* pacman) {
-    tMovimento ** movClone = (tMovimento **) malloc(sizeof(tMovimento *));
+    tMovimento ** movClone = (tMovimento **) malloc(ObtemNumeroMovimentosSignificativosPacman(pacman) * sizeof(tMovimento *));
     for (int i = 0; i < ObtemNumeroMovimentosSignificativosPacman(pacman); i++) {
         movClone[i] = CriaMovimento( ObtemNumeroMovimento(pacman->historicoDeMovimentosSignificativos[i]), 
                                      ObtemComandoMovimento(pacman->historicoDeMovimentosSignificativos[i]), 
@@ -82,7 +82,7 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
     int bateuParede = 0;
     tPosicao * posicaoClone = ClonaPosicao(ObtemPosicaoPacman(pacman));
     switch (comando) {
-        case ESQUERDA: //esquerda
+        case ESQUERDA: //esquerda (a)
             posicaoClone->coluna--;
             pacman->nMovimentosEsquerda++;
             if (EncontrouParedeMapa(mapa, posicaoClone)) {
@@ -96,15 +96,11 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     pacman->nFrutasComidasEsquerda++;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-
-                } else {
-                    AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
-                    AtualizaTrilhaPacman(pacman);
                 }
             }
             break;
 
-        case DIREITA: // direita
+        case DIREITA: // direita (d)
             posicaoClone->coluna++;
             pacman->nMovimentosDireita++;
             if (EncontrouParedeMapa(mapa, posicaoClone)) {
@@ -118,15 +114,11 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     pacman->nFrutasComidasDireita++;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-
-                } else {
-                    AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
-                    AtualizaTrilhaPacman(pacman);
                 }
             }
             break;
         
-        case CIMA: // cima
+        case CIMA: // cima (w)
             posicaoClone->linha--;
             pacman->nMovimentosCima++;
             if (EncontrouParedeMapa(mapa, posicaoClone)) {
@@ -140,15 +132,11 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     pacman->nFrutasComidasCima++;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-
-                } else {
-                    AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
-                    AtualizaTrilhaPacman(pacman);
                 }
             }
             break;
 
-        case BAIXO: // baixo
+        case BAIXO: // baixo (s)
             posicaoClone->linha++;
             pacman->nMovimentosBaixo++;
             if (EncontrouParedeMapa(mapa, posicaoClone)) {
@@ -162,14 +150,13 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     pacman->nFrutasComidasBaixo++;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-
-                } else {
-                    AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
-                    AtualizaTrilhaPacman(pacman);
                 }
             }
             break;
     }
+
+    AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
+    AtualizaTrilhaPacman(pacman);
 
     if (PossuiTunelMapa(mapa)) {
         if (EntrouTunel(ObtemTunelMapa(mapa), posicaoClone) && !bateuParede) {

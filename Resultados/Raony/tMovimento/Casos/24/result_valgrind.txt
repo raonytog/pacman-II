@@ -1,0 +1,16 @@
+==10280== Memcheck, a memory error detector
+==10280== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10280== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==10280== Command: Resultados/Raony/tMovimento/prog Resultados/Raony/tMovimento/Casos/24
+==10280== Parent PID: 10279
+==10280== 
+==10280== error calling PR_SET_PTRACER, vgdb might block
+==10280== 
+==10280== HEAP SUMMARY:
+==10280==     in use at exit: 0 bytes in 0 blocks
+==10280==   total heap usage: 21,166 allocs, 21,166 frees, 192,471 bytes allocated
+==10280== 
+==10280== All heap blocks were freed -- no leaks are possible
+==10280== 
+==10280== For lists of detected and suppressed errors, rerun with: -s
+==10280== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

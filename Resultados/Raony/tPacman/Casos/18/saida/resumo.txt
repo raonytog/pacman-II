@@ -1,6 +1,6 @@
-Movimento 79542112 (a) ෽
-Movimento 79544160 (a) ࿽
-Movimento 79546208 (a) �ǽ
+Movimento 1 (d) pegou comida
+Movimento 2 (w) pegou comida
+Movimento 3 (w) pegou comida
 Movimento 4 (a) pegou comida
 Movimento 5 (s) pegou comida
 Movimento 7 (w) pegou comida

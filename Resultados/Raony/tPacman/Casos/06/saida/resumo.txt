@@ -1,9 +1,9 @@
-Movimento 93775232 (a) 
-Movimento 93777280 (a) 
-Movimento 93779328 (a) 
-Movimento 93781376 (a) 
-Movimento 93783424 (a) 
-Movimento 93785472 (a) 
+Movimento 4 (w) colidiu com a parede
+Movimento 5 (w) colidiu com a parede
+Movimento 10 (w) colidiu com a parede
+Movimento 13 (s) colidiu com a parede
+Movimento 14 (w) colidiu com a parede
+Movimento 15 (w) colidiu com a parede
 Movimento 18 (w) colidiu com a parede
 Movimento 24 (s) pegou comida
 Movimento 25 (a) pegou comida

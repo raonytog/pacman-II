@@ -1,0 +1,16 @@
+==2015== Memcheck, a memory error detector
+==2015== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2015== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2015== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/11
+==2015== Parent PID: 2014
+==2015== 
+==2015== error calling PR_SET_PTRACER, vgdb might block
+==2015== 
+==2015== HEAP SUMMARY:
+==2015==     in use at exit: 0 bytes in 0 blocks
+==2015==   total heap usage: 933,422 allocs, 933,422 frees, 7,723,596 bytes allocated
+==2015== 
+==2015== All heap blocks were freed -- no leaks are possible
+==2015== 
+==2015== For lists of detected and suppressed errors, rerun with: -s
+==2015== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
