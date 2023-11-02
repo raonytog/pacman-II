@@ -1,0 +1,63 @@
+==24327== Memcheck, a memory error detector
+==24327== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24327== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==24327== Command: Resultados/Raony/completo/prog Resultados/Raony/completo/Casos/24
+==24327== Parent PID: 24326
+==24327== 
+==24327== error calling PR_SET_PTRACER, vgdb might block
+==24327== Invalid read of size 4
+==24327==    at 0x10B8FE: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x10A11D: EstaForaDosLimites (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x10A8AA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==  Address 0x4 is not stack'd, malloc'd or (recently) free'd
+==24327== 
+==24327== 
+==24327== Process terminating with default action of signal 11 (SIGSEGV)
+==24327==  Access not within mapped region at address 0x4
+==24327==    at 0x10B8FE: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x10A11D: EstaForaDosLimites (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x10A8AA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==  If you believe this happened as a result of a stack
+==24327==  overflow in your program's main thread (unlikely but
+==24327==  possible), you can try to increase the size of the
+==24327==  main thread stack using the --main-stacksize= flag.
+==24327==  The main thread stack size used in this run was 8388608.
+==24327== 
+==24327== HEAP SUMMARY:
+==24327==     in use at exit: 2,085 bytes in 47 blocks
+==24327==   total heap usage: 78 allocs, 31 frees, 4,269 bytes allocated
+==24327== 
+==24327== 8 bytes in 1 blocks are definitely lost in loss record 10 of 26
+==24327==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24327==    by 0x10B86C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1096B6: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327== 
+==24327== 8 bytes in 1 blocks are definitely lost in loss record 11 of 26
+==24327==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24327==    by 0x10B86C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1096D1: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327== 
+==24327== 40 bytes in 5 blocks are definitely lost in loss record 18 of 26
+==24327==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24327==    by 0x10B86C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x10A67C: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x109390: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24327== 
+==24327== LEAK SUMMARY:
+==24327==    definitely lost: 56 bytes in 7 blocks
+==24327==    indirectly lost: 0 bytes in 0 blocks
+==24327==      possibly lost: 0 bytes in 0 blocks
+==24327==    still reachable: 2,029 bytes in 40 blocks
+==24327==         suppressed: 0 bytes in 0 blocks
+==24327== Reachable blocks (those to which a pointer was found) are not shown.
+==24327== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==24327== 
+==24327== For lists of detected and suppressed errors, rerun with: -s
+==24327== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

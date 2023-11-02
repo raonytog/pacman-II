@@ -1,0 +1,16 @@
+==4558== Memcheck, a memory error detector
+==4558== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4558== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==4558== Command: Resultados/Raony/tMovimento/prog Resultados/Raony/tMovimento/Casos/24
+==4558== Parent PID: 4557
+==4558== 
+==4558== error calling PR_SET_PTRACER, vgdb might block
+==4558== 
+==4558== HEAP SUMMARY:
+==4558==     in use at exit: 0 bytes in 0 blocks
+==4558==   total heap usage: 21,166 allocs, 21,166 frees, 192,471 bytes allocated
+==4558== 
+==4558== All heap blocks were freed -- no leaks are possible
+==4558== 
+==4558== For lists of detected and suppressed errors, rerun with: -s
+==4558== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

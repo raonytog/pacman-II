@@ -1,0 +1,16 @@
+==10903== Memcheck, a memory error detector
+==10903== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10903== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==10903== Command: Resultados/Raony/tTunel/prog Resultados/Raony/tTunel/Casos/27
+==10903== Parent PID: 10902
+==10903== 
+==10903== error calling PR_SET_PTRACER, vgdb might block
+==10903== 
+==10903== HEAP SUMMARY:
+==10903==     in use at exit: 0 bytes in 0 blocks
+==10903==   total heap usage: 9,344 allocs, 9,344 frees, 90,656 bytes allocated
+==10903== 
+==10903== All heap blocks were freed -- no leaks are possible
+==10903== 
+==10903== For lists of detected and suppressed errors, rerun with: -s
+==10903== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

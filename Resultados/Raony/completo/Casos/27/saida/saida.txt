@@ -1,1 +1,43 @@
-valgrind: Resultados/Raony/completo/prog: No such file or directory
+Estado do jogo apos o movimento 'd':
+#########
+#   *   #
+# ### I #
+#     * #
+# #   #*#
+# ## ## #
+#  #  # #
+# >    C#
+#########
+Pontuacao: 0
+
+Estado do jogo apos o movimento 'd':
+#########
+#   *   #
+# ### * #
+#     I #
+# #   #*#
+# ## ## #
+#  #  # #
+#  >   C#
+#########
+Pontuacao: 0
+
+Estado do jogo apos o movimento 'd':
+#########
+#   *   #
+# ### * #
+#     I #
+# #   #*#
+# ## ## #
+#  #  # #
+#   > C #
+#########
+Pontuacao: 0
+
+Estado do jogo apos o movimento 'd':
+#########
+#   *   #
+# ### I #
+#       #
+# #   #*#
+# timeout: the monitored command dumped core

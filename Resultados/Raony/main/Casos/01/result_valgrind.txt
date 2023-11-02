@@ -1,0 +1,61 @@
+==26681== Memcheck, a memory error detector
+==26681== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==26681== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==26681== Command: Resultados/Raony/main/prog Resultados/Raony/main/Casos/01
+==26681== Parent PID: 26680
+==26681== 
+==26681== error calling PR_SET_PTRACER, vgdb might block
+==26681== Invalid read of size 4
+==26681==    at 0x10B7D2: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x10A8CA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==26681== 
+==26681== 
+==26681== Process terminating with default action of signal 11 (SIGSEGV)
+==26681==  Access not within mapped region at address 0x0
+==26681==    at 0x10B7D2: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x10A8CA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==  If you believe this happened as a result of a stack
+==26681==  overflow in your program's main thread (unlikely but
+==26681==  possible), you can try to increase the size of the
+==26681==  main thread stack using the --main-stacksize= flag.
+==26681==  The main thread stack size used in this run was 8388608.
+==26681== 
+==26681== HEAP SUMMARY:
+==26681==     in use at exit: 1,941 bytes in 43 blocks
+==26681==   total heap usage: 162 allocs, 119 frees, 4,738 bytes allocated
+==26681== 
+==26681== 8 bytes in 1 blocks are definitely lost in loss record 10 of 24
+==26681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==26681==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1096B6: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681== 
+==26681== 8 bytes in 1 blocks are definitely lost in loss record 11 of 24
+==26681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==26681==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1096D1: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681== 
+==26681== 32 bytes in 4 blocks are definitely lost in loss record 17 of 24
+==26681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==26681==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x10A785: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x109390: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==26681== 
+==26681== LEAK SUMMARY:
+==26681==    definitely lost: 48 bytes in 6 blocks
+==26681==    indirectly lost: 0 bytes in 0 blocks
+==26681==      possibly lost: 0 bytes in 0 blocks
+==26681==    still reachable: 1,893 bytes in 37 blocks
+==26681==         suppressed: 0 bytes in 0 blocks
+==26681== Reachable blocks (those to which a pointer was found) are not shown.
+==26681== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==26681== 
+==26681== For lists of detected and suppressed errors, rerun with: -s
+==26681== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

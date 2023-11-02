@@ -1,0 +1,61 @@
+==32222== Memcheck, a memory error detector
+==32222== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==32222== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==32222== Command: Resultados/Raony/main/prog Resultados/Raony/main/Casos/20
+==32222== Parent PID: 32221
+==32222== 
+==32222== error calling PR_SET_PTRACER, vgdb might block
+==32222== Invalid read of size 4
+==32222==    at 0x10B7D2: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x10A8CA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==32222== 
+==32222== 
+==32222== Process terminating with default action of signal 11 (SIGSEGV)
+==32222==  Access not within mapped region at address 0x0
+==32222==    at 0x10B7D2: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x10A8CA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==  If you believe this happened as a result of a stack
+==32222==  overflow in your program's main thread (unlikely but
+==32222==  possible), you can try to increase the size of the
+==32222==  main thread stack using the --main-stacksize= flag.
+==32222==  The main thread stack size used in this run was 8388608.
+==32222== 
+==32222== HEAP SUMMARY:
+==32222==     in use at exit: 2,381 bytes in 54 blocks
+==32222==   total heap usage: 196 allocs, 142 frees, 5,442 bytes allocated
+==32222== 
+==32222== 8 bytes in 1 blocks are definitely lost in loss record 10 of 26
+==32222==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32222==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1096B6: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222== 
+==32222== 8 bytes in 1 blocks are definitely lost in loss record 11 of 26
+==32222==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32222==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1096D1: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222== 
+==32222== 64 bytes in 8 blocks are definitely lost in loss record 18 of 26
+==32222==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==32222==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x10A785: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x109390: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==32222== 
+==32222== LEAK SUMMARY:
+==32222==    definitely lost: 80 bytes in 10 blocks
+==32222==    indirectly lost: 0 bytes in 0 blocks
+==32222==      possibly lost: 0 bytes in 0 blocks
+==32222==    still reachable: 2,301 bytes in 44 blocks
+==32222==         suppressed: 0 bytes in 0 blocks
+==32222== Reachable blocks (those to which a pointer was found) are not shown.
+==32222== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==32222== 
+==32222== For lists of detected and suppressed errors, rerun with: -s
+==32222== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
