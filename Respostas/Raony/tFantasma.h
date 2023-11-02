@@ -2,7 +2,6 @@
 #define TFANTASMA_H_
 
 #include "tPosicao.h"
-#include "tJogo.h"
 #include "tMapa.h"
 
 #define MAX_FANTASMAS 4
@@ -24,15 +23,7 @@ tPosicao * ObtemPosicaoFantasma (tFantasma * fantasma);
 
 tFantasma * CriaFantasma(tMapa * mapa, char simoblogia_fantasma);
 
-tFantasma* RetornaFantasmaB(tJogo * jogo);
-
-tFantasma* RetornaFantasmaC(tJogo * jogo);
-
-tFantasma* RetornaFantasmaI(tJogo * jogo);
-
-tFantasma* RetornaFantasmaP(tJogo * jogo);
-
-void MoveFantasmas (tJogo * fantasma, tMapa * mapa)
+void MoveFantasmas (tFantasma * fantasma, tMapa * mapa);
 
 int EstaPresenteFantasma (tFantasma * fantasma);
 

@@ -6,12 +6,7 @@
 // #define FANT_I 'I'  //fantasma vertical     - inicio: baixo
 // #define FANT_P 'P'  //fantasma vertical     - inicio: cima
 
-void MoveFantasmas (tJogo * jogo) {
-    if (EstaPresenteFantasma(RetornaFantasmaB(jogo))) {
-        
-
-    }
-}
+void MoveFantasmas (tFantasma * fantasma, tMapa * mapa);
 
 int EstaPresenteFantasma (tFantasma * fantasma) {
     return fantasma->presenteMapa;
