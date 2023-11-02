@@ -13,3 +13,4 @@ Movimento 34 (a) pegou comida
 Movimento 35 (w) pegou comida
 Movimento 40 (a) pegou comida
 Movimento 43 (a) pegou comida
+Movimento 45 (w) fim de jogo por encostar em um fantasma

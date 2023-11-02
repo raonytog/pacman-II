@@ -52,7 +52,7 @@ tPacman* CriaPacman(tPosicao* posicao) {
 
 tPacman* ClonaPacman(tPacman* pacman) {
     tPacman * clone = malloc (sizeof(tPacman));
-    clone->posicaoAtual = pacman->posicaoAtual;
+    clone->posicaoAtual = CriaPosicao(ObtemLinhaPosicao(pacman->posicaoAtual), ObtemColunaPosicao(pacman->posicaoAtual));
     clone->trilha = NULL;
     clone->historicoDeMovimentosSignificativos = NULL;
     return clone;
@@ -79,7 +79,7 @@ int EstaVivoPacman(tPacman* pacman) {
 
 void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
     int bateuParede = 0;
-    tPosicao * posicaoClone = ClonaPosicao(ObtemPosicaoPacman(pacman));
+    tPosicao * posicaoClone = ClonaPosicao(pacman->posicaoAtual);
     switch (comando) {
         case ESQUERDA: //esquerda (a)
             posicaoClone->coluna--;
@@ -214,10 +214,12 @@ void SalvaTrilhaPacman(tPacman* pacman) {
 }
 
 void InsereNovoMovimentoSignificativoPacman(tPacman* pacman, COMANDO comando, const char* acao) {
-    (pacman->nMovimentosSignificativos)++;
-    pacman->historicoDeMovimentosSignificativos = (tMovimento **) realloc (pacman->historicoDeMovimentosSignificativos, ObtemNumeroMovimentosSignificativosPacman(pacman) * sizeof(tMovimento *));
-    pacman->historicoDeMovimentosSignificativos[ObtemNumeroMovimentosSignificativosPacman(pacman)-1] = CriaMovimento(ObtemNumeroAtualMovimentosPacman(pacman), comando, acao);
+    tMovimento * mov = CriaMovimento(ObtemNumeroAtualMovimentosPacman(pacman), comando, acao);
+    pacman->nMovimentosSignificativos++;
+    pacman->historicoDeMovimentosSignificativos = (tMovimento **) realloc(pacman->historicoDeMovimentosSignificativos, pacman->nMovimentosSignificativos * sizeof(tMovimento *));
+    pacman->historicoDeMovimentosSignificativos[pacman->nMovimentosSignificativos - 1] = mov;
 }
+
 
 void MataPacman(tPacman* pacman) {
     pacman->estaVivo = MORTO;
@@ -241,9 +243,7 @@ void DesalocaPacman(tPacman* pacman) {
     }
 
     // desaloca posicao
-    if (pacman->posicaoAtual != NULL) {
-        DesalocaPosicao(pacman->posicaoAtual);
-    }
+    DesalocaPosicao(pacman->posicaoAtual);
 
     // desaloca o pacman em si
     free(pacman);
@@ -312,7 +312,7 @@ int ObtemNumeroColisoesParedeDireitaPacman(tPacman* pacman) {
 }
 
 int ObtemNumeroMovimentosSignificativosPacman(tPacman* pacman) {
-    return ObtemPontuacaoAtualPacman(pacman) + ObtemNumeroColisoesParedePacman(pacman);
+    return pacman->nMovimentosSignificativos;
 }
 
 int ObtemPontuacaoAtualPacman(tPacman* pacman) {

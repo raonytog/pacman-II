@@ -46,4 +46,5 @@ Movimento 78 (w) pegou comida
 Movimento 79 (a) pegou comida
 Movimento 82 (s) colidiu com a parede
 Movimento 83 (d) pegou comida
+Movimento 87 (a) pegou comida
 Movimento 87 (a) fim de jogo por encostar em um fantasma

@@ -103,4 +103,5 @@ Movimento 363 (w) colidiu com a parede
 Movimento 366 (a) colidiu com a parede
 Movimento 367 (w) colidiu com a parede
 Movimento 370 (s) colidiu com a parede
+Movimento 371 (s) colidiu com a parede
 Movimento 371 (s) fim de jogo por encostar em um fantasma

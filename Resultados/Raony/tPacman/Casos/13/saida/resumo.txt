@@ -31,3 +31,4 @@ Movimento 88 (w) pegou comida
 Movimento 96 (a) pegou comida
 Movimento 99 (d) pegou comida
 Movimento 100 (d) pegou comida
+Movimento 103 (d) fim de jogo por encostar em um fantasma
