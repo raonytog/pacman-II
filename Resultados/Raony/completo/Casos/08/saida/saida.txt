@@ -5710,33 +5710,5 @@ Estado do jogo apos o movimento 's':
 ##########
 Pontuacao: 5
 
-Estado do jogo apos o movimento 's':
-##########
-#* *     #
-# ##  ## #
-#  ## ## #
-#* **  * #
-# ## ##  #
-# ## ##* #
-# *   B  #
-# ###### #
-# ###### #
-#*######*#
-#  C    *#
-#  #   * #
-# ##*    #
-# #     *#
-#   *    #
-#*#####  #
-#   #    #
-#** #    #
-#       >#
-#*#      #
-# #      #
-# #      #
-#*       #
-##########
-Pontuacao: 5
-
-Voce venceu!
+Game over!
 Pontuacao final: 5

@@ -159,13 +159,11 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
 
     if (PossuiTunelMapa(mapa)) {
         if (EntrouTunel(ObtemTunelMapa(mapa), pacman->posicaoAtual) && !bateuParede) {
-            // AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
             AtualizaTrilhaPacman(pacman);
             LevaFinalTunel(ObtemTunelMapa(mapa), pacman->posicaoAtual);
         }
     }
     
-    // AtualizaPosicao(pacman->posicaoAtual, posicaoClone);
     AtualizaTrilhaPacman(pacman);
     DesalocaPosicao(posicaoClone);
 }

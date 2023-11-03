@@ -1038,18 +1038,5 @@ Estado do jogo apos o movimento 'w':
 ##########
 Pontuacao: 5
 
-Estado do jogo apos o movimento 'w':
-##########
-#  >   * #
-#      # #
-#      # #
-#      # #
-#  # #  P#
-#*## ## *#
-#  # #   #
-#    *   #
-##########
-Pontuacao: 5
-
-Voce venceu!
+Game over!
 Pontuacao final: 5

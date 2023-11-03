@@ -383,16 +383,4 @@ Estado do jogo apos o movimento 'd':
 ####################
 Pontuacao: 8
 
-Estado do jogo apos o movimento 'd':
-####################
-#                 ##
-######### #######I@#
-##              # ##
-######### ##########
-####################
-#       ******    @#
-####################
-Pontuacao: 8
-
-Game over!
-Pontuacao final: 8
+Estado do jogo timeout: the monitored command dumped core

@@ -33,6 +33,7 @@ typedef struct tFantasma {
 */
 bool ExisteFantasmaMapa (tMapa * mapa, char item);
 
+bool ExisteItemPosicao (tMapa * mapa, tPosicao * posicao, char item);
 
 tPosicao * ObtemPosicaoAtualFantasma (tFantasma * fantasma);
 
@@ -44,7 +45,6 @@ tFantasma * CriaFantasma(tMapa * mapa, char simoblogia_fantasma);
 
 
 void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, tFantasma * direita, tMapa * mapa);
-
 
 int EstaPresenteFantasma (tFantasma * fantasma);
 

@@ -1,5 +1,6 @@
 #include "tFantasma.h"
 #include "tPacman.h"
+#include "tArquivos.h"
 
 #define DIRETORIO_MAX_SIZE 1001
 
@@ -17,44 +18,43 @@ bool OcorreuCruzamento(tPacman * pacman, tPacman * pacmanAntigo,
         SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(down)) ||
         SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(up)) ||
 
-        // atual do pacman igual antiga do fantasma
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(left)) ||
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(right)) ||
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(down)) ||
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(up)) ||
+        // se a atualPacman = antigaFantasma && antigaFantasma = atualPacman
+        (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(left)) &&
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAtualFantasma(left))) ||
 
-        // antiga do pacman igual atual do fantasma
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(left)) ||
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(right)) ||
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(down)) ||
-        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(up))) return true;
+        (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(right)) &&
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAtualFantasma(right))) ||
+
+        (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(down)) &&
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAtualFantasma(down))) ||
+
+        (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(up)) &&
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAtualFantasma(up)))
+        ) return true;
     return false;
+}
+
+COMANDO RetornaComando (char mov) {
+    switch (mov) {
+        case 'a':
+            return MOV_ESQUERDA;
+
+        case 'w':
+            return MOV_CIMA;
+
+        case 's':
+            return MOV_BAIXO;
+
+        case 'd':
+            return MOV_DIREITA;
+    }
 }
 
 void AtualizaPacmanMapa(tMapa * mapa, tPacman * pacman, COMANDO comando) {
     tPosicao * antiga = ObtemPosicaoItemMapa(mapa, PACMAN);
     MovePacman(pacman, mapa, comando);
     AtualizaItemMapa(mapa, antiga, VAZIO);
-    AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-}
-
-void GeraArquivoInicializacao (tMapa * mapa, tPacman * pacman) {
-    FILE * fInicializacao = NULL;
-    fInicializacao = fopen("inicializacao.txt", "w");
-    if (!fInicializacao) {
-        printf("diretorio da saida da trilha invalido\n");
-        exit(1);
-    }
-
-    for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
-        for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++)
-            fprintf(fInicializacao, "%c", mapa->grid[i][j]);
-        fprintf(fInicializacao, "\n");
-    }
-    fprintf(fInicializacao, "Pac-Man comecara o jogo na linha %d e coluna %d\n", 
-            ObtemLinhaPosicao(ObtemPosicaoPacman(pacman))+1, ObtemColunaPosicao(ObtemPosicaoPacman(pacman))+1);
-
-    fclose(fInicializacao);
+    if (ObtemItemMapa(mapa, ObtemPosicaoPacman(pacman)) == VAZIO) AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
 }
 
 void ImprimeMapa(tMapa * mapa) {
@@ -63,26 +63,6 @@ void ImprimeMapa(tMapa * mapa) {
             printf("%c", mapa->grid[i][j]);
         }
         printf("\n");
-    }
-}
-
-COMANDO RetornaComando (char mov) {
-    switch (mov) {
-        case 'a':
-            return MOV_ESQUERDA;
-            break;
-
-        case 'w':
-            return MOV_CIMA;
-            break;
-
-        case 's':
-            return MOV_BAIXO;
-            break;
-
-        case 'd':
-            return MOV_DIREITA;
-            break;
     }
 }
 
@@ -95,11 +75,12 @@ int main (int agrc, char * argv[]) {
     char diretorio[DIRETORIO_MAX_SIZE];
     sprintf(diretorio, "%s", argv[1]);
 
-// int main () {
-//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/02";
+//  int main () {
+//      char diretorio[DIRETORIO_MAX_SIZE] = "Casos/29";
 
     tMapa * mapa = CriaMapa(diretorio);
     tPacman * pacman = CriaPacman(ObtemPosicaoItemMapa(mapa, PACMAN));
+    tPacman * clone = ClonaPacman(pacman);
 
     tFantasma * left = CriaFantasma(mapa, LEFT_GHOST);
     tFantasma * right = CriaFantasma(mapa, RIGHT_GHOST);
@@ -110,14 +91,18 @@ int main (int agrc, char * argv[]) {
     CriaTrilhaPacman(pacman, ObtemNumeroLinhasMapa(mapa), ObtemNumeroColunasMapa(mapa));
 
     char mov = '\0';
-    while (EstaVivoPacman(pacman) && ObtemNumeroAtualMovimentosPacman(pacman) <= ObtemNumeroMaximoMovimentosMapa(mapa)) {
-        tPacman * clone = ClonaPacman(pacman);
+    while ( EstaVivoPacman(pacman) && 
+            ObtemNumeroAtualMovimentosPacman(pacman) < ObtemNumeroMaximoMovimentosMapa(mapa) &&
+            ObtemPontuacaoAtualPacman(pacman) < ObtemQuantidadeFrutasIniciaisMapa(mapa)) {
+
+        AtualizaPosicao(ObtemPosicaoPacman(clone), ObtemPosicaoPacman(pacman));
 
         scanf("%c%*c", &mov);
         printf("Estado do jogo apos o movimento '%c':\n", mov);
-        AtualizaPacmanMapa(mapa, pacman, RetornaComando(mov));
 
         MoveFantasmas(down, up, left, right, mapa);
+        AtualizaPacmanMapa(mapa, pacman, RetornaComando(mov));
+
         ImprimeMapa(mapa);
         printf("Pontuacao: %d\n\n", ObtemPontuacaoAtualPacman(pacman));
 
@@ -126,19 +111,17 @@ int main (int agrc, char * argv[]) {
             MataPacman(pacman);
         }
 
-        DesalocaPacman(clone);
     }
 
-    if (EstaVivoPacman(pacman)) printf("Voce venceu!\n");
+    if (EstaVivoPacman(pacman) && ObtemPontuacaoAtualPacman(pacman) == ObtemQuantidadeFrutasIniciaisMapa(mapa)) printf("Voce venceu!\n");
     else printf("Game over!\n");
-
     printf("Pontuacao final: %d\n", ObtemPontuacaoAtualPacman(pacman));
 
+    GeraArquivos(pacman);
 
-    
-    
     DesalocaMapa(mapa);
     
+    DesalocaPacman(clone);
     DesalocaPacman(pacman);
 
     DesalocaFantasma(left);

@@ -1,46 +1,69 @@
-==32582== Memcheck, a memory error detector
-==32582== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==32582== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==32582== Command: Resultados/Raony/completo/prog Resultados/Raony/completo/Casos/13
-==32582== Parent PID: 32581
-==32582== 
-==32582== error calling PR_SET_PTRACER, vgdb might block
-==32582== 
-==32582== HEAP SUMMARY:
-==32582==     in use at exit: 552 bytes in 69 blocks
-==32582==   total heap usage: 640 allocs, 571 frees, 19,248 bytes allocated
-==32582== 
-==32582== 8 bytes in 1 blocks are definitely lost in loss record 1 of 4
-==32582==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==32582==    by 0x10BC1C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x109D3A: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x109908: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582== 
-==32582== 8 bytes in 1 blocks are definitely lost in loss record 2 of 4
-==32582==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==32582==    by 0x10BC1C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x109D3A: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x109923: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582== 
-==32582== 8 bytes in 1 blocks are definitely lost in loss record 3 of 4
-==32582==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==32582==    by 0x10BC1C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x109D3A: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x109959: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582== 
-==32582== 528 bytes in 66 blocks are definitely lost in loss record 4 of 4
-==32582==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==32582==    by 0x10BC1C: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x10AA2C: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x1095DF: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582==    by 0x109A3A: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==32582== 
-==32582== LEAK SUMMARY:
-==32582==    definitely lost: 552 bytes in 69 blocks
-==32582==    indirectly lost: 0 bytes in 0 blocks
-==32582==      possibly lost: 0 bytes in 0 blocks
-==32582==    still reachable: 0 bytes in 0 blocks
-==32582==         suppressed: 0 bytes in 0 blocks
-==32582== 
-==32582== For lists of detected and suppressed errors, rerun with: -s
-==32582== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
+==24333== Memcheck, a memory error detector
+==24333== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24333== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==24333== Command: Resultados/Raony/completo/prog Resultados/Raony/completo/Casos/13
+==24333== Parent PID: 24332
+==24333== 
+==24333== error calling PR_SET_PTRACER, vgdb might block
+==24333== Invalid read of size 4
+==24333==    at 0x10C487: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10ACA6: EstaForaDosLimites (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10B433: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109658: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109979: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==  Address 0x4 is not stack'd, malloc'd or (recently) free'd
+==24333== 
+==24333== 
+==24333== Process terminating with default action of signal 11 (SIGSEGV)
+==24333==  Access not within mapped region at address 0x4
+==24333==    at 0x10C487: ObtemColunaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10ACA6: EstaForaDosLimites (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10B433: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109658: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109979: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==  If you believe this happened as a result of a stack
+==24333==  overflow in your program's main thread (unlikely but
+==24333==  possible), you can try to increase the size of the
+==24333==  main thread stack using the --main-stacksize= flag.
+==24333==  The main thread stack size used in this run was 8388608.
+==24333== 
+==24333== HEAP SUMMARY:
+==24333==     in use at exit: 6,132 bytes in 146 blocks
+==24333==   total heap usage: 479 allocs, 333 frees, 12,100 bytes allocated
+==24333== 
+==24333== 8 bytes in 1 blocks are definitely lost in loss record 11 of 32
+==24333==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24333==    by 0x10C3F5: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10A513: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109803: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333== 
+==24333== 8 bytes in 1 blocks are definitely lost in loss record 12 of 32
+==24333==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24333==    by 0x10C3F5: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10A513: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10981E: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333== 
+==24333== 8 bytes in 1 blocks are definitely lost in loss record 13 of 32
+==24333==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24333==    by 0x10C3F5: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10A513: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109854: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333== 
+==24333== 488 bytes in 61 blocks are definitely lost in loss record 27 of 32
+==24333==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24333==    by 0x10C3F5: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x10B205: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109626: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333==    by 0x109979: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
+==24333== 
+==24333== LEAK SUMMARY:
+==24333==    definitely lost: 512 bytes in 64 blocks
+==24333==    indirectly lost: 0 bytes in 0 blocks
+==24333==      possibly lost: 0 bytes in 0 blocks
+==24333==    still reachable: 5,620 bytes in 82 blocks
+==24333==         suppressed: 0 bytes in 0 blocks
+==24333== Reachable blocks (those to which a pointer was found) are not shown.
+==24333== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==24333== 
+==24333== For lists of detected and suppressed errors, rerun with: -s
+==24333== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)

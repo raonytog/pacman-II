@@ -1,4 +1,8 @@
 main.c: In function ‘RetornaComando’:
-main.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
-   87 | }
+main.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
+   51 | }
+      | ^
+tArquivos.c: In function ‘RetornaTeclaComando’:
+tArquivos.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
+   17 | }
       | ^

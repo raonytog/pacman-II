@@ -14,7 +14,6 @@ bool FantasmaComeuComida (tFantasma * fantasma) {
     return fantasma->gulaFantasmagorica;
 }
 
-
 tFantasma * CriaFantasma(tMapa * mapa, char simoblogia_fantasma) {
     tFantasma * fantasma = malloc(sizeof(tFantasma));
 
@@ -83,7 +82,7 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
 
     // fantasma b
     if (EstaPresenteFantasma(esquerda)) {
-         if (!ExisteItemPosicao(mapa, cloneE, PACMAN)) AtualizaItemMapa(mapa, esquerda->posicao, VAZIO);
+        AtualizaItemMapa(mapa, esquerda->posicao, VAZIO);
         cloneE->coluna += esquerda->dy;
         if (FantasmaComeuComida(esquerda)) {
             AtualizaItemMapa(mapa, esquerda->posicaoAntiga, COMIDA);
@@ -101,12 +100,12 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
         
         AtualizaPosicao(esquerda->posicao, cloneE);
-        if (!ExisteItemPosicao(mapa, cloneE, PACMAN)) AtualizaItemMapa(mapa, esquerda->posicao, LEFT_GHOST);
+        AtualizaItemMapa(mapa, esquerda->posicao, LEFT_GHOST);
     }
 
     // fantasma c
     if (EstaPresenteFantasma(direita)) {
-        if (!ExisteItemPosicao(mapa, cloneD,PACMAN)) AtualizaItemMapa(mapa, direita->posicao, VAZIO);
+        AtualizaItemMapa(mapa, direita->posicao, VAZIO);
         cloneD->coluna += direita->dy;
         if (FantasmaComeuComida(direita)) {
             AtualizaItemMapa(mapa, direita->posicaoAntiga, COMIDA);
@@ -124,12 +123,12 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(direita->posicao, cloneD);
-        if (!ExisteItemPosicao(mapa, cloneD,PACMAN)) AtualizaItemMapa(mapa, esquerda->posicao, RIGHT_GHOST);
+        AtualizaItemMapa(mapa, direita->posicao, RIGHT_GHOST);
     }
 
     // fantasma i
     if (EstaPresenteFantasma(baixo)) {
-        if (!ExisteItemPosicao(mapa, baixo->posicaoAntiga, PACMAN)) AtualizaItemMapa(mapa, baixo->posicao, VAZIO);
+        AtualizaItemMapa(mapa, baixo->posicao, VAZIO);
         cloneB->linha += baixo->dx;
         if (FantasmaComeuComida(baixo)) {
             AtualizaItemMapa(mapa, baixo->posicaoAntiga, COMIDA);
@@ -147,12 +146,13 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(baixo->posicao, cloneB);
-        if (!ExisteItemPosicao(mapa, baixo->posicaoAntiga, PACMAN)) AtualizaItemMapa(mapa, esquerda->posicao, DOWN_GHOST);
+        AtualizaItemMapa(mapa, baixo->posicao, DOWN_GHOST);
     }
 
     // fantasma p
     if (EstaPresenteFantasma(cima)) {
-        if (!ExisteItemPosicao(mapa, cloneC, PACMAN)) AtualizaItemMapa(mapa, cima->posicao, VAZIO);
+        AtualizaItemMapa(mapa, cima->posicao, VAZIO);
+        
         cloneC->linha += cima->dx;
         if (FantasmaComeuComida(cima)) {
             AtualizaItemMapa(mapa, cima->posicaoAntiga, COMIDA);
@@ -170,7 +170,7 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(cima->posicao, cloneC);
-        if (!ExisteItemPosicao(mapa, cloneC, PACMAN)) AtualizaItemMapa(mapa, esquerda->posicao, UP_GHOST);
+        AtualizaItemMapa(mapa, cima->posicao, UP_GHOST);
     }
 
     DesalocaPosicao(cloneB);

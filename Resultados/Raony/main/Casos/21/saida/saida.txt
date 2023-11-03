@@ -254,9 +254,6 @@ Estado do jogo apos o movimento 'd':
 # #    ### #   *#
 # # ## ### ## C #
 # # ##I###  #   #
-#       @# *    #
+#     > @# *    #
 #################
-Pontuacao: 3
-
-Game over!
-Pontuacao final: 3
+Potimeout: the monitored command dumped core

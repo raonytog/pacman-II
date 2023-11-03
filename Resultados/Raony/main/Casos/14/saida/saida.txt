@@ -1680,15 +1680,5 @@ Estado do jogo apos o movimento 's':
 # ###       P   #  #
 #              ##  #
 # #####        #   #
-#   #   **#  #    B#
-#   # *   ## #  #  #
-#     * *C # # ### #
-#     # #          #
-#  #  # #   ##  #  #
-# ### # ### ## ### #
-#                  #
-####################
-Pontuacao: 24
-
-Game over!
-Pontuacao final: 24
+#   #   **#  #   >B#
+#   # *   ## timeout: the monitored command dumped core
