@@ -1,61 +1,52 @@
-==356== Memcheck, a memory error detector
-==356== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==356== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==356== Command: Resultados/Raony/main/prog Resultados/Raony/main/Casos/23
-==356== Parent PID: 355
-==356== 
-==356== error calling PR_SET_PTRACER, vgdb might block
-==356== Invalid read of size 4
-==356==    at 0x10B7D2: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x10A8CA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==356== 
-==356== 
-==356== Process terminating with default action of signal 11 (SIGSEGV)
-==356==  Access not within mapped region at address 0x0
-==356==    at 0x10B7D2: ObtemLinhaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x10A8CA: AtualizaItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1093C2: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==  If you believe this happened as a result of a stack
-==356==  overflow in your program's main thread (unlikely but
-==356==  possible), you can try to increase the size of the
-==356==  main thread stack using the --main-stacksize= flag.
-==356==  The main thread stack size used in this run was 8388608.
-==356== 
-==356== HEAP SUMMARY:
-==356==     in use at exit: 2,381 bytes in 54 blocks
-==356==   total heap usage: 196 allocs, 142 frees, 5,442 bytes allocated
-==356== 
-==356== 8 bytes in 1 blocks are definitely lost in loss record 10 of 26
-==356==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==356==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1096B6: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356== 
-==356== 8 bytes in 1 blocks are definitely lost in loss record 11 of 26
-==356==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==356==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1099DA: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1096D1: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356== 
-==356== 64 bytes in 8 blocks are definitely lost in loss record 18 of 26
-==356==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==356==    by 0x10B766: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x10A785: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x109390: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356==    by 0x1097B7: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==356== 
-==356== LEAK SUMMARY:
-==356==    definitely lost: 80 bytes in 10 blocks
-==356==    indirectly lost: 0 bytes in 0 blocks
-==356==      possibly lost: 0 bytes in 0 blocks
-==356==    still reachable: 2,301 bytes in 44 blocks
-==356==         suppressed: 0 bytes in 0 blocks
-==356== Reachable blocks (those to which a pointer was found) are not shown.
-==356== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==356== 
-==356== For lists of detected and suppressed errors, rerun with: -s
-==356== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
+==10727== Memcheck, a memory error detector
+==10727== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10727== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==10727== Command: Resultados/Raony/main/prog Resultados/Raony/main/Casos/23
+==10727== Parent PID: 10726
+==10727== 
+==10727== error calling PR_SET_PTRACER, vgdb might block
+==10727== 
+==10727== HEAP SUMMARY:
+==10727==     in use at exit: 464 bytes in 58 blocks
+==10727==   total heap usage: 990 allocs, 932 frees, 24,238 bytes allocated
+==10727== 
+==10727== 8 bytes in 1 blocks are definitely lost in loss record 1 of 5
+==10727==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10727==    by 0x10BB36: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109D5A: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109928: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727== 
+==10727== 8 bytes in 1 blocks are definitely lost in loss record 2 of 5
+==10727==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10727==    by 0x10BB36: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109D5A: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109943: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727== 
+==10727== 8 bytes in 1 blocks are definitely lost in loss record 3 of 5
+==10727==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10727==    by 0x10BB36: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109D5A: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x10995E: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727== 
+==10727== 8 bytes in 1 blocks are definitely lost in loss record 4 of 5
+==10727==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10727==    by 0x10BB36: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109D5A: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109979: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727== 
+==10727== 432 bytes in 54 blocks are definitely lost in loss record 5 of 5
+==10727==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10727==    by 0x10BB36: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x10AB55: ObtemPosicaoItemMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x1095FF: AtualizaPacmanMapa (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727==    by 0x109A5A: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==10727== 
+==10727== LEAK SUMMARY:
+==10727==    definitely lost: 464 bytes in 58 blocks
+==10727==    indirectly lost: 0 bytes in 0 blocks
+==10727==      possibly lost: 0 bytes in 0 blocks
+==10727==    still reachable: 0 bytes in 0 blocks
+==10727==         suppressed: 0 bytes in 0 blocks
+==10727== 
+==10727== For lists of detected and suppressed errors, rerun with: -s
+==10727== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)

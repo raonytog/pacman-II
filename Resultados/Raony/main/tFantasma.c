@@ -30,8 +30,8 @@ tFantasma * CriaFantasma(tMapa * mapa, char simoblogia_fantasma) {
     fantasma->dy = 0;
     fantasma->gulaFantasmagorica = 0;
     fantasma->presenteMapa = 0;
-    fantasma->posicao = CriaPosicao(-1, -1);
-    fantasma->posicaoAntiga = CriaPosicao(-1, -1);
+    fantasma->posicao = CriaPosicao(0, 0);
+    fantasma->posicaoAntiga = CriaPosicao(0, 0);
 
     tPosicao * posicao = ObtemPosicaoItemMapa(mapa, simoblogia_fantasma);
     if (posicao == NULL) {
@@ -89,7 +89,8 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
     tPosicao * cloneD = ClonaPosicao(ObtemPosicaoAtualFantasma(direita));
     AtualizaPosicao(direita->posicaoAntiga, direita->posicao);
 
-    if (EstaPresenteFantasma(esquerda)) { // fantasma b
+    // fantasma b
+    if (EstaPresenteFantasma(esquerda)) {
         AtualizaItemMapa(mapa, esquerda->posicao, VAZIO);
         cloneE->coluna += esquerda->dy;
         if (FantasmaComeuComida(esquerda)) {
@@ -100,16 +101,18 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         if (EncontrouParedeMapa(mapa, cloneE)) {
             esquerda->dy *= -1;
             cloneE->coluna += esquerda->dy;
+            cloneE->coluna += esquerda->dy;
+        }
 
-        } else if (EncontrouComidaMapa(mapa, cloneE)) {
+        if (EncontrouComidaMapa(mapa, cloneE)) {
             esquerda->gulaFantasmagorica++;
         }
-    }
     AtualizaPosicao(esquerda->posicao, cloneE);
     AtualizaItemMapa(mapa, esquerda->posicao, LEFT_GHOST);
+    }
 
-
-    if (EstaPresenteFantasma(direita)) { // fantasma c
+    // fantasma c
+    if (EstaPresenteFantasma(direita)) {
         AtualizaItemMapa(mapa, direita->posicao, VAZIO);
         cloneD->coluna += direita->dy;
         if (FantasmaComeuComida(direita)) {
@@ -120,16 +123,18 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         if (EncontrouParedeMapa(mapa, cloneD)) {
             direita->dy *= -1;
             cloneD->coluna += direita->dy;
+            cloneD->coluna += direita->dy;
+        }
 
-        } else if (EncontrouComidaMapa(mapa, cloneD)) {
+        if (EncontrouComidaMapa(mapa, cloneD)) {
             direita->gulaFantasmagorica++;
         }
-    }
     AtualizaPosicao(direita->posicao, cloneD);
     AtualizaItemMapa(mapa, direita->posicao, RIGHT_GHOST);
+    }
 
-
-    if (EstaPresenteFantasma(baixo)) { // fantasma i
+    // fantasma i
+    if (EstaPresenteFantasma(baixo)) {
         AtualizaItemMapa(mapa, baixo->posicao, VAZIO);
         cloneB->linha += baixo->dx;
         if (FantasmaComeuComida(baixo)) {
@@ -140,16 +145,18 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         if (EncontrouParedeMapa(mapa, cloneB)) {
             baixo->dx *= -1;
             cloneB->linha += baixo->dx;
+            cloneB->linha += baixo->dx;
+        }
 
-        } else if (EncontrouComidaMapa(mapa, cloneB)) {
+        if (EncontrouComidaMapa(mapa, cloneB)) {
             baixo->gulaFantasmagorica++;
         }
-    }
     AtualizaPosicao(baixo->posicao, cloneB);
     AtualizaItemMapa(mapa, baixo->posicao, DOWN_GHOST);
+    }
 
-
-    if (EstaPresenteFantasma(cima)) { // fantasma p
+    // fantasma p
+    if (EstaPresenteFantasma(cima)) {
         AtualizaItemMapa(mapa, cima->posicao, VAZIO);
         cloneC->linha += cima->dx;
         if (FantasmaComeuComida(cima)) {
@@ -160,13 +167,15 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         if (EncontrouParedeMapa(mapa, cloneC)) {
             cima->dx *= -1;
             cloneC->linha += cima->dx;
+            cloneC->linha += cima->dx;
+        } 
 
-        } else if (EncontrouComidaMapa(mapa, cloneC)) {
+        if (EncontrouComidaMapa(mapa, cloneC)) {
             cima->gulaFantasmagorica++;
         }
-    }
     AtualizaPosicao(cima->posicao, cloneC);
     AtualizaItemMapa(mapa, cima->posicao, UP_GHOST);
+    }
 
     DesalocaPosicao(cloneB);
     DesalocaPosicao(cloneC);

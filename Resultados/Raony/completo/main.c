@@ -9,6 +9,28 @@
 #define PACMAN '>'
 #define VAZIO ' '
 
+bool OcorreuCruzamento(tPacman * pacman, tPacman * pacmanAntigo, 
+                       tFantasma * left, tFantasma *  right, tFantasma * down, tFantasma * up) {
+        // posicoes atuais iguais
+    if (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(left)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(right)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(down)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(up)) ||
+
+        // atual do pacman igual antiga do fantasma
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(left)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(right)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(down)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(up)) ||
+
+        // antiga do pacman igual atual do fantasma
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(left)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(right)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(down)) ||
+        SaoIguaisPosicao(ObtemPosicaoPacman(pacmanAntigo), ObtemPosicaoAntigaFantasma(up))) return true;
+    return false;
+}
+
 void AtualizaPacmanMapa(tMapa * mapa, tPacman * pacman, COMANDO comando) {
     tPosicao * antiga = ObtemPosicaoItemMapa(mapa, PACMAN);
     MovePacman(pacman, mapa, comando);
@@ -64,15 +86,17 @@ COMANDO RetornaComando (char mov) {
     }
 }
 
-// int agrc, char * argv[]
-int main () {
-    // if (agrc <= 1) {
-    //     printf("ERRO: O diretorio de arquivos de configuracao nao foi informado\n");
-    //     return 1;
-    // }
+int main (int agrc, char * argv[]) {
+    if (agrc <= 1) {
+        printf("ERRO: O diretorio de arquivos de configuracao nao foi informado\n");
+        return 1;
+    }
 
-    char diretorio[DIRETORIO_MAX_SIZE] = "Casos/02";
-    //sprintf(diretorio, "%s", argv[1]);
+    char diretorio[DIRETORIO_MAX_SIZE];
+    sprintf(diretorio, "%s", argv[1]);
+
+// int main () {
+//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/02";
 
     tMapa * mapa = CriaMapa(diretorio);
     tPacman * pacman = CriaPacman(ObtemPosicaoItemMapa(mapa, PACMAN));
@@ -87,6 +111,8 @@ int main () {
 
     char mov = '\0';
     while (EstaVivoPacman(pacman) && ObtemNumeroAtualMovimentosPacman(pacman) <= ObtemNumeroMaximoMovimentosMapa(mapa)) {
+        tPacman * clone = ClonaPacman(pacman);
+
         scanf("%c%*c", &mov);
         printf("Estado do jogo apos o movimento '%c':\n", mov);
         AtualizaPacmanMapa(mapa, pacman, RetornaComando(mov));
@@ -95,8 +121,19 @@ int main () {
         ImprimeMapa(mapa);
         printf("Pontuacao: %d\n\n", ObtemPontuacaoAtualPacman(pacman));
 
-        // MataPacman(pacman);
+        if (OcorreuCruzamento(pacman, clone, left, right, down, up)) {
+            InsereNovoMovimentoSignificativoPacman(pacman, RetornaComando(mov), "fim de jogo por encostar em um fantasma");
+            MataPacman(pacman);
+        }
+
+        DesalocaPacman(clone);
     }
+
+    if (EstaVivoPacman(pacman)) printf("Voce venceu!\n");
+    else printf("Game over!\n");
+
+    printf("Pontuacao final: %d\n", ObtemPontuacaoAtualPacman(pacman));
+
 
     
     

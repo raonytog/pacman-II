@@ -1,294 +1,164 @@
 Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### I #
-#     * #
-# #   #*#
-# ## ## #
-#  #  # #
-# >    C#
-#########
+#########################
+#  *  **      **  * *   #
+#*     **            #* #
+#  *    *   ######*  #  #
+#     #    *######*###  #
+#     #     ######      #
+#     ### #     C* # *  #
+#P### #  *#   ###  #  I #
+# ### #   ###  # * # #  #
+# ### *      >   B  *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### * #
-#     I #
-# #   #*#
-# ## ## #
-# >#  # #
-#      C#
-#########
+#########################
+#  *  **      **  * *   #
+#*     **            #* #
+#  *    *   ######*  #  #
+#     #    *######*###  #
+#     #     ######      #
+#P    ### #      C # *  #
+# ### #  *#   ###  #  * #
+# ### #   ###> # * # #I #
+# ### *         B   *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'a':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### * #
-#     I #
-# #   #*#
-# ## ## #
-#> #  # #
-#     C #
-#########
+#########################
+#  *  **      **  * *   #
+#*     **            #* #
+#  *    *   ######*  #  #
+#     #    *######*###  #
+#P    #     ######      #
+#     ### #      *C# *  #
+# ### #  *#   ###  #  I #
+# ### #   ###> # * # #  #
+# ### *        B    *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### I #
-#       #
-# #   #*#
-#>## ## #
-#  #  # #
-#    C  #
-#########
+#########################
+#  *  **      **  * *   #
+#*     **            #* #
+#  *    *   ######*  #  #
+#P    #    *######*###  #
+#     #     ######      #
+#     ### #      C # *I #
+# ### #  *#  >###  #  * #
+# ### #   ###  # * # #  #
+# ### *       B     *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   * I #
-# ### * #
-#       #
-#>#   #*#
-# ## ## #
-#  #  # #
-#   C   #
-#########
+#########################
+#  *  **      **  * *   #
+#*     **            #* #
+#P *    *   ######*  #  #
+#     #    *######*###  #
+#     #     ######    I #
+#     ### #  >  C* # *  #
+# ### #  *#   ###  #  * #
+# ### #   ###  # * # #  #
+# ### *      B      *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 's':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   * I #
-# ### * #
-#       #
-# #   #*#
-#>## ## #
-#  #  # #
-#  C    #
-#########
+#########################
+#  *  **      **  * *   #
+#P     **            #* #
+#  *    *   ######*  #  #
+#     #    *######*###I #
+#     #     ######      #
+#     ### #    C * # *  #
+# ### #  *#  >###  #  * #
+# ### #   ###  # * # #  #
+# ### *     B       *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### I #
-#       #
-# #   #*#
-#>## ## #
-#  #  # #
-# C     #
-#########
+#########################
+#P *  **      **  * *   #
+#*     **            #* #
+#  *    *   ######*  #I #
+#     #    *######*###  #
+#     #     ######      #
+#     ### #   C  * # *  #
+# ### #  *#  >###  #  * #
+# ### #   ###  # * # #  #
+# ### *    B        *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### * #
-#     I #
-# #   #*#
-#>## ## #
-#  #  # #
-#C      #
-#########
+#########################
+#  *  **      **  * *   #
+#P     **            #I #
+#  *    *   ######*  #  #
+#     #    *######*###  #
+#     #     ######      #
+#     ### #  C   * # *  #
+# ### #  *#  >###  #  * #
+# ### #   ###  # * # #  #
+# ### *   B         *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### * #
-#     I #
-#>#   #*#
-# ## ## #
-#  #  # #
-#C      #
-#########
+#########################
+#  *  **      **  * * I #
+#*     **            #* #
+#P *    *   ######*  #  #
+#     #    *######*###  #
+#     #     ######      #
+#     ### # C    * # *  #
+# ### #  *#   ###  #  * #
+# ### #   ###  # * # #  #
+# ### *  B          *##*#
+#*###   # ######   #  # #
+# ###   # ###### * #*   #
+# ### ### ###### ##### *#
+#           *          *#
+#########################
 Pontuacao: 0
 
-Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### I #
-#       #
-#>#   #*#
-# ## ## #
-#  #  # #
-# C     #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   * I #
-# ### * #
-#       #
-#>#   #*#
-# ## ## #
-#  #  # #
-#  C    #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   * I #
-# ### * #
-#       #
-#>#   #*#
-# ## ## #
-#  #  # #
-#   C   #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### I #
-#       #
-#>#   #*#
-# ## ## #
-#  #  # #
-#    C  #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### * #
-#     I #
-#>#   #*#
-# ## ## #
-#  #  # #
-#     C #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-# ### * #
-#>    I #
-# #   #*#
-# ## ## #
-#  #  # #
-#      C#
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#   *   #
-#>### I #
-#       #
-# #   #*#
-# ## ## #
-#  #  # #
-#      C#
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#>  * I #
-# ### * #
-#       #
-# #   #*#
-# ## ## #
-#  #  # #
-#     C #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#>  * I #
-# ### * #
-#       #
-# #   #*#
-# ## ## #
-#  #  # #
-#    C  #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'w':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#>  *   #
-# ### I #
-#       #
-# #   #*#
-# ## ## #
-#  #  # #
-#   C   #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-# > *   #
-# ### * #
-#     I #
-# #   #*#
-# ## ## #
-#  #  # #
-#  C    #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'd':
-Erro! O valor de linha está fora dos limites do mapa!
-Erro! O valor de linha está fora dos limites do mapa!
-#########
-#  >*   #
-# ### * #
-#     I #
-# #   #*#
-# ## ## #
-#  #  # #
-# C     #
-#########
-Pontuacao: 0
-
+Game over!
+Pontuacao final: 0

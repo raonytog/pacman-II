@@ -18,55 +18,55 @@ Estado do jogo apos o movimento 'd':
 # #   #*#
 # ## ## #
 #  #  # #
-#  >   C#
+#  >  C #
 #########
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'd':
 #########
 #   *   #
-# ### * #
-#     I #
+# ### I #
+#     * #
 # #   #*#
 # ## ## #
 #  #  # #
-#   > C #
+#   >C  #
 #########
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'w':
 #########
-#   *   #
-# ### I #
-#       #
+#   * I #
+# ### * #
+#     * #
 # #   #*#
 # ## ## #
 #  #> # #
-#    C  #
+#   C   #
 #########
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'd':
 #########
-#   * I #
-# ### * #
-#       #
+#   *   #
+# ### I #
+#     * #
 # #   #*#
 # ## ## #
 #  # ># #
-#   C   #
+#  C    #
 #########
 Pontuacao: 0
 
 Estado do jogo apos o movimento 's':
 #########
-#   * I #
+#   *   #
 # ### * #
-#       #
+#     I #
 # #   #*#
 # ## ## #
 #  #  # #
-#  C >  #
+# C  >  #
 #########
 Pontuacao: 0
 
@@ -74,35 +74,47 @@ Estado do jogo apos o movimento 'd':
 #########
 #   *   #
 # ### I #
-#       #
+#     * #
 # #   #*#
 # ## ## #
 #  #  # #
-# C   > #
+#C    > #
 #########
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'd':
 #########
-#   *   #
+#   * I #
 # ### * #
-#     I #
+#     * #
 # #   #*#
 # ## ## #
 #  #  # #
-#C     >#
+# C    >#
 #########
 Pontuacao: 0
 
 Estado do jogo apos o movimento 'w':
 #########
 #   *   #
-# ### * #
-#     I #
+# ### I #
+#     * #
 # #   #*#
 # ## ## #
 #  #  #>#
-#C      #
+#  C    #
+#########
+Pontuacao: 0
+
+Estado do jogo apos o movimento 'w':
+#########
+#   *   #
+# ### * #
+#     I #
+# #   #*#
+# ## ##>#
+#  #  # #
+#   C   #
 #########
 Pontuacao: 0
 
@@ -110,23 +122,11 @@ Estado do jogo apos o movimento 'w':
 #########
 #   *   #
 # ### I #
-#       #
-# #   #*#
-# ## ##>#
-#  #  # #
-# C     #
-#########
-Pontuacao: 0
-
-Estado do jogo apos o movimento 'w':
-#########
-#   * I #
-# ### * #
-#       #
+#     * #
 # #   #>#
 # ## ## #
 #  #  # #
-#  C    #
+#    C  #
 #########
 Pontuacao: 1
 
@@ -134,11 +134,11 @@ Estado do jogo apos o movimento 'w':
 #########
 #   * I #
 # ### * #
-#      >#
+#     *>#
 # #   # #
 # ## ## #
 #  #  # #
-#   C   #
+#     C #
 #########
 Pontuacao: 1
 
@@ -150,9 +150,9 @@ Estado do jogo apos o movimento 'a':
 # #   # #
 # ## ## #
 #  #  # #
-#    C  #
+#      C#
 #########
-Pontuacao: 1
+Pontuacao: 2
 
 Estado do jogo apos o movimento 'd':
 #########
@@ -164,10 +164,43 @@ Estado do jogo apos o movimento 'd':
 #  #  # #
 #     C #
 #########
-Pontuacao: 1
+Pontuacao: 2
 
 Estado do jogo apos o movimento 'w':
 #########
 #   *   #
+# ### I>#
+#       #
+# #   # #
+# ## ## #
+#  #  # #
+#    C  #
+#########
+Pontuacao: 2
+
+Estado do jogo apos o movimento 'd':
+#########
+#   * I #
 # ### *>#
-#     Itimeout: the monitored command dumped core
+#       #
+# #   # #
+# ## ## #
+#  #  # #
+#   C   #
+#########
+Pontuacao: 2
+
+Estado do jogo apos o movimento 'a':
+#########
+#   *   #
+# ### I #
+#       #
+# #   # #
+# ## ## #
+#  #  # #
+#  C    #
+#########
+Pontuacao: 3
+
+Game over!
+Pontuacao final: 3
