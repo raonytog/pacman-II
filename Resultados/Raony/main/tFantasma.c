@@ -1,10 +1,5 @@
 #include "tFantasma.h"
 
-// #define FANT_B 'B'  //fantasma horizontal   - inicio: esquerda
-// #define FANT_C 'C'  //fantasma horizontal   - inicio: direita
-// #define FANT_I 'I'  //fantasma vertical     - inicio: baixo
-// #define FANT_P 'P'  //fantasma vertical     - inicio: cima
-
 bool ExisteItemPosicao (tMapa * mapa, tPosicao * posicao, char item) {
     if (ObtemItemMapa(mapa, posicao) == item) return true;
     return false;
@@ -105,7 +100,6 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
         
         AtualizaPosicao(esquerda->posicao, cloneE);
-        // AtualizaItemMapa(mapa, esquerda->posicao, LEFT_GHOST);
     }
 
     // fantasma c
@@ -131,7 +125,6 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(direita->posicao, cloneD);
-        // AtualizaItemMapa(mapa, direita->posicao, RIGHT_GHOST);
     }
 
     // fantasma i
@@ -157,7 +150,6 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(baixo->posicao, cloneB);
-        // AtualizaItemMapa(mapa, baixo->posicao, DOWN_GHOST);
     }
 
     // fantasma p
@@ -183,7 +175,6 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(cima->posicao, cloneC);
-        // AtualizaItemMapa(mapa, cima->posicao, UP_GHOST);
     }
 
     DesalocaPosicao(cloneB);

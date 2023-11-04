@@ -1,16 +1,16 @@
-==30116== Memcheck, a memory error detector
-==30116== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==30116== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==30116== Command: Resultados/Raony/tMovimento/prog Resultados/Raony/tMovimento/Casos/16
-==30116== Parent PID: 30115
-==30116== 
-==30116== error calling PR_SET_PTRACER, vgdb might block
-==30116== 
-==30116== HEAP SUMMARY:
-==30116==     in use at exit: 0 bytes in 0 blocks
-==30116==   total heap usage: 8,544 allocs, 8,544 frees, 84,124 bytes allocated
-==30116== 
-==30116== All heap blocks were freed -- no leaks are possible
-==30116== 
-==30116== For lists of detected and suppressed errors, rerun with: -s
-==30116== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==19553== Memcheck, a memory error detector
+==19553== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==19553== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==19553== Command: Resultados/Raony/tMovimento/prog Resultados/Raony/tMovimento/Casos/16
+==19553== Parent PID: 19552
+==19553== 
+==19553== error calling PR_SET_PTRACER, vgdb might block
+==19553== 
+==19553== HEAP SUMMARY:
+==19553==     in use at exit: 0 bytes in 0 blocks
+==19553==   total heap usage: 8,544 allocs, 8,544 frees, 84,124 bytes allocated
+==19553== 
+==19553== All heap blocks were freed -- no leaks are possible
+==19553== 
+==19553== For lists of detected and suppressed errors, rerun with: -s
+==19553== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

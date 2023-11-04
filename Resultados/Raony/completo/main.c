@@ -135,13 +135,15 @@ int main (int agrc, char * argv[]) {
         AtualizaPacmanMapa(mapa, pacman, clone, RetornaComando(mov));
         MoveFantasmas(down, up, left, right, mapa, pacman);
 
-        ImprimeMapa(mapa, left, right, down, up);
-        printf("Pontuacao: %d\n\n", ObtemPontuacaoAtualPacman(pacman));
-
         if (OcorreuCruzamento(pacman, clone, left, right, down, up)) {
             InsereNovoMovimentoSignificativoPacman(pacman, RetornaComando(mov), "fim de jogo por encostar em um fantasma");
             MataPacman(pacman);
+            AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
         }
+        
+        ImprimeMapa(mapa, left, right, down, up);
+        printf("Pontuacao: %d\n\n", ObtemPontuacaoAtualPacman(pacman));
+
 
         DesalocaPosicao(clone);
     }
