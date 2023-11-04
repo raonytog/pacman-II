@@ -1,0 +1,16 @@
+==24128== Memcheck, a memory error detector
+==24128== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24128== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==24128== Command: Resultados/RaonyTogneri/main/prog Resultados/RaonyTogneri/main/Casos/26
+==24128== Parent PID: 24127
+==24128== 
+==24128== error calling PR_SET_PTRACER, vgdb might block
+==24128== 
+==24128== HEAP SUMMARY:
+==24128==     in use at exit: 0 bytes in 0 blocks
+==24128==   total heap usage: 73,330 allocs, 73,330 frees, 611,206 bytes allocated
+==24128== 
+==24128== All heap blocks were freed -- no leaks are possible
+==24128== 
+==24128== For lists of detected and suppressed errors, rerun with: -s
+==24128== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

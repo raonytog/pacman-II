@@ -1,0 +1,8 @@
+Resultados/RaonyTogneri/tMapa/main.c: In function ‘RetornaComando’:
+Resultados/RaonyTogneri/tMapa/main.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
+   51 | }
+      | ^
+Resultados/RaonyTogneri/tMapa/tArquivos.c: In function ‘RetornaTeclaComando’:
+Resultados/RaonyTogneri/tMapa/tArquivos.c:17:1: warning: control reaches end of non-void function [-Wreturn-type]
+   17 | }
+      | ^

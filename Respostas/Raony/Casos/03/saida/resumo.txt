@@ -1,5 +1,0 @@
-Movimento 4 (w) colidiu com a parede
-Movimento 5 (d) pegou comida
-Movimento 8 (w) pegou comida
-Movimento 9 (a) colidiu com a parede
-Movimento 9 (a) fim de jogo por encostar em um fantasma

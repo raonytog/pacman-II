@@ -1,0 +1,16 @@
+==17625== Memcheck, a memory error detector
+==17625== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==17625== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==17625== Command: Resultados/RaonyTogneri/completo/prog Resultados/RaonyTogneri/completo/Casos/11
+==17625== Parent PID: 17624
+==17625== 
+==17625== error calling PR_SET_PTRACER, vgdb might block
+==17625== 
+==17625== HEAP SUMMARY:
+==17625==     in use at exit: 0 bytes in 0 blocks
+==17625==   total heap usage: 926,111 allocs, 926,111 frees, 7,568,376 bytes allocated
+==17625== 
+==17625== All heap blocks were freed -- no leaks are possible
+==17625== 
+==17625== For lists of detected and suppressed errors, rerun with: -s
+==17625== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
