@@ -32,30 +32,31 @@ tFantasma * CriaFantasma(tMapa * mapa, char simoblogia_fantasma) {
         fantasma->presenteMapa = 1;
         switch (simoblogia_fantasma) {
             case LEFT_GHOST:
-                fantasma->posicao = posicao;
+                AtualizaPosicao(fantasma->posicao, posicao);
                 fantasma->dx = 0;
                 fantasma->dy = -1;
                 break;
 
             case RIGHT_GHOST:
-                fantasma->posicao = posicao;
+                AtualizaPosicao(fantasma->posicao, posicao);
                 fantasma->dx = 0;
                 fantasma->dy = 1;
                 break;
 
             case DOWN_GHOST:
-                fantasma->posicao = posicao;
+                AtualizaPosicao(fantasma->posicao, posicao);
                 fantasma->dx = 1;
                 fantasma->dy = 0;
                 break;
 
             case UP_GHOST:
-                fantasma->posicao = posicao;
+                AtualizaPosicao(fantasma->posicao, posicao);
                 fantasma->dx = -1;
                 fantasma->dy = 0;
                 break;
         }
     }
+    DesalocaPosicao(posicao);
     return fantasma;
 }
 
@@ -88,7 +89,8 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
 
         cloneE->coluna += esquerda->dy;
         if (FantasmaComeuComida(esquerda)) {
-            AtualizaItemMapa(mapa, esquerda->posicaoAntiga, COMIDA);
+            if (!SaoIguaisPosicao(esquerda->posicaoAntiga, pacman->posicaoAtual)) 
+                AtualizaItemMapa(mapa, esquerda->posicaoAntiga, COMIDA);
             esquerda->gulaFantasmagorica = 0;
         }
 
@@ -113,9 +115,8 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
 
         cloneD->coluna += direita->dy;
         if (FantasmaComeuComida(direita)) {
-            if (!SaoIguaisPosicao(pacman->posicaoAtual, direita->posicao)) {
+            if (!SaoIguaisPosicao(pacman->posicaoAtual, direita->posicao))
                 AtualizaItemMapa(mapa, direita->posicaoAntiga, COMIDA);
-            }
             direita->gulaFantasmagorica = 0;
         }
 
@@ -140,7 +141,8 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
 
         cloneB->linha += baixo->dx;
         if (FantasmaComeuComida(baixo)) {
-            AtualizaItemMapa(mapa, baixo->posicaoAntiga, COMIDA);
+            if (!SaoIguaisPosicao(baixo->posicaoAntiga, pacman->posicaoAtual)) 
+                AtualizaItemMapa(mapa, baixo->posicaoAntiga, COMIDA);
             baixo->gulaFantasmagorica = 0;
         }
 
@@ -165,7 +167,8 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         
         cloneC->linha += cima->dx;
         if (FantasmaComeuComida(cima)) {
-            AtualizaItemMapa(mapa, cima->posicaoAntiga, COMIDA);
+            if (!SaoIguaisPosicao(cima->posicaoAntiga, pacman->posicaoAtual)) 
+                AtualizaItemMapa(mapa, cima->posicaoAntiga, COMIDA);
             cima->gulaFantasmagorica = 0;
         }
 

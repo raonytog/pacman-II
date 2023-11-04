@@ -1,45 +1,16 @@
-==17045== Memcheck, a memory error detector
-==17045== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==17045== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==17045== Command: Resultados/Raony/completo/prog Resultados/Raony/completo/Casos/23
-==17045== Parent PID: 17044
-==17045== 
-==17045== error calling PR_SET_PTRACER, vgdb might block
-==17045== 
-==17045== HEAP SUMMARY:
-==17045==     in use at exit: 32 bytes in 4 blocks
-==17045==   total heap usage: 32,605 allocs, 32,601 frees, 274,432 bytes allocated
-==17045== 
-==17045== 8 bytes in 1 blocks are definitely lost in loss record 1 of 4
-==17045==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==17045==    by 0x10C6FD: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x10A765: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x109A08: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045== 
-==17045== 8 bytes in 1 blocks are definitely lost in loss record 2 of 4
-==17045==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==17045==    by 0x10C6FD: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x10A765: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x109A23: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045== 
-==17045== 8 bytes in 1 blocks are definitely lost in loss record 3 of 4
-==17045==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==17045==    by 0x10C6FD: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x10A765: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x109A3E: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045== 
-==17045== 8 bytes in 1 blocks are definitely lost in loss record 4 of 4
-==17045==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==17045==    by 0x10C6FD: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x10A765: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045==    by 0x109A59: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/completo/prog)
-==17045== 
-==17045== LEAK SUMMARY:
-==17045==    definitely lost: 32 bytes in 4 blocks
-==17045==    indirectly lost: 0 bytes in 0 blocks
-==17045==      possibly lost: 0 bytes in 0 blocks
-==17045==    still reachable: 0 bytes in 0 blocks
-==17045==         suppressed: 0 bytes in 0 blocks
-==17045== 
-==17045== For lists of detected and suppressed errors, rerun with: -s
-==17045== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
+==15985== Memcheck, a memory error detector
+==15985== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==15985== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==15985== Command: Resultados/Raony/completo/prog Resultados/Raony/completo/Casos/23
+==15985== Parent PID: 15984
+==15985== 
+==15985== error calling PR_SET_PTRACER, vgdb might block
+==15985== 
+==15985== HEAP SUMMARY:
+==15985==     in use at exit: 0 bytes in 0 blocks
+==15985==   total heap usage: 32,605 allocs, 32,605 frees, 274,432 bytes allocated
+==15985== 
+==15985== All heap blocks were freed -- no leaks are possible
+==15985== 
+==15985== For lists of detected and suppressed errors, rerun with: -s
+==15985== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

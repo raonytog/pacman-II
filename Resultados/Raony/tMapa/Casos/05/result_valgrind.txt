@@ -1,16 +1,16 @@
-==21271== Memcheck, a memory error detector
-==21271== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==21271== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==21271== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/05
-==21271== Parent PID: 21270
-==21271== 
-==21271== error calling PR_SET_PTRACER, vgdb might block
-==21271== 
-==21271== HEAP SUMMARY:
-==21271==     in use at exit: 0 bytes in 0 blocks
-==21271==   total heap usage: 1,429,983 allocs, 1,429,983 frees, 12,114,713 bytes allocated
-==21271== 
-==21271== All heap blocks were freed -- no leaks are possible
-==21271== 
-==21271== For lists of detected and suppressed errors, rerun with: -s
-==21271== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==22235== Memcheck, a memory error detector
+==22235== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22235== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==22235== Command: Resultados/Raony/tMapa/prog Resultados/Raony/tMapa/Casos/05
+==22235== Parent PID: 22234
+==22235== 
+==22235== error calling PR_SET_PTRACER, vgdb might block
+==22235== 
+==22235== HEAP SUMMARY:
+==22235==     in use at exit: 0 bytes in 0 blocks
+==22235==   total heap usage: 1,429,983 allocs, 1,429,983 frees, 12,114,713 bytes allocated
+==22235== 
+==22235== All heap blocks were freed -- no leaks are possible
+==22235== 
+==22235== For lists of detected and suppressed errors, rerun with: -s
+==22235== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

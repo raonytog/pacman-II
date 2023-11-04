@@ -51,11 +51,13 @@ COMANDO RetornaComando (char mov) {
 }
 
 void AtualizaPacmanMapa(tMapa * mapa, tPacman * pacman, tPosicao * antiga, COMANDO comando) {
-    AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
+    if (PossuiTunelMapa(mapa)) {
+        if (!EntrouTunel(ObtemTunelMapa(mapa), ObtemPosicaoPacman(pacman))) AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
+        else AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PORTAL);
+
+    } else AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
     MovePacman(pacman, mapa, comando);
     AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-    // if (ObtemItemMapa(mapa, antiga) == VAZIO || ObtemItemMapa(mapa, antiga) == PACMAN) AtualizaItemMapa(mapa, antiga, VAZIO);
-    // if (ObtemItemMapa(mapa, ObtemPosicaoPacman(pacman)) == VAZIO) AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
 }
 
 void ImprimeMapa(tMapa * mapa, tFantasma * left, tFantasma *  right, tFantasma * down, tFantasma * up) {
@@ -104,7 +106,7 @@ int main (int agrc, char * argv[]) {
     sprintf(diretorio, "%s", argv[1]);
 
 // int main () {
-//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/01";
+//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/02";
 
     tMapa * mapa = CriaMapa(diretorio);
     tPacman * pacman = CriaPacman(ObtemPosicaoItemMapa(mapa, PACMAN));
@@ -117,6 +119,8 @@ int main (int agrc, char * argv[]) {
     GeraArquivoInicializacao(mapa, pacman);
     RetiraFantasmasMapa(mapa, left, right, down, up);
     CriaTrilhaPacman(pacman, ObtemNumeroLinhasMapa(mapa), ObtemNumeroColunasMapa(mapa));
+    AtualizaTrilhaPacman(pacman);
+    
 
     char mov = '\0';
     while ( EstaVivoPacman(pacman) && 
