@@ -51,18 +51,46 @@ COMANDO RetornaComando (char mov) {
 }
 
 void AtualizaPacmanMapa(tMapa * mapa, tPacman * pacman, tPosicao * antiga, COMANDO comando) {
+    AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
     MovePacman(pacman, mapa, comando);
-    if (ObtemItemMapa(mapa, antiga) == VAZIO || ObtemItemMapa(mapa, antiga) == PACMAN) AtualizaItemMapa(mapa, antiga, VAZIO);
-    // AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-    if (ObtemItemMapa(mapa, ObtemPosicaoPacman(pacman)) == VAZIO) AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
+    AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
+    // if (ObtemItemMapa(mapa, antiga) == VAZIO || ObtemItemMapa(mapa, antiga) == PACMAN) AtualizaItemMapa(mapa, antiga, VAZIO);
+    // if (ObtemItemMapa(mapa, ObtemPosicaoPacman(pacman)) == VAZIO) AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
 }
 
-void ImprimeMapa(tMapa * mapa) {
+void ImprimeMapa(tMapa * mapa, tFantasma * left, tFantasma *  right, tFantasma * down, tFantasma * up) {
     for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
         for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
-            printf("%c", mapa->grid[i][j]);
+            tPosicao * posicao = CriaPosicao(i, j);
+            if (SaoIguaisPosicao(posicao, ObtemPosicaoAtualFantasma(left)) && EstaPresenteFantasma(left))
+                printf("%c", LEFT_GHOST);
+
+            else if (SaoIguaisPosicao(posicao, ObtemPosicaoAtualFantasma(right)) && EstaPresenteFantasma(right))
+                printf("%c", RIGHT_GHOST);
+            
+
+            else if (SaoIguaisPosicao(posicao, ObtemPosicaoAtualFantasma(down)) && EstaPresenteFantasma(down))
+                printf("%c", DOWN_GHOST);
+            
+
+            else if (SaoIguaisPosicao(posicao, ObtemPosicaoAtualFantasma(up)) && EstaPresenteFantasma(up))
+                printf("%c", UP_GHOST);
+            
+            else printf("%c", mapa->grid[i][j]);
+            DesalocaPosicao(posicao);
         }
         printf("\n");
+    }
+}
+
+void RetiraFantasmasMapa (tMapa * mapa, tFantasma * left, tFantasma *  right, tFantasma * down, tFantasma * up) {
+    for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
+        for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
+            if (mapa->grid[i][j] == UP_GHOST || mapa->grid[i][j] == DOWN_GHOST ||
+                mapa->grid[i][j] == RIGHT_GHOST || mapa->grid[i][j] == LEFT_GHOST) {
+                    mapa->grid[i][j] = VAZIO;
+            }
+        }
     }
 }
 
@@ -76,7 +104,7 @@ int main (int agrc, char * argv[]) {
     sprintf(diretorio, "%s", argv[1]);
 
 // int main () {
-//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/02";
+//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/01";
 
     tMapa * mapa = CriaMapa(diretorio);
     tPacman * pacman = CriaPacman(ObtemPosicaoItemMapa(mapa, PACMAN));
@@ -87,6 +115,7 @@ int main (int agrc, char * argv[]) {
     tFantasma * up = CriaFantasma(mapa, UP_GHOST);
 
     GeraArquivoInicializacao(mapa, pacman);
+    RetiraFantasmasMapa(mapa, left, right, down, up);
     CriaTrilhaPacman(pacman, ObtemNumeroLinhasMapa(mapa), ObtemNumeroColunasMapa(mapa));
 
     char mov = '\0';
@@ -100,9 +129,9 @@ int main (int agrc, char * argv[]) {
         printf("Estado do jogo apos o movimento '%c':\n", mov);
 
         AtualizaPacmanMapa(mapa, pacman, clone, RetornaComando(mov));
-        MoveFantasmas(down, up, left, right, mapa);
+        MoveFantasmas(down, up, left, right, mapa, pacman);
 
-        ImprimeMapa(mapa);
+        ImprimeMapa(mapa, left, right, down, up);
         printf("Pontuacao: %d\n\n", ObtemPontuacaoAtualPacman(pacman));
 
         if (OcorreuCruzamento(pacman, clone, left, right, down, up)) {

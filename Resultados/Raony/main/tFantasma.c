@@ -67,7 +67,8 @@ tPosicao * ObtemPosicaoAntigaFantasma (tFantasma * fantasma) {
     return fantasma->posicaoAntiga;
 }
 
-void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, tFantasma * direita, tMapa * mapa) {
+void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, tFantasma * direita, 
+                    tMapa * mapa, tPacman * pacman) {
     tPosicao * cloneB = ClonaPosicao(ObtemPosicaoAtualFantasma(baixo));
     AtualizaPosicao(baixo->posicaoAntiga, baixo->posicao);
 
@@ -82,7 +83,9 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
 
     // fantasma b
     if (EstaPresenteFantasma(esquerda)) {
-        AtualizaItemMapa(mapa, esquerda->posicao, VAZIO);
+        if (!SaoIguaisPosicao(pacman->posicaoAtual, esquerda->posicao)) AtualizaItemMapa(mapa, esquerda->posicao, VAZIO);
+        else AtualizaItemMapa(mapa, esquerda->posicao, PACMAN);
+
         cloneE->coluna += esquerda->dy;
         if (FantasmaComeuComida(esquerda)) {
             AtualizaItemMapa(mapa, esquerda->posicaoAntiga, COMIDA);
@@ -100,15 +103,19 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
         
         AtualizaPosicao(esquerda->posicao, cloneE);
-        AtualizaItemMapa(mapa, esquerda->posicao, LEFT_GHOST);
+        // AtualizaItemMapa(mapa, esquerda->posicao, LEFT_GHOST);
     }
 
     // fantasma c
     if (EstaPresenteFantasma(direita)) {
-        AtualizaItemMapa(mapa, direita->posicao, VAZIO);
+        if (!SaoIguaisPosicao(pacman->posicaoAtual, direita->posicao)) AtualizaItemMapa(mapa, direita->posicao, VAZIO);
+        else AtualizaItemMapa(mapa, direita->posicao, PACMAN);
+
         cloneD->coluna += direita->dy;
         if (FantasmaComeuComida(direita)) {
-            AtualizaItemMapa(mapa, direita->posicaoAntiga, COMIDA);
+            if (!SaoIguaisPosicao(pacman->posicaoAtual, direita->posicao)) {
+                AtualizaItemMapa(mapa, direita->posicaoAntiga, COMIDA);
+            }
             direita->gulaFantasmagorica = 0;
         }
 
@@ -123,12 +130,14 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(direita->posicao, cloneD);
-        AtualizaItemMapa(mapa, direita->posicao, RIGHT_GHOST);
+        // AtualizaItemMapa(mapa, direita->posicao, RIGHT_GHOST);
     }
 
     // fantasma i
     if (EstaPresenteFantasma(baixo)) {
-        AtualizaItemMapa(mapa, baixo->posicao, VAZIO);
+        if (!SaoIguaisPosicao(pacman->posicaoAtual, baixo->posicao)) AtualizaItemMapa(mapa, baixo->posicao, VAZIO);
+        else AtualizaItemMapa(mapa, baixo->posicao, PACMAN);
+
         cloneB->linha += baixo->dx;
         if (FantasmaComeuComida(baixo)) {
             AtualizaItemMapa(mapa, baixo->posicaoAntiga, COMIDA);
@@ -146,12 +155,13 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(baixo->posicao, cloneB);
-        AtualizaItemMapa(mapa, baixo->posicao, DOWN_GHOST);
+        // AtualizaItemMapa(mapa, baixo->posicao, DOWN_GHOST);
     }
 
     // fantasma p
     if (EstaPresenteFantasma(cima)) {
-        AtualizaItemMapa(mapa, cima->posicao, VAZIO);
+        if (!SaoIguaisPosicao(pacman->posicaoAtual, cima->posicao)) AtualizaItemMapa(mapa, cima->posicao, VAZIO);
+        else AtualizaItemMapa(mapa, cima->posicao, PACMAN);
         
         cloneC->linha += cima->dx;
         if (FantasmaComeuComida(cima)) {
@@ -170,7 +180,7 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
         }
 
         AtualizaPosicao(cima->posicao, cloneC);
-        AtualizaItemMapa(mapa, cima->posicao, UP_GHOST);
+        // AtualizaItemMapa(mapa, cima->posicao, UP_GHOST);
     }
 
     DesalocaPosicao(cloneB);
@@ -179,7 +189,7 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, t
     DesalocaPosicao(cloneD);
 }
 
-int EstaPresenteFantasma (tFantasma * fantasma) {
+bool EstaPresenteFantasma (tFantasma * fantasma) {
     return fantasma->presenteMapa;
 }
 

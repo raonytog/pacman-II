@@ -1,45 +1,45 @@
-==25232== Memcheck, a memory error detector
-==25232== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==25232== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==25232== Command: Resultados/Raony/main/prog Resultados/Raony/main/Casos/03
-==25232== Parent PID: 25231
-==25232== 
-==25232== error calling PR_SET_PTRACER, vgdb might block
-==25232== 
-==25232== HEAP SUMMARY:
-==25232==     in use at exit: 32 bytes in 4 blocks
-==25232==   total heap usage: 15,982 allocs, 15,978 frees, 5,279,146 bytes allocated
-==25232== 
-==25232== 8 bytes in 1 blocks are definitely lost in loss record 1 of 4
-==25232==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25232==    by 0x10C2EC: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x10A510: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x10980A: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232== 
-==25232== 8 bytes in 1 blocks are definitely lost in loss record 2 of 4
-==25232==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25232==    by 0x10C2EC: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x10A510: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x109825: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232== 
-==25232== 8 bytes in 1 blocks are definitely lost in loss record 3 of 4
-==25232==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25232==    by 0x10C2EC: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x10A510: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x109840: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232== 
-==25232== 8 bytes in 1 blocks are definitely lost in loss record 4 of 4
-==25232==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==25232==    by 0x10C2EC: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x10A510: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232==    by 0x10985B: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
-==25232== 
-==25232== LEAK SUMMARY:
-==25232==    definitely lost: 32 bytes in 4 blocks
-==25232==    indirectly lost: 0 bytes in 0 blocks
-==25232==      possibly lost: 0 bytes in 0 blocks
-==25232==    still reachable: 0 bytes in 0 blocks
-==25232==         suppressed: 0 bytes in 0 blocks
-==25232== 
-==25232== For lists of detected and suppressed errors, rerun with: -s
-==25232== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
+==20052== Memcheck, a memory error detector
+==20052== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==20052== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==20052== Command: Resultados/Raony/main/prog Resultados/Raony/main/Casos/03
+==20052== Parent PID: 20051
+==20052== 
+==20052== error calling PR_SET_PTRACER, vgdb might block
+==20052== 
+==20052== HEAP SUMMARY:
+==20052==     in use at exit: 32 bytes in 4 blocks
+==20052==   total heap usage: 1,307,365 allocs, 1,307,361 frees, 10,710,642 bytes allocated
+==20052== 
+==20052== 8 bytes in 1 blocks are definitely lost in loss record 1 of 4
+==20052==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20052==    by 0x10C617: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x10A785: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x109A28: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052== 
+==20052== 8 bytes in 1 blocks are definitely lost in loss record 2 of 4
+==20052==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20052==    by 0x10C617: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x10A785: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x109A43: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052== 
+==20052== 8 bytes in 1 blocks are definitely lost in loss record 3 of 4
+==20052==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20052==    by 0x10C617: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x10A785: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x109A5E: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052== 
+==20052== 8 bytes in 1 blocks are definitely lost in loss record 4 of 4
+==20052==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20052==    by 0x10C617: CriaPosicao (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x10A785: CriaFantasma (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052==    by 0x109A79: main (in /mnt/c/Users/DELL/Documents/GitHub/pacman-revival/Resultados/Raony/main/prog)
+==20052== 
+==20052== LEAK SUMMARY:
+==20052==    definitely lost: 32 bytes in 4 blocks
+==20052==    indirectly lost: 0 bytes in 0 blocks
+==20052==      possibly lost: 0 bytes in 0 blocks
+==20052==    still reachable: 0 bytes in 0 blocks
+==20052==         suppressed: 0 bytes in 0 blocks
+==20052== 
+==20052== For lists of detected and suppressed errors, rerun with: -s
+==20052== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

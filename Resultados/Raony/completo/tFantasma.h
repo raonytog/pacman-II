@@ -35,6 +35,8 @@ bool ExisteFantasmaMapa (tMapa * mapa, char item);
 
 bool ExisteItemPosicao (tMapa * mapa, tPosicao * posicao, char item);
 
+bool EstaPresenteFantasma (tFantasma * fantasma);
+
 tPosicao * ObtemPosicaoAtualFantasma (tFantasma * fantasma);
 
 
@@ -43,10 +45,7 @@ tPosicao * ObtemPosicaoAntigaFantasma (tFantasma * fantasma);
 
 tFantasma * CriaFantasma(tMapa * mapa, char simoblogia_fantasma);
 
-
-void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, tFantasma * direita, tMapa * mapa);
-
-int EstaPresenteFantasma (tFantasma * fantasma);
+void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, tFantasma * direita, tMapa * mapa, tPacman * pacman);
 
 void DesalocaFantasma(tFantasma * fantasma);
 
