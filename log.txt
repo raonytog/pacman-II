@@ -470,6 +470,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o resumo.txt: Ok!
  - Resultado para o saida.txt: Ok!
  - Resultado para o trilha.txt: Ok!
+ - Pasta main / Caso RaonyTogneri:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
  - Pasta tMapa / Caso 01:
  - Arquivo de output gerado: Resultados/RaonyTogneri/tMapa/Casos/01/result_valgrind.txt.
  - Valgrind: Ok! allocs: 34,520, frees: 34,520, errors: 0.
@@ -740,6 +742,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o resumo.txt: Ok!
  - Resultado para o saida.txt: Ok!
  - Resultado para o trilha.txt: Ok!
+ - Pasta tMapa / Caso RaonyTogneri:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
  - Pasta tMovimento / Caso 01:
  - Arquivo de output gerado: Resultados/RaonyTogneri/tMovimento/Casos/01/result_valgrind.txt.
  - Valgrind: Ok! allocs: 34,839, frees: 34,839, errors: 0.
@@ -1010,6 +1014,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o resumo.txt: Ok!
  - Resultado para o saida.txt: Ok!
  - Resultado para o trilha.txt: Ok!
+ - Pasta tMovimento / Caso RaonyTogneri:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
  - Pasta tPacman / Caso 01:
  - Arquivo de output gerado: Resultados/RaonyTogneri/tPacman/Casos/01/result_valgrind.txt.
  - Valgrind: Ok! allocs: 34,705, frees: 34,705, errors: 0.
@@ -1280,6 +1286,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o resumo.txt: Ok!
  - Resultado para o saida.txt: Ok!
  - Resultado para o trilha.txt: Ok!
+ - Pasta tPacman / Caso RaonyTogneri:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
  - Pasta tPosicao / Caso 01:
  - Arquivo de output gerado: Resultados/RaonyTogneri/tPosicao/Casos/01/result_valgrind.txt.
  - Valgrind: Ok! allocs: 34,839, frees: 34,839, errors: 0.
@@ -1550,6 +1558,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o resumo.txt: Ok!
  - Resultado para o saida.txt: Ok!
  - Resultado para o trilha.txt: Ok!
+ - Pasta tPosicao / Caso RaonyTogneri:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
  - Pasta tTunel / Caso 01:
  - Arquivo de output gerado: Resultados/RaonyTogneri/tTunel/Casos/01/result_valgrind.txt.
  - Valgrind: Ok! allocs: 34,839, frees: 34,839, errors: 0.
@@ -1820,6 +1830,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o resumo.txt: Ok!
  - Resultado para o saida.txt: Ok!
  - Resultado para o trilha.txt: Ok!
+ - Pasta tTunel / Caso RaonyTogneri:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
  - Pasta completo / Caso 01:
  - Arquivo de output gerado: Resultados/RaonyTogneri/completo/Casos/01/result_valgrind.txt.
  - Valgrind: Ok! allocs: 32,602, frees: 32,602, errors: 0.
@@ -2090,6 +2102,8 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Resultado para o resumo.txt: Ok!
  - Resultado para o saida.txt: Ok!
  - Resultado para o trilha.txt: Ok!
+ - Pasta completo / Caso RaonyTogneri:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
 
 #######################################
 RESULTADOS FINAIS
@@ -2100,23 +2114,23 @@ Nome 0: RaonyTogneri
  - Arquivos Corretos: 11 de 11 / Nota 10.00
  - Compilações Corretas: 56 de 56 / Nota 10.00
  - Linkagens Corretas: 7 de 7 / Nota 10.00
- - Resultados Corretos main: 30 de 30 / Nota 10.00
- - Valgrinds Corretos main: 30 de 30 / Nota 10.00
- - Resultados Corretos tMapa: 30 de 30 / Nota 10.00
- - Valgrinds Corretos tMapa: 30 de 30 / Nota 10.00
- - Resultados Corretos tMovimento: 30 de 30 / Nota 10.00
- - Valgrinds Corretos tMovimento: 30 de 30 / Nota 10.00
- - Resultados Corretos tPacman: 30 de 30 / Nota 10.00
- - Valgrinds Corretos tPacman: 30 de 30 / Nota 10.00
- - Resultados Corretos tPosicao: 30 de 30 / Nota 10.00
- - Valgrinds Corretos tPosicao: 30 de 30 / Nota 10.00
- - Resultados Corretos tTunel: 30 de 30 / Nota 10.00
- - Valgrinds Corretos tTunel: 30 de 30 / Nota 10.00
- - Resultados Corretos completo: 30 de 30 / Nota 10.00
- - Valgrinds Corretos completo: 30 de 30 / Nota 10.00
- - Soma das notas do RaonyTogneri: 170.000
+ - Resultados Corretos main: 31 de 31 / Nota 10.00
+ - Valgrinds Corretos main: 30 de 31 / Nota 9.67
+ - Resultados Corretos tMapa: 31 de 31 / Nota 10.00
+ - Valgrinds Corretos tMapa: 30 de 31 / Nota 9.67
+ - Resultados Corretos tMovimento: 31 de 31 / Nota 10.00
+ - Valgrinds Corretos tMovimento: 30 de 31 / Nota 9.67
+ - Resultados Corretos tPacman: 31 de 31 / Nota 10.00
+ - Valgrinds Corretos tPacman: 30 de 31 / Nota 9.67
+ - Resultados Corretos tPosicao: 31 de 31 / Nota 10.00
+ - Valgrinds Corretos tPosicao: 30 de 31 / Nota 9.67
+ - Resultados Corretos tTunel: 31 de 31 / Nota 10.00
+ - Valgrinds Corretos tTunel: 30 de 31 / Nota 9.67
+ - Resultados Corretos completo: 31 de 31 / Nota 10.00
+ - Valgrinds Corretos completo: 30 de 31 / Nota 9.67
+ - Soma das notas do RaonyTogneri: 167.690
  - Campos Considerados: 17
- - Média do RaonyTogneri: 10.00
+ - Média do RaonyTogneri: 9.86
 
 ----------------------------------------------------------------------------
 
