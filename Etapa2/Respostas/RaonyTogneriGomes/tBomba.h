@@ -3,37 +3,32 @@
 
 #include "tPosicao.h"
 #include "tMapa.h"
-#include "tPacman.h"
 #include "tFantasma.h"
-#include <stdlib.h>
+#include "tPacman.h"
 
 #define DESARMADA '&'
-#define CLOCK_3 '3'
-#define CLOCK_2 '2'
 #define CLOCK_1 '1'
-#define EXPLODIU ' '
+#define CLOCK_2 '2'
+#define CLOCK_3 '3'
 
 typedef struct {
-    tPosicao * posicaoBomba;
-    char aparencia;
+    tPosicao * posicao;
     int acionada;
+    char aparecia;
 } tBomba;
 
+tBomba * CriaBomba (tMapa * mapa);
 
-tBomba * CriaBomba ();
+int EstaDesarmadaBomba (tBomba * bomba);
 
-bool ExisteBombaMapa (tBomba * bomba);
+int EstaArmadaBomba(tBomba * bomba);
 
-tPosicao * ObtemPosicaoBomba (tBomba * bomba);
-
-bool EstaDesarmadaBomba (tBomba * bomba);
-
-bool EstaAcionadaBomba (tBomba * bomba);
-
-void ExplodeBomba (tBomba * bomba, tMapa * mapa, tPacman * pacman, 
-                   tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, 
-                   tFantasma * direita, tFantasma * horizontal, tFantasma * vertical);
+void ExplodeBomba (tBomba * bomba, tMapa * mapa, tFantasma * left, 
+                   tFantasma *  right, tFantasma * down, tFantasma * up, 
+                   tFantasma * hori, tFantasma * verti, tPacman * pacman);
 
 void DesalocaBomba (tBomba * bomba);
+
+tPosicao * RetornaPosicaoBomba (tBomba * bomba);
 
 #endif

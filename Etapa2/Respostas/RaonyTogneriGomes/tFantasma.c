@@ -288,14 +288,17 @@ bool EstaPresenteFantasma (tFantasma * fantasma) {
     return fantasma->presenteMapa;
 }
 
-void MataFantasma (tFantasma * fantasma) {
-    fantasma->presenteMapa = 0;
-}
 void DesalocaFantasmaPresentes (tFantasma * fantasma) {
     if (fantasma == NULL) return;
 
     DesalocaPosicao(fantasma->posicao);
     DesalocaPosicao(fantasma->posicaoAntiga);
     free(fantasma);
+}
+
+void MataFantasma (tFantasma * fantasma) {
+    fantasma->presenteMapa = 0;
+    free(fantasma->posicao);
+    fantasma->posicao = CriaPosicao(0, 0);
 }
 

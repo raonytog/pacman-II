@@ -1,4 +1,0 @@
-Movimento 2 (d) pegou comida
-Movimento 14 (d) pegou comida
-Movimento 16 (s) pegou comida
-Movimento 20 (d) colidiu com a parede

@@ -1,72 +1,77 @@
 #include "tBomba.h"
 
-tBomba * CriaBomba (tPosicao * posicao) {
-    tBomba * bomba = malloc (sizeof(tBomba));
-    bomba->aparencia = '&';
-    bomba->posicaoBomba = posicao;
+tBomba * CriaBomba (tMapa * mapa) {
+    tBomba * bomba = malloc(sizeof(tBomba));
+    bomba->aparecia = DESARMADA;
+    bomba->posicao = ObtemPosicaoItemMapa(mapa, bomba->aparecia);
     bomba->acionada = 0;
     return bomba;
 }
 
-bool ExisteBombaMapa (tBomba * bomba) {
-    return bomba != NULL;
-}
-
-tPosicao * ObtemPosicaoBomba (tBomba * bomba) {
-    return bomba->posicaoBomba;
-}
-
-bool EstaDesarmadaBomba (tBomba * bomba) {
+int EstaDesarmadaBomba (tBomba * bomba) {
     return bomba->acionada == 0;
 }
 
-bool EstaAcionadaBomba (tBomba * bomba) {
+int EstaArmadaBomba(tBomba * bomba) {
     return bomba->acionada == 1;
 }
 
-void ExplodeBomba (tBomba * bomba, tMapa * mapa, tPacman * pacman, 
-                   tFantasma * baixo, tFantasma * cima, tFantasma * esquerda, 
-                   tFantasma * direita, tFantasma * horizontal, tFantasma * vertical) {
-    if (bomba == NULL) return;
+void ExplodeBomba (tBomba * bomba, tMapa * mapa, tFantasma * left, 
+                   tFantasma *  right, tFantasma * down, tFantasma * up, 
+                   tFantasma * hori, tFantasma * verti, tPacman * pacman) {
+
+    if (bomba->posicao == NULL) return;
     
-    if (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoBomba(bomba)) && EstaDesarmadaBomba(bomba)) {
-        bomba->aparencia = CLOCK_3;
-        AtualizaItemMapa(mapa, bomba->posicaoBomba, bomba->aparencia);
+    if (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), bomba->posicao) && EstaDesarmadaBomba(bomba)) {
+        bomba->aparecia = CLOCK_3;
+        AtualizaItemMapa(mapa, bomba->posicao, bomba->aparecia);
         bomba->acionada = 1;
         return;
     }
 
-    if (EstaAcionadaBomba(bomba)) {
-        if (bomba->aparencia == CLOCK_3) {
-            bomba->aparencia = CLOCK_2;
-            AtualizaItemMapa(mapa, bomba->posicaoBomba, bomba->aparencia);
-        }
+    if (bomba->aparecia == CLOCK_3) {
+        bomba->aparecia = CLOCK_2;
+        AtualizaItemMapa(mapa, bomba->posicao, bomba->aparecia);
+        return;
+    }
 
-        else if (bomba->aparencia == CLOCK_2) {
-            bomba->aparencia = CLOCK_1;
-            AtualizaItemMapa(mapa, bomba->posicaoBomba, bomba->aparencia);
-        }
-        
-        else {
-            bomba->aparencia = EXPLODIU;
-            for (int i = ObtemLinhaPosicao(bomba->posicaoBomba)-1; i < ObtemLinhaPosicao(bomba->posicaoBomba)+2 && i < ObtemNumeroLinhasMapa(mapa)-1; i++) {
-                for (int j = ObtemColunaPosicao(bomba->posicaoBomba) -1; j < ObtemColunaPosicao(bomba->posicaoBomba)+2 && j < ObtemNumeroColunasMapa(mapa)-1; j++) {
-                    tPosicao * posicao = CriaPosicao(i, j);
-                    if (SaoIguaisPosicao(posicao, pacman->posicaoAtual)) MataPacman(pacman);
+    if (bomba->aparecia == CLOCK_2) {
+        bomba->aparecia = CLOCK_1;
+        AtualizaItemMapa(mapa, bomba->posicao, bomba->aparecia);
+        return;
+    }
 
-                    if (SaoIguaisPosicao(posicao, cima->posicao)) MataFantasma(cima);
-                    if (SaoIguaisPosicao(posicao, baixo->posicao)) MataFantasma(baixo);
-                    if (SaoIguaisPosicao(posicao, direita->posicao)) MataFantasma(direita);
-                    if (SaoIguaisPosicao(posicao, esquerda->posicao)) MataFantasma(esquerda);
-                    if (SaoIguaisPosicao(posicao, horizontal->posicao)) MataFantasma(horizontal);
-                    if (SaoIguaisPosicao(posicao, vertical->posicao)) MataFantasma(vertical);
+    if (bomba->aparecia == CLOCK_1) {
+        bomba->aparecia = VAZIO;
+        int i = 0, j = 0;
 
-                    if (mapa->grid[i][j] == COMIDA) mapa->nFrutasAtual--;
-                    if (i != 0 && i != ObtemNumeroLinhasMapa(mapa)-1 && j != 0 && j != ObtemNumeroColunasMapa(mapa)-1) 
-                        mapa->grid[i][j] = VAZIO;
-                }
+        for (i = ObtemLinhaPosicao(bomba->posicao)-1; i < ObtemLinhaPosicao(bomba->posicao)+2; i++) {
+            for (j = ObtemColunaPosicao(bomba->posicao)-1; j < ObtemColunaPosicao(bomba->posicao)+2; j++) {
+
+                if (mapa->grid[i][j] == COMIDA) mapa->nFrutasAtual--;
+
+                if (mapa->grid[i][j] == PACMAN) MataPacman(pacman);
+
+                if (mapa->grid[i][j] == UP_GHOST) MataFantasma(up);
+                if (mapa->grid[i][j] == DOWN_GHOST) MataFantasma(down);
+                if (mapa->grid[i][j] == RIGHT_GHOST) MataFantasma(right);
+                if (mapa->grid[i][j] == LEFT_GHOST) MataFantasma(left);
+                if (mapa->grid[i][j] == HORIZONTAL_GHOST) MataFantasma(hori);
+                if (mapa->grid[i][j] == VERTICAL_GHOST) MataFantasma(verti);
+
+                mapa->grid[i][j] = VAZIO;
             }
         }
     }
 }
 
+tPosicao * RetornaPosicaoBomba (tBomba * bomba) {
+    return bomba->posicao;
+}
+
+void DesalocaBomba (tBomba * bomba) {
+    if (bomba == NULL) return;
+
+    DesalocaPosicao(bomba->posicao);
+    free(bomba);
+}

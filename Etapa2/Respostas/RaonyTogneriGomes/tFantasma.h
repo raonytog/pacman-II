@@ -87,13 +87,12 @@ void MoveFantasmas (tFantasma * baixo, tFantasma * cima, tFantasma * esquerda,
                     tFantasma * direita, tFantasma * horizontal, tFantasma * vertical, 
                     tMapa * mapa, tPacman * pacman);
 
-
-void MataFantasma (tFantasma * fantasma);
-
 /**
 *  Desaloca fantasma presente (fantasma diferente de NULL)
 * \param fantasma fantasma
 */
 void DesalocaFantasmaPresentes (tFantasma * fantasma);
+
+void MataFantasma (tFantasma * fantasma);
 
 #endif

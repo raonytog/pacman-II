@@ -28,6 +28,9 @@ tPacman* CriaPacman(tPosicao* posicao) {
     pacman->roundLeft = 0;
     pacman->bateuParede = 0;
 
+    pacman->comeuMataFantasma = 0;
+    pacman->roundLeftMatarFantasma = 0;
+
     pacman->estaVivo = 1;
 
     pacman->nColisoesParedeBaixo = 0;
@@ -54,21 +57,45 @@ tPacman* CriaPacman(tPosicao* posicao) {
     return pacman;
 }
 
-bool BateuParedePacman (tPacman * pacman) {
-    return pacman->bateuParede;
+void DefinePacmanComeuMataFantasma (tPacman * pacman) {
+    pacman->comeuMataFantasma = 1;
+    pacman->roundLeftMatarFantasma = 15;
 }
+
+void DefinePacmanComeuSuperComida (tPacman * pacman) {
+    pacman->comeuSuperComida = 1;
+    pacman->roundLeft = 15;
+}
+
 
 bool ComeuSuperComida (tPacman * pacman) {
     return pacman->comeuSuperComida;
 }
 
+bool ComeuMataFantasma (tPacman * pacman) {
+    return pacman->comeuMataFantasma == 1;
+}
+
 int ObtemRoundsRestantes (tPacman * pacman) {
+    pacman->roundLeft--;
     return pacman->roundLeft;
 }
 
-void DefineNaoBatida(tPacman * pacman) {
-    pacman->bateuParede = 0;
+void ResetaMataFantasma (tPacman * pacman) {
+    pacman->comeuMataFantasma = 0;
+    pacman->roundLeftMatarFantasma = 0;
 }
+
+void DecrementaTimerMataFantasma (tPacman * pacman) {
+    pacman->roundLeftMatarFantasma--;
+    if (pacman->roundLeftMatarFantasma == 0) 
+        pacman->comeuMataFantasma = 0;
+}
+
+int RetornaTimerMataFantasma (tPacman * pacman) {
+    return pacman->roundLeftMatarFantasma;
+}
+
 
 tPacman* ClonaPacman(tPacman* pacman) {
     tPacman * clone = malloc (sizeof(tPacman));
@@ -112,22 +139,12 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
             posicaoClone->coluna--;
             pacman->nMovimentosEsquerda++;
 
-           if (comidona != NULL) {
-                if (SaoIguaisPosicao(comidona, posicaoClone) && !ComeuSuperComida(pacman)) {
-                    AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-                    pacman->comeuSuperComida = 1;
-                    pacman->roundLeft = 15;
-                }
-            }
-
             if (EncontrouParedeMapa(mapa, posicaoClone) && !ComeuSuperComida(pacman)) {
                 if (!ComeuSuperComida(pacman)) {
-                    pacman->bateuParede - 1;
                     pacman->nColisoesParedeEsquerda++;
                     posicaoClone->coluna++;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "colidiu com a parede");
-
-                } else AtualizaItemMapa(mapa, pacman->posicaoAtual, PAREDE);
+                } 
                 
             } else {
                 if (EncontrouComidaMapa(mapa, posicaoClone)) {
@@ -135,7 +152,6 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
                 }
-                pacman->bateuParede = 0;
             }
             break;
 
@@ -143,22 +159,12 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
             posicaoClone->coluna++;
             pacman->nMovimentosDireita++;
 
-            if (comidona != NULL) {
-                if (SaoIguaisPosicao(comidona, posicaoClone) && !ComeuSuperComida(pacman)) {
-                    AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-                    pacman->comeuSuperComida = 1;
-                    pacman->roundLeft = 15;
-                }
-            }
-
             if (EncontrouParedeMapa(mapa, posicaoClone)) {
                 if (!ComeuSuperComida(pacman)) {
-                    pacman->bateuParede - 1;
                     pacman->nColisoesParedeDireita++;   
                     posicaoClone->coluna--;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "colidiu com a parede");
-
-                } else AtualizaItemMapa(mapa, pacman->posicaoAtual, PAREDE);
+                } 
 
 
 
@@ -168,7 +174,6 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
                 }
-                pacman->bateuParede = 0;
             }
             break;
         
@@ -176,22 +181,12 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
             posicaoClone->linha--;
             pacman->nMovimentosCima++;
 
-            if (comidona != NULL) {
-                if (SaoIguaisPosicao(comidona, posicaoClone) && !ComeuSuperComida(pacman)) {
-                    AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-                    pacman->comeuSuperComida = 1;
-                    pacman->roundLeft = 15;
-                }
-            }
-
             if (EncontrouParedeMapa(mapa, posicaoClone)) {
                 if (!ComeuSuperComida(pacman)) {
-                    pacman->bateuParede - 1;
                     pacman->nColisoesParedeCima++;
                     posicaoClone->linha++;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "colidiu com a parede");
-
-                } else AtualizaItemMapa(mapa, pacman->posicaoAtual, PAREDE);
+                }
 
             } else {
                 if (EncontrouComidaMapa(mapa, posicaoClone)) {
@@ -199,7 +194,6 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
                 }
-                pacman->bateuParede = 0;
             }
             break;
 
@@ -207,22 +201,12 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
             posicaoClone->linha++;
             pacman->nMovimentosBaixo++;
 
-            if (comidona != NULL) {
-                if (SaoIguaisPosicao(comidona, posicaoClone) && !ComeuSuperComida(pacman)) {
-                    AtualizaItemMapa(mapa, posicaoClone, VAZIO);
-                    pacman->comeuSuperComida = 1;
-                    pacman->roundLeft = 15;
-                }
-            }
-
             if (EncontrouParedeMapa(mapa, posicaoClone)) {
                 if (!ComeuSuperComida(pacman)) {
-                    pacman->bateuParede - 1;
                     pacman->nColisoesParedeBaixo++;
                     posicaoClone->linha--;
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "colidiu com a parede");
-
-                } else if (pacman->bateuParede) AtualizaItemMapa(mapa, pacman->posicaoAtual, PAREDE);
+                } 
 
             } else {
                 if (EncontrouComidaMapa(mapa, posicaoClone)) {
@@ -230,7 +214,6 @@ void MovePacman(tPacman* pacman, tMapa* mapa, COMANDO comando) {
                     InsereNovoMovimentoSignificativoPacman(pacman, comando, "pegou comida");
                     AtualizaItemMapa(mapa, posicaoClone, VAZIO);
                 }
-                pacman->bateuParede = 0;
             }
             break;
     }

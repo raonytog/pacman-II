@@ -10,6 +10,9 @@ typedef struct tPacman{
     int roundLeft;
     int bateuParede;
 
+    int comeuMataFantasma;
+    int roundLeftMatarFantasma;
+
     /* Posição atual do pacman (linha,coluna) */
     tPosicao* posicaoAtual;
 
@@ -46,11 +49,21 @@ typedef struct tPacman{
     int** trilha;
 } tPacman;
 
-bool BateuParedePacman (tPacman * pacman);
-
 bool ComeuSuperComida (tPacman * pacman);
 
 int ObtemRoundsRestantes (tPacman * pacman);
+
+void DecrementaTimerMataFantasma (tPacman * pacman);
+
+int RetornaTimerMataFantasma (tPacman * pacman);
+
+void DefinePacmanComeuMataFantasma (tPacman * pacman);
+
+void DefinePacmanComeuSuperComida (tPacman * pacman);
+
+void ResetaMataFantasma (tPacman * pacman);
+
+bool ComeuMataFantasma (tPacman * pacman);
 
 
 /**

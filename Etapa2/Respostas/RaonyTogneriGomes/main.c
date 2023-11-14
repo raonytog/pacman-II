@@ -2,6 +2,8 @@
 #include "tPacman.h"
 #include "tArquivos.h"
 #include "tBomba.h"
+#include "mataFantasma.h"
+#include "comidaBonus.h"
 
 #define DIRETORIO_MAX_SIZE 1001
 
@@ -11,6 +13,7 @@
 #define PACMAN '>'
 #define VAZIO ' '
 #define SUPER_COMIDA '+'
+#define MATA_FANTASMA 'x'
 
 /**
  * Verifica as condicoes para cruzamento do fantasma com o pacman
@@ -24,6 +27,9 @@
 bool OcorreuCruzamento(tPacman * pacman, tPosicao * antiga, 
                        tFantasma * left, tFantasma *  right, tFantasma * down, tFantasma * up,
                        tFantasma * hori, tFantasma * verti) {
+
+    // if (ComeuMataFantasma(pacman)) return false;
+
         // posicoes atuais iguais
     if (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(left)) ||
         SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAtualFantasma(right)) ||
@@ -43,13 +49,13 @@ bool OcorreuCruzamento(tPacman * pacman, tPosicao * antiga,
         SaoIguaisPosicao(antiga, ObtemPosicaoAtualFantasma(down))) ||
 
         (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(up)) &&
-        SaoIguaisPosicao(antiga, ObtemPosicaoAtualFantasma(up)) ||
+        SaoIguaisPosicao(antiga, ObtemPosicaoAtualFantasma(up))) ||
         
         (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(hori)) &&
         SaoIguaisPosicao(antiga, ObtemPosicaoAtualFantasma(hori))) ||
         
         (SaoIguaisPosicao(ObtemPosicaoPacman(pacman), ObtemPosicaoAntigaFantasma(verti)) &&
-        SaoIguaisPosicao(antiga, ObtemPosicaoAtualFantasma(verti))))) return true;
+        SaoIguaisPosicao(antiga, ObtemPosicaoAtualFantasma(verti)))) return true;
     return false;
 }
 
@@ -74,38 +80,6 @@ COMANDO RetornaComando (char mov) {
 }
 
 /**
- * Atualiza a posicao do pacman no mapa
- * Caso o mapa possua tunel, verifica se o pacman esta sobrepondo um portal para tratar
- * 
- * \param mapa mapa
- * \param pacman pacman
- * \param antiga posicao antiga do pacman
- * \param comando comando de movimento (a, w, s, d)
- */
-void AtualizaPacmanMapa(tMapa * mapa, tPacman * pacman, tPosicao * antiga, COMANDO comando) {
-    // if (ComeuSuperComida(pacman)) DecrementaTimer(pacman);
-
-    // if (ObtemRoundsRestantes(pacman) == 0 && BateuParedePacman(pacman)) {
-    //     MataPacman(pacman);
-    //     AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PAREDE);
-    // }
-
-    // if (PossuiTunelMapa(mapa)) { 
-    //     if (!EntrouTunel(ObtemTunelMapa(mapa), ObtemPosicaoPacman(pacman))) AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
-    //     else AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PORTAL);
-
-    // } else AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
-
-    MovePacman(pacman, mapa, comando);
-    // if (BateuParedePacman(pacman) && ComeuSuperComida(pacman)) {
-    //     AtualizaItemMapa(mapa, antiga, PAREDE); 
-    //     DefineNaoBatida(pacman);
-    // }
-
-    // AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), PACMAN);
-}
-
-/**
  * Imprime o grid do mapa
  * \param mapa mapa
  * \param left fantasma que anda pela esquerda (inicialmente)
@@ -119,9 +93,10 @@ void ImprimeMapa(tMapa * mapa, tFantasma * left, tFantasma *  right,
     for (int i = 0; i < ObtemNumeroLinhasMapa(mapa); i++) {
         for (int j = 0; j < ObtemNumeroColunasMapa(mapa); j++) {
             tPosicao * posicao = CriaPosicao(i, j);
+
             if (SaoIguaisPosicao(posicao, ObtemPosicaoPacman(pacman)) && EstaVivoPacman(pacman))
                 printf("%c", PACMAN);
- 
+
             else if (SaoIguaisPosicao(posicao, ObtemPosicaoAtualFantasma(left)) && EstaPresenteFantasma(left))
                 printf("%c", LEFT_GHOST);
 
@@ -187,17 +162,18 @@ int main (int agrc, char * argv[]) { /* main oficial */
     }
 
     char diretorio[DIRETORIO_MAX_SIZE];
-    sprintf(diretorio, "%s", argv[1]);
+     sprintf(diretorio, "%s", argv[1]);
 
 // int main () { /* main para testes */
-//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/4";
+//     char diretorio[DIRETORIO_MAX_SIZE] = "Casos/7";
 
     /* cria os ponteiros necessarios para o jogo */
     tMapa * mapa = CriaMapa(diretorio);
-    tPacman * pacman = CriaPacman(ObtemPosicaoItemMapa(mapa, PACMAN));
-
-    tBomba * bomba = CriaBomba(ObtemPosicaoItemMapa(mapa, DESARMADA));
+    
     tPosicao * comidaBonus = IdentificaComidaBonus(mapa);
+    tBomba * bomba = CriaBomba(mapa);
+
+    tPacman * pacman = CriaPacman(ObtemPosicaoItemMapa(mapa, PACMAN));
 
     tFantasma * left = CriaFantasmaPresente(mapa, LEFT_GHOST);
     tFantasma * right = CriaFantasmaPresente(mapa, RIGHT_GHOST);
@@ -217,24 +193,30 @@ int main (int agrc, char * argv[]) { /* main oficial */
             ObtemNumeroAtualMovimentosPacman(pacman) < ObtemNumeroMaximoMovimentosMapa(mapa) &&
             ObtemPontuacaoAtualPacman(pacman) < ObtemQuantidadeFrutasIniciaisMapa(mapa)) {
 
+        
         /* clone de posicao temporaria para trabalhar */
         tPosicao * clone = ClonaPosicao(ObtemPosicaoPacman(pacman)); 
 
         scanf("%c%*c", &mov);
         printf("Estado do jogo apos o movimento '%c':\n", mov);
+        
+        // AtualizaPacmanMapa(mapa, pacman, clone, RetornaComando(mov));
+        MovePacman(pacman, mapa, RetornaComando(mov));
+        TrataComidaBonus (pacman, mapa, comidaBonus);
 
-        AtualizaPacmanMapa(mapa, pacman, clone, RetornaComando(mov));
         MoveFantasmas(down, up, left, right, hori, vert, mapa, pacman);
+        ExecutaMataFantasma(down, up, left, right, hori, vert, mapa, pacman, clone);
+        PacmanComeuMataFantasma(mapa, pacman);
+
+        ExplodeBomba(bomba, mapa, left, right, down, up, hori, vert, pacman);
 
         /* trata as condicoes de cruzamento entre fantasma e pacman */
         if (OcorreuCruzamento(pacman, clone, left, right, down, up, hori, vert)) {
             InsereNovoMovimentoSignificativoPacman(pacman, RetornaComando(mov), "fim de jogo por encostar em um fantasma");
             MataPacman(pacman);
-            // AtualizaItemMapa(mapa, ObtemPosicaoPacman(pacman), VAZIO);
         }
-
-        ExplodeBomba(bomba, mapa, pacman, down, up, left, right, hori, vert);
         
+
         ImprimeMapa(mapa, left, right, down, up, hori, vert, pacman);
         printf("Pontuacao: %d\n\n", ObtemPontuacaoAtualPacman(pacman));
 
@@ -251,12 +233,16 @@ int main (int agrc, char * argv[]) { /* main oficial */
     /* desaloca os ponteiros da partida */
     DesalocaMapa(mapa);
     DesalocaPacman(pacman);
+
     DesalocaFantasmaPresentes(left);
     DesalocaFantasmaPresentes(right);
     DesalocaFantasmaPresentes(down);
     DesalocaFantasmaPresentes(up);
     DesalocaFantasmaPresentes(hori);
     DesalocaFantasmaPresentes(vert);
+
+    DesalocaPosicao(comidaBonus);
+    DesalocaBomba(bomba);
 
     return 0;
 }
