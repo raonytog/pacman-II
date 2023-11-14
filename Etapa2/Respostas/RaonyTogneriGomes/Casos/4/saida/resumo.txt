@@ -1,0 +1,7 @@
+Movimento 15 (d) pegou comida
+Movimento 19 (s) colidiu com a parede
+Movimento 21 (s) pegou comida
+Movimento 26 (s) pegou comida
+Movimento 30 (w) pegou comida
+Movimento 31 (a) pegou comida
+Movimento 32 (a) pegou comida
